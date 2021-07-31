@@ -2,10 +2,24 @@
 
 body{
     font-family: 'Do Hyeon', sans-serif;
+    color: wheat;
+    background-image: url("../img/Avengers-logo-black-background_2560x1600.jpg");
+    background-size: cover;
 }
 
 .phase{
     display:flex;
     flex-direction: column;
     width:fit-content;
+}
+
+a:link{
+    color: #95ADC1;
+    text-decoration: none;
+}
+a:visited{
+    color: #95ADC1;
+}
+a:hover{
+    color:tomato;
 }
