@@ -3,7 +3,7 @@
 body {
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 1)),
     url("../img/Avengers-logo-black-background_2560x1600.jpg");
-  background-attachment: fixed;
+  background-position: center;
   background-size: cover;
 }
 
@@ -52,12 +52,12 @@ body {
 
 .moveToRight {
   transform: translateX(-100vw);
-  transition: transform 1s ease-in-out;
+  transition: transform 0.5s ease-in-out;
 }
 
 .moveToLeft {
   transform: translateX(0vw);
-  transition: transform 1s ease-in-out;
+  transition: transform 0.5s ease-in-out;
 }
 
 #order_launch {
