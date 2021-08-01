@@ -98,7 +98,8 @@ body {
   transition: transform 0.5s ease-in-out;
 }
 
-#order_launch {
+.order_menu {
+  width: 100vw;
 }
 
 #order_time {
