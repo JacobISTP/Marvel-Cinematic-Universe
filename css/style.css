@@ -50,6 +50,16 @@ body {
   align-items: center;
 }
 
+.moveToRight {
+  transform: translateX(-100vw);
+  transition: transform 1s ease-in-out;
+}
+
+.moveToLeft {
+  transform: translateX(0vw);
+  transition: transform 1s ease-in-out;
+}
+
 #order_launch {
 }
 
