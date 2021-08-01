@@ -12,13 +12,34 @@ body {
 
 .font_basic {
   font-family: "Do Hyeon", sans-serif;
-  color: wheat;
+  color: #FFDC00;
 }
 
 .phase {
   display: flex;
   flex-direction: column;
+  width: 450px;
+  border: 2px solid #FFDC00;
+  margin: 10px 0px 30px 5px;
+  padding-left: 5px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.phase:hover{
+  background-color: rgba(0,0,0,0.8);
+}
+
+.phase:hover h3{
+  padding: 0px 5px;
+  transform: translate(-5px, -15px);
+  background-color: #2e3741;
+  border-radius: 5px;
+}
+
+.phase h3{
+  margin: 0px;
   width: fit-content;
+  transition: 0.2s ease-in-out;
 }
 
 .phase a{
@@ -64,6 +85,7 @@ body {
   align-items: center;
   box-sizing: border-box;
   height: 50px;
+  margin-bottom: 10px;
 }
 
 .moveToRight {
