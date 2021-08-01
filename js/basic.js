@@ -1,6 +1,8 @@
 const btn_time = document.querySelector("#btn_time");
 const btn_launch = document.querySelector("#btn_launch");
 const panel_main = document.querySelector("body>div.order");
+const panel_phase = document.querySelectorAll(".phase");
+
 
 function screenMoveToRight() {
   panel_main.classList.add("moveToRight");
@@ -15,5 +17,22 @@ function screenMoveToLeft() {
   btn_launch.classList.add("currentOrder");
 }
 
+function phaseWidthResize(){
+  const mWidth = window.outerWidth;
+  const pWidth = window.innerWidth;
+  if(mWidth<450){
+    panel_phase.forEach(function(item){
+      item.style.width = `${String(mWidth*0.9)}px`;
+    });
+  }
+  else if(pWidth<450){
+    panel_phase.forEach(function(item){
+      item.style.width = `${String(pWidth*0.9)}px`;
+    });
+  }
+}
+
+phaseWidthResize();
+window.addEventListener("resize", phaseWidthResize);
 btn_time.addEventListener("click", screenMoveToRight);
 btn_launch.addEventListener("click", screenMoveToLeft);
