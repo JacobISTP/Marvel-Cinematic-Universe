@@ -18,10 +18,10 @@ function screenMoveToLeft() {
 }
 
 function phaseWidthResize(){
-  const mWidth = window.innerWidth;
-  if(mWidth<450){
+  const width = window.innerWidth;
+  if(width>=420){
     panel_phase.forEach(function(item){
-      item.style.width = `${String(mWidth*0.8)}px`;
+      item.style.width = `420px`;
     });
   }
 }
