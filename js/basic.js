@@ -18,7 +18,7 @@ function screenMoveToLeft() {
 }
 
 function phaseWidthResize(){
-  const mWidth = window.outerWidth;
+  const mWidth = window.innerWidth;
   if(mWidth<450){
     panel_phase.forEach(function(item){
       item.style.width = `${String(mWidth*0.8)}px`;
