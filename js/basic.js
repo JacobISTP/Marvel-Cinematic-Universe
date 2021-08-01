@@ -19,15 +19,9 @@ function screenMoveToLeft() {
 
 function phaseWidthResize(){
   const mWidth = window.outerWidth;
-  const pWidth = window.innerWidth;
   if(mWidth<450){
     panel_phase.forEach(function(item){
-      item.style.width = `${String(mWidth*0.9)}px`;
-    });
-  }
-  else if(pWidth<450){
-    panel_phase.forEach(function(item){
-      item.style.width = `${String(pWidth*0.9)}px`;
+      item.style.width = `${String(mWidth*0.8)}px`;
     });
   }
 }
