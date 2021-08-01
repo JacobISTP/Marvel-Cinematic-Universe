@@ -1,25 +1,70 @@
-@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap");
 
-body{
-    font-family: 'Do Hyeon', sans-serif;
-    color: wheat;
-    background-image: url("../img/Avengers-logo-black-background_2560x1600.jpg");
-    background-size: cover;
-}
-
-.phase{
-    display:flex;
-    flex-direction: column;
-    width:fit-content;
+body {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 1)),
+    url("../img/Avengers-logo-black-background_2560x1600.jpg");
+  background-attachment: fixed;
+  background-size: cover;
 }
 
-a:link{
-    color: #95ADC1;
-    text-decoration: none;
+.font_basic {
+  font-family: "Do Hyeon", sans-serif;
+  color: wheat;
 }
-a:visited{
-    color: #95ADC1;
+
+.phase {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
 }
-a:hover{
-    color:tomato;
+
+.order {
+  position: relative;
+  display: flex;
+  width: 100%;
+}
+
+.btn_changeOrder {
+  padding: 0px 5px;
+  border: black;
+  background: none;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.btn_changeOrder:hover {
+  cursor: pointer;
+  border-bottom: 4px solid #9fa2a3;
+  transform: translateY(2px);
+}
+
+.span_currentOrder {
+  padding: 0px 5px;
+  border: 4px solid #2e3741;
+  border-radius: 5px;
+  margin: 0px 5px;
+}
+
+.order_title {
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+}
+
+#order_launch {
+}
+
+#order_time {
+  position: absolute;
+  transform: translateX(100vw);
+}
+
+a:link {
+  color: #95adc1;
+  text-decoration: none;
+}
+a:visited {
+  color: #95adc1;
+}
+a:hover {
+  color: tomato;
 }
