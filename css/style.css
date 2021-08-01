@@ -12,14 +12,14 @@ body {
 
 .font_basic {
   font-family: "Do Hyeon", sans-serif;
-  color: #FFDC00;
+  color: rgba(255,220,0,0.95);
 }
 
 .phase {
   display: flex;
   flex-direction: column;
   width: 450px;
-  border: 2px solid #FFDC00;
+  border: 2px solid white;
   margin: 10px 0px 30px 5px;
   padding-left: 5px;
   transition: background-color 0.2s ease-in-out;
