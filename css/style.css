@@ -24,6 +24,8 @@ body {
 .order {
   position: relative;
   display: flex;
+  width: 100vw;
+  overflow-x:visible;
 }
 
 .btn_changeOrder {
