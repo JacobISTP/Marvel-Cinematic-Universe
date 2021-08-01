@@ -7,7 +7,7 @@ body {
   background-size: cover;
   width: 100vw;
   height: 100vh;
-  overflow-x:hidden;
+  overflow-x: hidden;
 }
 
 .font_basic {
@@ -21,6 +21,10 @@ body {
   width: fit-content;
 }
 
+.phase a{
+  width: fit-content;
+}
+
 .order {
   position: relative;
   display: flex;
@@ -30,28 +34,36 @@ body {
 
 .btn_changeOrder {
   padding: 0px 5px;
-  border: black;
+  margin: 0px 5px;
+  border: 4px solid black;
   background: none;
+
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  height: 40px;
+  
   transition: border-color 0.2s ease-in-out;
 }
 
 .btn_changeOrder:hover {
   cursor: pointer;
   border-bottom: 4px solid #9fa2a3;
-  transform: translateY(2px);
 }
 
-.span_currentOrder {
-  padding: 0px 5px;
+.currentOrder {
+  padding: 5px;
   border: 4px solid #2e3741;
   border-radius: 5px;
-  margin: 0px 5px;
 }
 
-.order_title {
-  font-size: 30px;
+.order_title{
   display: flex;
+  justify-content: left;
   align-items: center;
+  box-sizing: border-box;
+  height: 50px;
 }
 
 .moveToRight {
