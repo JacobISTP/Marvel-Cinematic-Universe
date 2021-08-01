@@ -18,10 +18,11 @@ function screenMoveToLeft() {
 }
 
 function phaseWidthResize(){
-  const width = window.innerWidth;
-  if(width>=420){
+  let pcWidth = window.matchMedia('(min-width: 421px)')
+  console.log(pcWidth);
+  if(pcWidth.matches===true){
     panel_phase.forEach(function(item){
-      item.style.width = `420px`;
+      item.style.width = `450px`;
     });
   }
 }
