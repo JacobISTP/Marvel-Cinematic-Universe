@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap");
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 1)),
     url("../img/Avengers-logo-black-background_2560x1600.jpg");
@@ -12,7 +16,7 @@ body {
 
 .font_basic {
   font-family: "Do Hyeon", sans-serif;
-  color: rgba(255,220,0,0.95);
+  color: rgba(255, 220, 0, 0.95);
 }
 
 .phase {
@@ -25,38 +29,45 @@ body {
   transition: background-color 0.2s ease-in-out;
 }
 
-.phase:hover{
-  background-color: rgba(0,0,0,0.8);
+.phase:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
-.phase:hover h3{
+.phase:hover h3 {
   padding: 0px 5px;
   transform: translate(-5px, -15px);
   background-color: #2e3741;
   border-radius: 5px;
 }
 
-.phase h3{
+.phase h3 {
   margin: 0px;
+  margin-bottom: 10px;
   width: fit-content;
   transition: 0.2s ease-in-out;
 }
 
-.phase a{
+.phase a {
   width: fit-content;
+}
+
+.phase_movie {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
 .order {
   position: relative;
   display: flex;
   width: 100vw;
-  overflow-x:visible;
+  overflow-x: visible;
 }
 
 .btn_changeOrder {
   padding: 0px 5px;
   margin: 0px 5px;
-  border: 4px solid rgba(0,0,0,0);
+  border: 4px solid rgba(0, 0, 0, 0);
   background: none;
 
   font-size: 30px;
@@ -64,7 +75,7 @@ body {
   align-items: center;
   box-sizing: border-box;
   height: 40px;
-  
+
   transition: border-color 0.2s ease-in-out;
 }
 
@@ -79,7 +90,7 @@ body {
   border-radius: 5px;
 }
 
-.order_title{
+.order_title {
   display: flex;
   justify-content: left;
   align-items: center;
@@ -102,11 +113,19 @@ body {
   width: 100vw;
 }
 
+.documentTitle {
+  position: relative;
+}
+
+h1 {
+  text-shadow: 2px 2px 4px #95adc1;
+}
+
 #order_time {
   position: absolute;
   transform: translateX(100vw);
 }
-#timeline>*{
+#timeline > * {
   padding-bottom: 5px;
 }
 
@@ -117,6 +136,6 @@ a:link {
 a:visited {
   color: #95adc1;
 }
-a:hover {
+.eachMovie:hover a {
   color: tomato;
 }

@@ -22,7 +22,7 @@ function phaseWidthResize(){
   console.log(pcWidth);
   if(pcWidth.matches===true){
     panel_phase.forEach(function(item){
-      item.style.width = `450px`;
+      item.style.width = `500px`;
     });
   }
 }
