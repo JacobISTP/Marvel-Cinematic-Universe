@@ -20,6 +20,16 @@ body {
   color: rgba(255, 220, 0, 0.95);
 }
 
+.font_basic_sm {
+  font-family: "Do Hyeon", sans-serif;
+  color: rgba(255, 220, 0, 0);
+  transition: 1s ease-in-out;
+}
+
+#btn_sort:hover .font_basic_sm {
+  color: rgba(255, 220, 0, 0.95);
+}
+
 .phase {
   display: flex;
   flex-direction: column;
@@ -80,7 +90,22 @@ body {
   transition: border-color 0.2s ease-in-out;
 }
 
-.btn_changeOrder:hover {
+.btn_changeOrder_sm {
+  padding: 0px 5px;
+  border: 4px solid rgba(0, 0, 0, 0);
+  background: none;
+
+  font-size: 20px;
+  display: flex;
+  align-items: flex-end;
+  box-sizing: border-box;
+  height: 40px;
+
+  transition: 0.2s ease-in-out;
+}
+
+.btn_changeOrder:hover,
+.btn_changeOrder_sm:hover {
   cursor: pointer;
   border-bottom: 4px solid #9fa2a3;
 }
@@ -128,6 +153,10 @@ h1 {
 }
 #timeline > * {
   padding-bottom: 5px;
+}
+
+#btn_sort {
+  display: flex;
 }
 
 a:link {
