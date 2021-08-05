@@ -3,7 +3,6 @@ const btn_launch = document.querySelector("#btn_launch");
 const btn_sort = document.querySelector("#btn_sort");
 const panel_main = document.querySelector("body>div.order");
 const panel_phase = document.querySelectorAll(".phase");
-const div_sort = document.querySelector("#sortMenuId");
 const sort_href = ["sort_movie.html", "sort_hero.html", "sort_stone.html"];
 const sort_button = ["영화", "히어로", "스톤"];
 
@@ -64,18 +63,8 @@ function sortMenuAdd() {
   }
 }
 
-function sortMenuVisible() {
-  div_sort.style.visibility = "visible";
-}
-
-function sortMenuHidden() {
-  div_sort.style.visibility = "hidden";
-}
-
 phaseWidthResize();
 sortMenuAdd();
 window.addEventListener("resize", phaseWidthResize);
 btn_time.addEventListener("click", screenMoveToRight);
 btn_launch.addEventListener("click", screenMoveToLeft);
-btn_sort.addEventListener("mouseenter", sortMenuVisible);
-btn_sort.addEventListener("mouseleave", sortMenuHidden);
