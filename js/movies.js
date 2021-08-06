@@ -241,7 +241,7 @@ for (let t = 0; t < movies_launch.length; t++) {
     }
   }
 }
-
+// 함수 생성
 function f_div_movie(div_movie) {
   div_movie.classList.add("eachMovie");
   div_movie.style.width = "150px";
@@ -295,7 +295,7 @@ for (let p = 0; p < 4; p++) {
   }
 }
 
-// 시간순 정렬
+// 타임라인순 정렬
 for (let i = 0; i < movies_time.length; i++) {
   const div_movie = document.createElement("div");
   const img_movie = document.createElement("img");

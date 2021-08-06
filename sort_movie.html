@@ -17,12 +17,23 @@
         </button></a
       >
       <div id="btn_sort">
-        <button class="btn_changeOrder font_basic currentOrder">
-          영화별 검색
-        </button>
+        <button class="btn_changeOrder font_basic currentOrder">영화</button>
+      </div>
+      <form id="input_sort">
+        <input type="text" class="input_search font_basic" />
+        <input type="submit" value="검색" class="input_search font_basic" />
+      </form>
+    </div>
+    <div class="order">
+      <div class="order_menu" id="order_sort">
+        <div class="phase">
+          <h3>검색 결과</h3>
+          <div class="phase_movie"></div>
+        </div>
       </div>
     </div>
   </body>
   <script src="js/basic.js"></script>
   <script src="js/movies.js"></script>
+  <script src="js/sort.js"></script>
 </html>
