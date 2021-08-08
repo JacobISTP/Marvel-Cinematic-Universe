@@ -28,10 +28,10 @@ function f_movies_sort_movie(event) {
   movies_sort_movie.length = 0;
 
   initializeDiv(order_sort);
-  if(order_sort_prev_new !== null){
+  if (order_sort_prev_new !== null) {
     initializeDiv(order_sort_prev_new);
   }
-  if(order_sort_next_new !== null){
+  if (order_sort_next_new !== null) {
     initializeDiv(order_sort_next_new);
   }
 
@@ -40,24 +40,25 @@ function f_movies_sort_movie(event) {
       movies_sort_movie.push(movies_time[s]);
     }
   }
-  
+
   for (let i = 0; i < movies_sort_movie.length; i++) {
     const div_movie_sort = createDivEach(movies_sort_movie, i)[0];
     div_movie_sort.addEventListener("click", selectMovie);
     div_movie_sort.addEventListener("click", createPrevMovieDiv);
     div_movie_sort.addEventListener("click", createNextMovieDiv);
-   order_sort.appendChild(div_movie_sort);
+    order_sort.appendChild(div_movie_sort);
   }
 }
 
 function selectMovie(event) {
   const select_movie = event.target.parentElement.parentElement;
   const select_movie_text = select_movie.querySelector(".eachMovie div a").innerText;
-  const select_movie_name = select_movie_text.substring(0,select_movie_text.indexOf("("));
+  const select_movie_name = select_movie_text.substring(0, select_movie_text.indexOf("("));
   initializeDiv(order_sort);
 
   order_sort.appendChild(select_movie);
   console.log(select_movie_name);
+  f_movies_sort_movie_prev(select_movie_name);
   f_movies_sort_movie_next(select_movie_name);
 }
 
@@ -66,12 +67,25 @@ form_sort.addEventListener("submit", f_movies_sort_movie);
 const movies_sort_movie_prev = [];
 const movies_sort_movie_next = [];
 
-function f_movies_sort_movie_next(select_movie_name){
+function f_movies_sort_movie_prev(select_movie_name) {
+  movies_sort_movie_prev.length = 0;
+
+  for (let p = 0; p < movies_time.length; p++) {
+    if (movies_time[p].next_movie.includes(select_movie_name)) {
+      if (!movies_sort_movie_prev.includes(movies_time[p])) {
+        movies_sort_movie_prev.push(movies_time[p]);
+      }
+    }
+  }
+  console.log(movies_sort_movie_prev);
+}
+
+function f_movies_sort_movie_next(select_movie_name) {
   movies_sort_movie_next.length = 0;
 
   const movies_sort_movie_next_name = [];
-  for(let n =0; n < movies_time.length; n++){
-    if(select_movie_name === movies_time[n].name_kr){
+  for (let n = 0; n < movies_time.length; n++) {
+    if (select_movie_name === movies_time[n].name_kr) {
       movies_sort_movie_next_name.push(movies_time[n]);
     }
   }
@@ -87,7 +101,7 @@ function f_movies_sort_movie_next(select_movie_name){
 
 }
 
-function createMovieDiv(title){
+function createMovieDiv(title) {
   const div_phase = document.createElement("div");
   div_phase.classList.add("phase");
   const h3_title = document.createElement("h3");
@@ -100,19 +114,28 @@ function createMovieDiv(title){
   maindiv_sort.appendChild(div_phase);
 }
 
-function createPrevMovieDiv(){
-  if(document.querySelector(".phase:nth-child(2) .phase_movie")===null){
+function createPrevMovieDiv() {
+  if (document.querySelector(".phase:nth-child(2) .phase_movie") === null) {
     createMovieDiv("이전 관련 영화");
   }
   const order_sort_prev_new = document.querySelector(".phase:nth-child(2) .phase_movie");
+  if (order_sort_prev_new !== null) {
+    initializeDiv(order_sort_prev_new);
+  }
+  for (let pi = 0; pi < movies_sort_movie_prev.length; pi++) {
+    const return_sort_movie_prev = createDivEach(movies_sort_movie_prev, pi);
+    f_a_title(return_sort_movie_prev[1], pi, movies_sort_movie_prev);
+    f_a_title(return_sort_movie_prev[2], pi, movies_sort_movie_prev);
+    order_sort_prev_new.appendChild(return_sort_movie_prev[0]);
+  }
 }
 
-function createNextMovieDiv(){
-  if(document.querySelector(".phase:nth-child(3) .phase_movie")===null){
+function createNextMovieDiv() {
+  if (document.querySelector(".phase:nth-child(3) .phase_movie") === null) {
     createMovieDiv("다음 관련 영화");
   }
   const order_sort_next_new = document.querySelector(".phase:nth-child(3) .phase_movie");
-  if(order_sort_next_new !== null){
+  if (order_sort_next_new !== null) {
     initializeDiv(order_sort_next_new);
   }
   for (let ni = 0; ni < movies_sort_movie_next.length; ni++) {
