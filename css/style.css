@@ -173,6 +173,16 @@ body {
   position: relative;
 }
 
+.eachFeature {
+  filter: brightness(75%);
+  transition: 0.2s ease-in-out;
+}
+
+.eachFeature:hover {
+  filter: brightness(100%);
+  transform: scale(110%) translateY(-5%);
+}
+
 h1 {
   text-shadow: 2px 2px 4px #95adc1;
 }

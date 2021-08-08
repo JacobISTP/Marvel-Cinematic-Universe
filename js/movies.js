@@ -9,6 +9,7 @@ const movies_launch = [
     phase: "1",
     timeline: "3",
     next_movie: ["아이언맨2"],
+    stone: [],
   },
   {
     name_kr: "인크레더블 헐크",
@@ -19,6 +20,7 @@ const movies_launch = [
     phase: "1",
     timeline: "4",
     next_movie: ["어벤져스"],
+    stone: [],
   },
   {
     name_kr: "아이언맨2",
@@ -29,6 +31,7 @@ const movies_launch = [
     phase: "1",
     timeline: "5",
     next_movie: ["토르 : 천둥의 신", "어벤져스", "아이언맨3"],
+    stone: [],
   },
   {
     name_kr: "토르 : 천둥의 신",
@@ -39,6 +42,7 @@ const movies_launch = [
     phase: "1",
     timeline: "6",
     next_movie: ["어벤져스", "토르 : 다크월드"],
+    stone: ["space"],
   },
   {
     name_kr: "캡틴 아메리카 : 퍼스트어벤져",
@@ -49,6 +53,7 @@ const movies_launch = [
     phase: "1",
     timeline: "1",
     next_movie: ["토르 : 천둥의 신", "어벤져스", "캡틴 아메리카 : 윈터솔저"],
+    stone: ["space"],
   },
   {
     name_kr: "어벤져스",
@@ -59,6 +64,7 @@ const movies_launch = [
     phase: "1",
     timeline: "7",
     next_movie: ["아이언맨3", "토르 : 다크월드", "캡틴 아메리카 : 윈터솔저"],
+    stone: ["space", "mind"],
   },
   {
     name_kr: "아이언맨3",
@@ -69,6 +75,7 @@ const movies_launch = [
     phase: "2",
     timeline: "9",
     next_movie: ["어벤져스 : 에이지 오브 울트론"],
+    stone: [],
   },
   {
     name_kr: "토르 : 다크월드",
@@ -83,6 +90,7 @@ const movies_launch = [
       "어벤져스 : 에이지 오브 울트론",
       "토르 : 라그나로크",
     ],
+    stone: ["reality"],
   },
   {
     name_kr: "캡틴 아메리카 : 윈터솔저",
@@ -93,6 +101,7 @@ const movies_launch = [
     phase: "2",
     timeline: "10",
     next_movie: ["어벤져스 : 에이지 오브 울트론", "캡틴 아메리카 : 시빌 워"],
+    stone: [],
   },
   {
     name_kr: "가디언즈 오브 갤럭시",
@@ -103,6 +112,7 @@ const movies_launch = [
     phase: "2",
     timeline: "11",
     next_movie: ["가디언즈 오브 갤럭시 VOL.2"],
+    stone: ["reality", "power"],
   },
   {
     name_kr: "어벤져스 : 에이지 오브 울트론",
@@ -113,6 +123,7 @@ const movies_launch = [
     phase: "2",
     timeline: "13",
     next_movie: ["캡틴 아메리카 : 시빌 워", "토르 : 라그나로크"],
+    stone: ["mind"],
   },
   {
     name_kr: "앤트맨",
@@ -123,6 +134,7 @@ const movies_launch = [
     phase: "2",
     timeline: "14",
     next_movie: ["캡틴 아메리카 : 시빌 워", "앤트맨과 와스프"],
+    stone: [],
   },
   {
     name_kr: "캡틴 아메리카 : 시빌 워",
@@ -139,6 +151,7 @@ const movies_launch = [
       "앤트맨과 와스프",
       "블랙팬서",
     ],
+    stone: ["mind"],
   },
   {
     name_kr: "닥터 스트레인지",
@@ -149,6 +162,7 @@ const movies_launch = [
     phase: "3",
     timeline: "18",
     next_movie: ["토르 : 라그나로크", "어벤져스 : 인피니티 워"],
+    stone: ["time"],
   },
   {
     name_kr: "가디언즈 오브 갤럭시 VOL.2",
@@ -159,6 +173,7 @@ const movies_launch = [
     phase: "3",
     timeline: "12",
     next_movie: ["어벤져스 : 인피니티 워"],
+    stone: [],
   },
   {
     name_kr: "스파이더맨 : 홈커밍",
@@ -169,6 +184,7 @@ const movies_launch = [
     phase: "3",
     timeline: "19",
     next_movie: ["어벤져스 : 인피니티 워"],
+    stone: [],
   },
   {
     name_kr: "토르 : 라그나로크",
@@ -179,6 +195,7 @@ const movies_launch = [
     phase: "3",
     timeline: "20",
     next_movie: ["어벤져스 : 인피니티 워"],
+    stone: [],
   },
   {
     name_kr: "블랙 팬서",
@@ -189,6 +206,7 @@ const movies_launch = [
     phase: "3",
     timeline: "17",
     next_movie: ["어벤져스 : 인피니티 워"],
+    stone: [],
   },
   {
     name_kr: "어벤져스 : 인피니티 워",
@@ -199,6 +217,7 @@ const movies_launch = [
     phase: "3",
     timeline: "22",
     next_movie: ["어벤져스 : 엔드게임"],
+    stone: ["space", "mind", "power", "time", "soul", "reality"],
   },
   {
     name_kr: "앤트맨과 와스프",
@@ -209,6 +228,7 @@ const movies_launch = [
     phase: "3",
     timeline: "21",
     next_movie: ["어벤져스 : 인피니티 워"],
+    stone: [],
   },
   {
     name_kr: "캡틴 마블",
@@ -219,6 +239,7 @@ const movies_launch = [
     phase: "3",
     timeline: "2",
     next_movie: ["어벤져스 : 엔드게임"],
+    stone: ["space"],
   },
   {
     name_kr: "어벤져스 : 엔드게임",
@@ -229,6 +250,7 @@ const movies_launch = [
     phase: "3",
     timeline: "23",
     next_movie: ["스파이더맨 : 파 프롬 홈"],
+    stone: ["space", "mind", "power", "time", "soul", "reality"],
   },
   {
     name_kr: "스파이더맨 : 파 프롬 홈",
@@ -239,6 +261,7 @@ const movies_launch = [
     phase: "3",
     timeline: "24",
     next_movie: [],
+    stone: [],
   },
   {
     name_kr: "블랙위도우",
@@ -249,6 +272,7 @@ const movies_launch = [
     phase: "4",
     timeline: "16",
     next_movie: ["어벤져스 : 인피니티 워"],
+    stone: [],
   },
 ];
 
