@@ -77,7 +77,7 @@ function f_movies_sort_movie_prev(select_movie_name) {
       }
     }
   }
-  console.log(movies_sort_movie_prev);
+
 }
 
 function f_movies_sort_movie_next(select_movie_name) {
@@ -128,6 +128,13 @@ function createPrevMovieDiv() {
     f_a_title(return_sort_movie_prev[2], pi, movies_sort_movie_prev);
     order_sort_prev_new.appendChild(return_sort_movie_prev[0]);
   }
+
+  if (movies_sort_movie_prev.length === 0) {
+    const null_span = document.createElement("span");
+    null_span.innerText = "- 이전 영화가 없습니다 -";
+    null_span.style.marginBottom = "35px";
+    order_sort_prev_new.appendChild(null_span);
+  }
 }
 
 function createNextMovieDiv() {
@@ -143,5 +150,13 @@ function createNextMovieDiv() {
     f_a_title(return_sort_movie_next[1], ni, movies_sort_movie_next);
     f_a_title(return_sort_movie_next[2], ni, movies_sort_movie_next);
     order_sort_next_new.appendChild(return_sort_movie_next[0]);
+  }
+
+  if (movies_sort_movie_next.length === 0) {
+    const null_span = document.createElement("span");
+    null_span.innerText = "- Coming soon -";
+    null_span.style.color = "tomato";
+    null_span.style.marginBottom = "35px";
+    order_sort_next_new.appendChild(null_span);
   }
 }
