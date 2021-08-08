@@ -83,9 +83,6 @@ function selectMovie(event) {
       f_a_title(select_movie_a_img, a, movies_launch);
     }
   }
-  const clickStatement = document.querySelector(
-    ".phase:nth-child(2) .phase_movie"
-  );
 
   if (statement_sort === 0) {
     event.preventDefault();

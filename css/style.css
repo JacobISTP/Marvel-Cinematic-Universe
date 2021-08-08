@@ -162,7 +162,11 @@ body {
 }
 
 .order_menu {
-  width: 100vw;
+  width: 95vw;
+  height: 80vh;
+  overflow-y: auto;
+  padding-top: 10px;
+  margin-right: 5vw;
 }
 
 .documentTitle {
