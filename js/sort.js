@@ -1,10 +1,17 @@
+// statement 선언
+let statement_sort = 0;
+
 // menu div 지정
 const maindiv_sort = document.querySelector("#order_sort");
 
 // 검색 div 지정
 const order_sort = document.querySelector(".phase:first-child .phase_movie");
-const order_sort_prev = document.querySelector(".phase:nth-child(2) .phase_movie");
-const order_sort_next = document.querySelector(".phase:nth-child(3) .phase_movie");
+const order_sort_prev = document.querySelector(
+  ".phase:nth-child(2) .phase_movie"
+);
+const order_sort_next = document.querySelector(
+  ".phase:nth-child(3) .phase_movie"
+);
 
 // 검색 input 지정
 const form_sort = document.querySelector("#input_sort");
@@ -15,16 +22,20 @@ const movies_sort_movie = [];
 
 // 검색_타임라인순 정렬
 function initializeDiv(div) {
-
   while (div.hasChildNodes()) {
     div.removeChild(div.firstChild);
   }
 }
 
 function f_movies_sort_movie(event) {
-  const order_sort_prev_new = document.querySelector(".phase:nth-child(2) .phase_movie");
-  const order_sort_next_new = document.querySelector(".phase:nth-child(3) .phase_movie");
+  const order_sort_prev_new = document.querySelector(
+    ".phase:nth-child(2) .phase_movie"
+  );
+  const order_sort_next_new = document.querySelector(
+    ".phase:nth-child(3) .phase_movie"
+  );
   event.preventDefault();
+  statement_sort = 0;
   movies_sort_movie.length = 0;
 
   initializeDiv(order_sort);
@@ -52,14 +63,35 @@ function f_movies_sort_movie(event) {
 
 function selectMovie(event) {
   const select_movie = event.target.parentElement.parentElement;
-  const select_movie_text = select_movie.querySelector(".eachMovie div a").innerText;
-  const select_movie_name = select_movie_text.substring(0, select_movie_text.indexOf("("));
+  const select_movie_a = select_movie.querySelector(".eachMovie div a");
+  const select_movie_a_img = select_movie.querySelector(".eachMovie a");
+  const select_movie_text = select_movie_a.innerText;
+  const select_movie_name = select_movie_text.substring(
+    0,
+    select_movie_text.indexOf("(")
+  );
   initializeDiv(order_sort);
 
   order_sort.appendChild(select_movie);
-  console.log(select_movie_name);
+
   f_movies_sort_movie_prev(select_movie_name);
   f_movies_sort_movie_next(select_movie_name);
+
+  for (let a = 0; a < movies_launch.length; a++) {
+    if (select_movie_name === movies_launch[a].name_kr) {
+      f_a_title(select_movie_a, a, movies_launch);
+      f_a_title(select_movie_a_img, a, movies_launch);
+    }
+  }
+  const clickStatement = document.querySelector(
+    ".phase:nth-child(2) .phase_movie"
+  );
+
+  if (statement_sort === 0) {
+    event.preventDefault();
+  }
+
+  statement_sort = 1;
 }
 
 form_sort.addEventListener("submit", f_movies_sort_movie);
@@ -77,7 +109,6 @@ function f_movies_sort_movie_prev(select_movie_name) {
       }
     }
   }
-
 }
 
 function f_movies_sort_movie_next(select_movie_name) {
@@ -89,16 +120,15 @@ function f_movies_sort_movie_next(select_movie_name) {
       movies_sort_movie_next_name.push(movies_time[n]);
     }
   }
-  console.log(movies_sort_movie_next_name);
   for (let n = 0; n < movies_sort_movie_next_name[0].next_movie.length; n++) {
     for (let t = 0; t < movies_time.length; t++) {
-      if (movies_sort_movie_next_name[0].next_movie[n] === movies_time[t].name_kr) {
+      if (
+        movies_sort_movie_next_name[0].next_movie[n] === movies_time[t].name_kr
+      ) {
         movies_sort_movie_next.push(movies_time[t]);
       }
     }
   }
-  console.log(movies_sort_movie_next);
-
 }
 
 function createMovieDiv(title) {
@@ -118,7 +148,9 @@ function createPrevMovieDiv() {
   if (document.querySelector(".phase:nth-child(2) .phase_movie") === null) {
     createMovieDiv("이전 관련 영화");
   }
-  const order_sort_prev_new = document.querySelector(".phase:nth-child(2) .phase_movie");
+  const order_sort_prev_new = document.querySelector(
+    ".phase:nth-child(2) .phase_movie"
+  );
   if (order_sort_prev_new !== null) {
     initializeDiv(order_sort_prev_new);
   }
@@ -141,7 +173,9 @@ function createNextMovieDiv() {
   if (document.querySelector(".phase:nth-child(3) .phase_movie") === null) {
     createMovieDiv("다음 관련 영화");
   }
-  const order_sort_next_new = document.querySelector(".phase:nth-child(3) .phase_movie");
+  const order_sort_next_new = document.querySelector(
+    ".phase:nth-child(3) .phase_movie"
+  );
   if (order_sort_next_new !== null) {
     initializeDiv(order_sort_next_new);
   }

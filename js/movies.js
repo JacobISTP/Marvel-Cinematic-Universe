@@ -48,7 +48,7 @@ const movies_launch = [
     img_poster: "img/캡틴아메리카1.jpg",
     phase: "1",
     timeline: "1",
-    next_movie: ["어벤져스", "캡틴 아메리카 : 윈터솔저"],
+    next_movie: ["토르 : 천둥의 신", "어벤져스", "캡틴 아메리카 : 윈터솔저"],
   },
   {
     name_kr: "어벤져스",
@@ -78,7 +78,11 @@ const movies_launch = [
     img_poster: "img/토르2.jpg",
     phase: "2",
     timeline: "8",
-    next_movie: ["가디언즈 오브 갤럭시", "어벤져스 : 에이지 오브 울트론", "토르 : 라그나로크"],
+    next_movie: [
+      "가디언즈 오브 갤럭시",
+      "어벤져스 : 에이지 오브 울트론",
+      "토르 : 라그나로크",
+    ],
   },
   {
     name_kr: "캡틴 아메리카 : 윈터솔저",
@@ -128,7 +132,13 @@ const movies_launch = [
     img_poster: "img/캡틴아메리카3.jpg",
     phase: "3",
     timeline: "15",
-    next_movie: ["어벤져스 : 인피니티 워", "블랙위도우", "스파이더맨 : 홈커밍", "앤트맨과 와스프", "블랙팬서"],
+    next_movie: [
+      "어벤져스 : 인피니티 워",
+      "블랙위도우",
+      "스파이더맨 : 홈커밍",
+      "앤트맨과 와스프",
+      "블랙팬서",
+    ],
   },
   {
     name_kr: "닥터 스트레인지",
@@ -288,26 +298,25 @@ function f_a_title(a_title, i, array) {
   a_title.style.textAlign = "center";
 }
 
-function createDivEach(array, index){
-    const div_movie = document.createElement("div");
-    const div_title = document.createElement("div");
-    const img_movie = document.createElement("img");
-    const a_img = document.createElement("a");
-    const a_title = document.createElement("a");
-    const returnArray = [div_movie, a_img, a_title];
+function createDivEach(array, index) {
+  const div_movie = document.createElement("div");
+  const div_title = document.createElement("div");
+  const img_movie = document.createElement("img");
+  const a_img = document.createElement("a");
+  const a_title = document.createElement("a");
+  const returnArray = [div_movie, a_img, a_title];
 
-    f_div_movie(div_movie);
-    f_img_movie(img_movie, index, array);
+  f_div_movie(div_movie);
+  f_img_movie(img_movie, index, array);
 
-    a_title.innerText = `${array[index].name_kr}(${array[index].name_en
-      }) - ${array[index].launch_year}`;
+  a_title.innerText = `${array[index].name_kr}(${array[index].name_en}) - ${array[index].launch_year}`;
 
-    a_img.appendChild(img_movie);
-    div_movie.appendChild(a_img);
-    div_title.appendChild(a_title);
-    div_movie.appendChild(div_title);
+  a_img.appendChild(img_movie);
+  div_movie.appendChild(a_img);
+  div_title.appendChild(a_title);
+  div_movie.appendChild(div_title);
 
-    return returnArray;
+  return returnArray;
 }
 
 // 개봉순 정렬
