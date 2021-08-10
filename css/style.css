@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
 
 * {
   box-sizing: border-box;
@@ -233,6 +234,12 @@ h1 {
 
 #input_sort input:last-child:hover {
   cursor: pointer;
+}
+
+#stoneName span {
+  font-family: "Russo One", sans-serif;
+  color: white;
+  font-size: 30px;
 }
 
 a:link {

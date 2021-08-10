@@ -1,6 +1,23 @@
-// statement 선언
-let statement_sort_stone = 0;
+// stoneName div
+const div_stone_name = document.querySelector("#stoneName");
+const span_stone_name = document.createElement("span");
+let stone_name = "";
 
+div_stone_name.style.height = "30px";
+div_stone_name.style.display = "flex";
+div_stone_name.style.justifyContent = "center";
+span_stone_name.style.textAlign = "center";
+div_stone_name.appendChild(span_stone_name);
+
+// stone별 색상
+const dic_stone_color = {
+  space: "rgb(11,62,211)",
+  mind: "rgb(230,187,44)",
+  reality: "rgb(251,1,21)",
+  power: "rgb(213,39,239)",
+  time: "rgb(3,214,150)",
+  soul: "rgb(192,94,45)",
+};
 // 검색 div 지정
 const order_sort_result = document.querySelector(
   ".phase:nth-child(2) .phase_movie"
@@ -22,6 +39,8 @@ for (let s = 0; s < stones_sort.length; s++) {
 
   f_div_movie(div_stone);
   f_img_movie(img_stone, s, stones_sort);
+  div_stone.style.transform = "scale(60%)";
+  div_stone.style.width = "50px";
   img_stone.style.borderRadius = "15px";
   img_stone.style.border = "3px solid rgba(105,122,135,0.6)";
   img_stone.classList.add("eachFeature");
@@ -31,8 +50,27 @@ for (let s = 0; s < stones_sort.length; s++) {
   order_sort.appendChild(div_stone);
 
   div_stone.addEventListener("click", selectStone);
+  div_stone.addEventListener("mouseenter", addStoneName);
+  div_stone.addEventListener("mouseleave", removeStoneName);
 }
 
+function addStoneName(event) {
+  const src_img = event.target.childNodes[0].currentSrc;
+  stone_name = src_img.substring(
+    src_img.lastIndexOf("/") + 1,
+    src_img.indexOf(".png")
+  );
+  span_stone_name.innerText = stone_name;
+  span_stone_name.style.textDecoration = "underline";
+  span_stone_name.style.textShadow = `0px 0px 15px ${dic_stone_color[stone_name]}`;
+  console.log(stone_name);
+}
+
+function removeStoneName() {
+  stone_name = "";
+  span_stone_name.innerText = stone_name;
+  console.log(stone_name);
+}
 function selectStone(event) {
   const select_stone = event.target;
   const select_stone_copy = select_stone.cloneNode(true);
@@ -42,6 +80,7 @@ function selectStone(event) {
   stones_sort_movie.length = 0;
 
   order_sort_result.appendChild(select_stone_copy);
+  // select_stone_copy.childNodes.classList.remove("eachFeature");
 
   for (let s = 0; s < movies_time.length; s++) {
     if (movies_time[s].stone.includes(select_stone_name)) {
