@@ -34,6 +34,7 @@ const movies_launch = [
       { man_name: "브루스 배너", char_name: "헐크" },
       { man_name: "썬더볼트 장군", char_name: "" },
       { man_name: "토니 스타크", char_name: "" },
+      { man_name: "에밀 브론스키", char_name: "어보미네이터" },
       { man_name: "스탠 리", char_name: "" },
     ],
     stone: [],
