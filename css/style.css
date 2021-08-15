@@ -184,6 +184,12 @@ body {
   transform: scale(110%) translateY(-5%);
 }
 
+.stoneName span {
+  font-family: "Russo One", sans-serif;
+  color: white;
+  font-size: 30px;
+}
+
 h1 {
   text-shadow: 2px 2px 4px #95adc1;
 }
@@ -234,12 +240,6 @@ h1 {
 
 #input_sort input:last-child:hover {
   cursor: pointer;
-}
-
-#stoneName span {
-  font-family: "Russo One", sans-serif;
-  color: white;
-  font-size: 30px;
 }
 
 a:link {

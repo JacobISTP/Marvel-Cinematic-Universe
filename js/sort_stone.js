@@ -1,5 +1,5 @@
 // stoneName div
-const div_stone_name = document.querySelector("#stoneName");
+const div_stone_name = document.querySelector(".stoneName");
 const span_stone_name = document.createElement("span");
 let stone_name = "";
 
@@ -59,7 +59,7 @@ function addStoneName(event) {
   const src_img = event.target.childNodes[0].currentSrc;
   stone_name = src_img.substring(
     src_img.lastIndexOf("/") + 1,
-    src_img.indexOf(".png")
+    src_img.indexOf(".jpg")
   );
   span_stone_name.innerText = stone_name;
   span_stone_name.style.textDecoration = "underline";
@@ -74,11 +74,23 @@ function selectStone(event) {
   const select_stone = event.target;
   const select_stone_copy = select_stone.cloneNode(true);
   const select_stone_name = select_stone.id;
+  const select_stone_div = document.createElement("div");
+  const select_stone_span = document.createElement("span");
 
   initializeDiv(order_sort_result);
   stones_sort_movie.length = 0;
 
-  order_sort_result.appendChild(select_stone_copy);
+  select_stone_div.classList.add("stoneName");
+  select_stone_div.style.display = "flex";
+  select_stone_div.style.flexDirection = "column";
+  select_stone_div.style.alignItems = "center";
+  select_stone_span.innerText = select_stone_name;
+  select_stone_span.style.textDecoration = "underline";
+  select_stone_span.style.textShadow = `0px 0px 15px ${dic_stone_color[select_stone_name]}`;
+
+  select_stone_div.appendChild(select_stone_copy);
+  select_stone_div.appendChild(select_stone_span);
+  order_sort_result.appendChild(select_stone_div);
   // select_stone_copy.childNodes.classList.remove("eachFeature");
 
   for (let s = 0; s < movies_time.length; s++) {
