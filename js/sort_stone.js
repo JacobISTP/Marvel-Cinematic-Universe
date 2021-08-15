@@ -42,6 +42,7 @@ for (let s = 0; s < stones_sort.length; s++) {
   div_stone.style.transform = "scale(60%)";
   div_stone.style.width = "50px";
   img_stone.style.borderRadius = "15px";
+  img_stone.style.cursor = "pointer";
   img_stone.style.border = "3px solid rgba(105,122,135,0.6)";
   img_stone.classList.add("eachFeature");
   img_stone.id = stones_sort[s].name_stone;
@@ -63,13 +64,11 @@ function addStoneName(event) {
   span_stone_name.innerText = stone_name;
   span_stone_name.style.textDecoration = "underline";
   span_stone_name.style.textShadow = `0px 0px 15px ${dic_stone_color[stone_name]}`;
-  console.log(stone_name);
 }
 
 function removeStoneName() {
   stone_name = "";
   span_stone_name.innerText = stone_name;
-  console.log(stone_name);
 }
 function selectStone(event) {
   const select_stone = event.target;
