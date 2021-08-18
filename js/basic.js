@@ -2,7 +2,7 @@ const btn_time = document.querySelector("#btn_time");
 const btn_launch = document.querySelector("#btn_launch");
 const btn_sort = document.querySelector("#btn_sort");
 const panel_main = document.querySelector("body>div.order");
-const sort_href = ["sort_movie.html", "sort_hero.html", "sort_stone.html"];
+const sort_href = ["sort_movie.html", "sort_character.html", "sort_stone.html"];
 const sort_button = ["영화", "캐릭터", "스톤"];
 
 function screenMoveToRight() {
