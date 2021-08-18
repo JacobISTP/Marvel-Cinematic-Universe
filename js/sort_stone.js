@@ -24,12 +24,12 @@ const order_sort_result = document.querySelector(
 );
 // 검색배열 생성
 const stones_sort = [
-  { name_stone: "space", img_poster: "img/stone/수정본/space.jpg" },
-  { name_stone: "mind", img_poster: "img/stone/수정본/mind.jpg" },
-  { name_stone: "reality", img_poster: "img/stone/수정본/reality.jpg" },
-  { name_stone: "power", img_poster: "img/stone/수정본/power.jpg" },
-  { name_stone: "time", img_poster: "img/stone/수정본/time.jpg" },
-  { name_stone: "soul", img_poster: "img/stone/수정본/soul.jpg" },
+  { name_stone: "space", img: "img/stone/수정본/space.jpg" },
+  { name_stone: "mind", img: "img/stone/수정본/mind.jpg" },
+  { name_stone: "reality", img: "img/stone/수정본/reality.jpg" },
+  { name_stone: "power", img: "img/stone/수정본/power.jpg" },
+  { name_stone: "time", img: "img/stone/수정본/time.jpg" },
+  { name_stone: "soul", img: "img/stone/수정본/soul.jpg" },
 ];
 const stones_sort_movie = [];
 
