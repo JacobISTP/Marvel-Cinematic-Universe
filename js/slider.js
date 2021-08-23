@@ -11,6 +11,8 @@ function prev() {
     order_launch_slider.style.transform = `translateX(-100vw)`;
     order_time_slider.style.transform = `translateX(0)`;
     position = 1;
+    btn_time.classList.add("currentOrder");
+    btn_launch.classList.remove("currentOrder");
   }
 }
 function next() {
@@ -18,6 +20,8 @@ function next() {
     order_launch_slider.style.transform = `translateX(0)`;
     order_time_slider.style.transform = `translateX(100vw)`;
     position = 0;
+    btn_time.classList.remove("currentOrder");
+    btn_launch.classList.add("currentOrder");
   }
 }
 
