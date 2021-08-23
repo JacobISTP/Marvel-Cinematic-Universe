@@ -75,8 +75,6 @@ function selectMovie(event) {
   statement_sort_movie = 1;
 }
 
-form_sort.addEventListener("submit", f_movies_sort_movie);
-
 const movies_sort_movie_prev = [];
 const movies_sort_movie_next = [];
 
@@ -162,3 +160,6 @@ function createNextMovieDiv() {
     order_sort_next_new.appendChild(null_span);
   }
 }
+
+window.addEventListener("pageshow", f_movies_sort_movie);
+form_sort.addEventListener("submit", f_movies_sort_movie);

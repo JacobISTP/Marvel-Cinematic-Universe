@@ -438,8 +438,6 @@ function selectMovie_char(event) {
   statement_sort_char = 1;
 }
 
-form_sort.addEventListener("submit", f_movies_sort_movie);
-
 const movies_sort_movie_char = [];
 
 function f_movies_sort_movie_char(select_char_name) {
@@ -471,3 +469,5 @@ function createCharMovieDiv() {
     order_sort_char_new.appendChild(return_sort_movie_char[0]);
   }
 }
+window.addEventListener("pageshow", f_movies_sort_movie);
+form_sort.addEventListener("submit", f_movies_sort_movie);

@@ -39,8 +39,8 @@ for (let s = 0; s < stones_sort.length; s++) {
 
   f_div_movie(div_stone);
   f_img_movie(img_stone, s, stones_sort);
-  div_stone.style.transform = "scale(60%)";
-  div_stone.style.width = "50px";
+  div_stone.style.transform = "scale(75%)";
+  div_stone.style.width = "33%";
   img_stone.style.borderRadius = "15px";
   img_stone.style.cursor = "pointer";
   img_stone.style.border = "3px solid rgba(105,122,135,0.6)";
@@ -84,6 +84,9 @@ function selectStone(event) {
   select_stone_div.style.display = "flex";
   select_stone_div.style.flexDirection = "column";
   select_stone_div.style.alignItems = "center";
+
+  select_stone_copy.classList.remove("eachFeature");
+
   select_stone_span.innerText = select_stone_name;
   select_stone_span.style.textDecoration = "underline";
   select_stone_span.style.textShadow = `0px 0px 15px ${dic_stone_color[select_stone_name]}`;
