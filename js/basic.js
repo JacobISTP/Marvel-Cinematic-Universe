@@ -1,32 +1,6 @@
-const btn_time = document.querySelector("#btn_time");
-const btn_launch = document.querySelector("#btn_launch");
 const btn_sort = document.querySelector("#btn_sort");
-const panel_main = document.querySelector("body>div.order");
 const sort_href = ["sort_movie.html", "sort_character.html", "sort_stone.html"];
 const sort_button = ["영화", "캐릭터", "스톤"];
-
-function screenMoveToRight() {
-  panel_main.classList.add("moveToRight");
-  panel_main.classList.remove("moveToLeft");
-  btn_time.classList.add("currentOrder");
-  btn_launch.classList.remove("currentOrder");
-}
-function screenMoveToLeft() {
-  panel_main.classList.remove("moveToRight");
-  panel_main.classList.add("moveToLeft");
-  btn_time.classList.remove("currentOrder");
-  btn_launch.classList.add("currentOrder");
-}
-
-function phaseWidthResize() {
-  const panel_phase = document.querySelectorAll(".phase");
-  let pcWidth = window.matchMedia("(min-width: 421px)");
-  if (pcWidth.matches === true) {
-    panel_phase.forEach(function (item) {
-      item.style.width = `500px`;
-    });
-  }
-}
 
 function titleAnchorHref(a, i) {
   a.href = sort_href[i];
@@ -64,6 +38,3 @@ function sortMenuAdd() {
 }
 
 sortMenuAdd();
-window.addEventListener("click", phaseWidthResize);
-btn_time.addEventListener("click", screenMoveToRight);
-btn_launch.addEventListener("click", screenMoveToLeft);

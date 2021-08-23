@@ -1,22 +1,23 @@
-const order_launch_slider = document.querySelector("#order_launch");
-const order_time_slider = document.querySelector("#order_time");
+const order_launch_slider = document.querySelector(".order>div:first-child");
+const order_time_slider = document.querySelector(".order>div:last-child");
+const btn_time = document.querySelector("#btn_time");
+const btn_launch = document.querySelector("#btn_launch");
+
 let startX, endX;
 let position = 0;
 
-let mobileJs = window.matchMedia("(max-width: 420px)");
-let pcJs = window.matchMedia("(min-width: 421px)");
 function prev() {
-  if (position == 0 && mobileJs.matches == true) {
+  if (position == 0) {
     order_launch_slider.style.transform = `translateX(-100%)`;
     order_time_slider.style.transform = `translateX(0)`;
-    position += 1;
+    position = 1;
   }
 }
 function next() {
-  if (position == 1 && mobileJs.matches == true) {
+  if (position == 1) {
     order_launch_slider.style.transform = `translateX(0)`;
     order_time_slider.style.transform = `translateX(100%)`;
-    position -= 1;
+    position = 0;
   }
 }
 
@@ -33,15 +34,9 @@ function touchEnd(event) {
 }
 
 function resizeWidth() {
-  if (pcJs.matches == true) {
-    order_launch_slider.style.transform = `translateX(0)`;
-    order_time_slider.style.transform = `translateX(100vw)`;
-  } else {
-    order_launch_slider.style.transform = `translateX(0)`;
-    order_time_slider.style.transform = `translateX(100%)`;
-    position = 0;
-  }
-  console.log(position);
+  order_launch_slider.style.transform = `translateX(0)`;
+  order_time_slider.style.transform = `translateX(100vw)`;
+  position = 0;
 }
 
 window.addEventListener("resize", resizeWidth);
@@ -49,3 +44,5 @@ order_launch.addEventListener("touchstart", touchStart);
 order_launch.addEventListener("touchend", touchEnd);
 order_time.addEventListener("touchstart", touchStart);
 order_time.addEventListener("touchend", touchEnd);
+btn_time.addEventListener("click", prev);
+btn_launch.addEventListener("click", next);
