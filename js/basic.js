@@ -63,9 +63,7 @@ function sortMenuAdd() {
   }
 }
 
-phaseWidthResize();
 sortMenuAdd();
-window.addEventListener("resize", phaseWidthResize);
 window.addEventListener("click", phaseWidthResize);
 btn_time.addEventListener("click", screenMoveToRight);
 btn_launch.addEventListener("click", screenMoveToLeft);
