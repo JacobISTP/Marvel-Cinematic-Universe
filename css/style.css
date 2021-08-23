@@ -50,11 +50,28 @@ body {
   border-radius: 5px;
 }
 
+.phase div.phase_header {
+  display: flex;
+  justify-content: space-between;
+}
+
 .phase h3 {
   margin: 0px;
   margin-bottom: 10px;
   width: fit-content;
   transition: 0.2s ease-in-out;
+}
+
+.phase h4 {
+  margin: 5px 10px 0px 0px;
+  padding: 0px 5px;
+  width: fit-content;
+  height: fit-content;
+}
+
+.phase:hover h4 {
+  background-color: rgb(99, 99, 99);
+  border-radius: 5px;
 }
 
 .phase a {

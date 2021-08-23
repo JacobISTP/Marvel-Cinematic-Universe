@@ -8,41 +8,54 @@ const order_sort_prev = document.querySelector(
 const order_sort_next = document.querySelector(
   ".phase:nth-child(3) .phase_movie"
 );
+// 뒤로가기 element 지정
+const go_to_back = document.querySelector(".phase_header h4");
 // 검색배열 생성
 const movies_sort_movie = [];
 
-function f_movies_sort_movie(event) {
+function f_movies_sort_movie(event = "", array = []) {
   const order_sort_prev_new = document.querySelector(
     ".phase:nth-child(2) .phase_movie"
   );
   const order_sort_next_new = document.querySelector(
     ".phase:nth-child(3) .phase_movie"
   );
-  event.preventDefault();
+
   statement_sort_movie = 0;
-  movies_sort_movie.length = 0;
+  if (array.length === 0) {
+    event.preventDefault();
+    movies_sort_movie.length = 0;
+    for (let s = 0; s < movies_time.length; s++) {
+      if (movies_time[s].name_kr.includes(input_sort.value)) {
+        movies_sort_movie.push(movies_time[s]);
+      }
+    }
+    array = movies_sort_movie;
+  }
 
   initializeDiv(order_sort);
+
   if (order_sort_prev_new !== null) {
     initializeDiv(order_sort_prev_new);
   }
   if (order_sort_next_new !== null) {
     initializeDiv(order_sort_next_new);
   }
+  for_createMovieDiv_movie(array);
+}
 
-  for (let s = 0; s < movies_time.length; s++) {
-    if (movies_time[s].name_kr.includes(input_sort.value)) {
-      movies_sort_movie.push(movies_time[s]);
-    }
-  }
-
-  for (let i = 0; i < movies_sort_movie.length; i++) {
-    const div_movie_sort = createDivEach(movies_sort_movie, i)[0];
+function for_createMovieDiv_movie(array) {
+  for (let i = 0; i < array.length; i++) {
+    const div_movie_sort = createDivEach(array, i)[0];
     div_movie_sort.addEventListener("click", selectMovie);
     div_movie_sort.addEventListener("click", createPrevMovieDiv);
     div_movie_sort.addEventListener("click", createNextMovieDiv);
     order_sort.appendChild(div_movie_sort);
   }
+}
+
+function f_backToTheResult_movie() {
+  f_movies_sort_movie("", movies_sort_movie);
 }
 
 function selectMovie(event) {
@@ -163,3 +176,4 @@ function createNextMovieDiv() {
 
 window.addEventListener("pageshow", f_movies_sort_movie);
 form_sort.addEventListener("submit", f_movies_sort_movie);
+go_to_back.addEventListener("click", f_backToTheResult_movie);

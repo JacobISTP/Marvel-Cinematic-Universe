@@ -360,6 +360,8 @@ let characters = [
 // statement 선언
 let statement_sort_char = 0;
 
+// 뒤로가기 element 지정
+const go_to_back = document.querySelector(".phase_header h4");
 // 검색배열 생성
 const movies_sort_char = [];
 
@@ -391,34 +393,46 @@ function createDivEach_char(array, index) {
   return returnArray;
 }
 
-function f_movies_sort_movie(event) {
+function f_movies_sort_char(event, array = []) {
   const order_sort_char_new = document.querySelector(
     ".phase:nth-child(2) .phase_movie"
   );
-  event.preventDefault();
+
   statement_sort_char = 0;
-  movies_sort_char.length = 0;
 
   initializeDiv(order_sort);
   if (order_sort_char_new !== null) {
     initializeDiv(order_sort_char_new);
   }
 
-  for (let s = 0; s < characters.length; s++) {
-    if (
-      characters[s].man_name.includes(input_sort.value) ||
-      characters[s].char_name.includes(input_sort.value)
-    ) {
-      movies_sort_char.push(characters[s]);
+  if (array.length === 0) {
+    event.preventDefault();
+    movies_sort_char.length = 0;
+    for (let s = 0; s < characters.length; s++) {
+      if (
+        characters[s].man_name.includes(input_sort.value) ||
+        characters[s].char_name.includes(input_sort.value)
+      ) {
+        movies_sort_char.push(characters[s]);
+      }
     }
+    array = movies_sort_char;
   }
 
-  for (let i = 0; i < movies_sort_char.length; i++) {
-    const div_movie_sort = createDivEach_char(movies_sort_char, i)[0];
+  for_createMovieDiv_char(movies_sort_char);
+}
+
+function for_createMovieDiv_char(array) {
+  for (let i = 0; i < array.length; i++) {
+    const div_movie_sort = createDivEach_char(array, i)[0];
     div_movie_sort.addEventListener("click", selectMovie_char);
     div_movie_sort.addEventListener("click", createCharMovieDiv);
     order_sort.appendChild(div_movie_sort);
   }
+}
+
+function f_backToTheResult_char() {
+  f_movies_sort_char("", movies_sort_char);
 }
 
 function selectMovie_char(event) {
@@ -469,5 +483,7 @@ function createCharMovieDiv() {
     order_sort_char_new.appendChild(return_sort_movie_char[0]);
   }
 }
-window.addEventListener("pageshow", f_movies_sort_movie);
-form_sort.addEventListener("submit", f_movies_sort_movie);
+
+window.addEventListener("pageshow", f_movies_sort_char);
+form_sort.addEventListener("submit", f_movies_sort_char);
+go_to_back.addEventListener("click", f_backToTheResult_char);
