@@ -8,7 +8,7 @@ let position = 0;
 
 function prev() {
   if (position == 0) {
-    order_launch_slider.style.transform = `translateX(-100%)`;
+    order_launch_slider.style.transform = `translateX(-100vw)`;
     order_time_slider.style.transform = `translateX(0)`;
     position = 1;
   }
@@ -16,7 +16,7 @@ function prev() {
 function next() {
   if (position == 1) {
     order_launch_slider.style.transform = `translateX(0)`;
-    order_time_slider.style.transform = `translateX(100%)`;
+    order_time_slider.style.transform = `translateX(100vw)`;
     position = 0;
   }
 }
