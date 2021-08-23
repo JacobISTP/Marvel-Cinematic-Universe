@@ -11,8 +11,6 @@ body {
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-  width: 100vw;
-  height: fit-content;
   margin: 0;
 }
 
@@ -80,7 +78,8 @@ body {
 }
 
 .order > div {
-  width: 100vw;
+  width: fit-content;
+  height: fit-content;
 }
 
 .order_title {
@@ -255,7 +254,7 @@ a:visited {
   .order {
     /* flex-direction: column; */
     width: 100vw;
-    height: 80vh;
+    height: 75vh;
     overflow: hidden;
     position: relative;
     padding: 0;
