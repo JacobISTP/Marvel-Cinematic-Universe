@@ -9,32 +9,38 @@
     <link href="img/avengers_icon.png" rel="shortcut icon" />
   </head>
   <body class="font_basic">
-    <h1>Marvel Cinematic Universe</h1>
-    <div class="order_title">
-      <a href="index.html">
-        <button class="btn_changeOrder font_basic" id="btn_launch">
-          메인으로
-        </button></a
-      >
-      <div id="btn_sort">
-        <button class="btn_changeOrder font_basic currentOrder">
-          검색-스톤
-        </button>
-      </div>
-    </div>
-    <div class="order">
-      <div class="order_menu" id="order_sort">
-        <div class="phase">
-          <h3>인피니티 스톤</h3>
-          <div class="stoneName"></div>
-          <div class="phase_movie"></div>
-        </div>
-        <div class="phase">
-          <h3>검색 결과</h3>
-          <div class="phase_movie"></div>
+    <header>
+      <article>
+        <img src="img/MARVEL.png" />
+      </article>
+      <div class="order_title">
+        <a href="index.html">
+          <button class="btn_changeOrder font_basic" id="btn_launch">
+            메인으로
+          </button></a
+        >
+        <div id="btn_sort">
+          <button class="btn_changeOrder font_basic currentOrder">
+            검색-스톤
+          </button>
         </div>
       </div>
-    </div>
+    </header>
+    <main>
+      <div class="order">
+        <div class="order_menu" id="order_sort">
+          <div class="phase">
+            <h3>인피니티 스톤</h3>
+            <div class="stoneName"></div>
+            <div class="phase_movie"></div>
+          </div>
+          <div class="phase">
+            <h3>검색 결과</h3>
+            <div class="phase_movie"></div>
+          </div>
+        </div>
+      </div>
+    </main>
   </body>
   <script src="js/basic.js"></script>
   <script src="js/movies.js"></script>

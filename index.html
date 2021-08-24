@@ -10,13 +10,18 @@
   </head>
   <body class="font_basic">
     <header>
-      <h1>Marvel Cinematic Universe</h1>
+      <article>
+        <img src="img/MARVEL.png" />
+      </article>
       <div class="order_title">
         <button class="btn_changeOrder font_basic currentOrder" id="btn_launch">
           개봉순
         </button>
         <button class="btn_changeOrder font_basic" id="btn_time">
           타임라인
+        </button>
+        <button class="btn_changeOrder font_basic" id="btn_schedule">
+          개봉예정
         </button>
         <div id="btn_sort">
           <button class="btn_changeOrder font_basic">검색</button>
@@ -28,19 +33,19 @@
         <div>
           <div class="order_menu" id="order_launch">
             <div class="phase">
-              <h3>Phase I</h3>
+              <h3>Phase I .</h3>
               <div class="phase_movie"></div>
             </div>
             <div class="phase">
-              <h3>Phase II</h3>
+              <h3>Phase II .</h3>
               <div class="phase_movie"></div>
             </div>
             <div class="phase">
-              <h3>Phase III</h3>
+              <h3>Phase III .</h3>
               <div class="phase_movie"></div>
             </div>
             <div class="phase">
-              <h3>Phase IV</h3>
+              <h3>Phase IV .</h3>
               <div class="phase_movie"></div>
             </div>
           </div>
@@ -49,6 +54,14 @@
           <div class="order_menu" id="order_time">
             <div class="phase" id="timeline">
               <h3>2021. 07. 31. 현재</h3>
+              <div class="phase_movie"></div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="order_menu" id="order_schedule">
+            <div class="phase" id="scheduled">
+              <h3>개봉예정작</h3>
               <div class="phase_movie"></div>
             </div>
           </div>

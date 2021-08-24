@@ -6,17 +6,34 @@
 }
 
 body {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 1)),
-    url("../img/Avengers-logo-black-background_2560x1600.jpg");
+  background-color: black;
+  margin: 0;
+  overflow-y: auto;
+}
+
+header > article {
+  width: 100%;
+  padding: 100px;
+  padding-top: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  background-image: url("../img/universe.png");
   background-position: center;
   background-size: cover;
-  background-attachment: fixed;
-  margin: 0;
+}
+
+article > img {
+  width: 50vw;
+  opacity: 0%;
+  transition: 1s ease-in-out;
 }
 
 .font_basic {
   font-family: "Do Hyeon", sans-serif;
-  color: rgba(255, 220, 0, 0.95);
+  color: rgb(228, 228, 228);
 }
 
 .font_basic_sm {
@@ -26,15 +43,15 @@ body {
 }
 
 #btn_sort:hover .font_basic_sm {
-  color: rgba(255, 220, 0, 0.95);
+  color: rgb(228, 228, 228);
 }
 
 .phase {
   display: flex;
   flex-direction: column;
-  width: 95vw;
+  width: 88vw;
   border: 2px solid white;
-  margin: 10px 0px 30px 5px;
+  margin: 0px 5px 30px 5px;
   padding-left: 5px;
   transition: background-color 0.2s ease-in-out;
 }
@@ -43,23 +60,22 @@ body {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-.phase:hover h3 {
-  padding: 0px 5px;
-  transform: translate(-5px, -15px);
-  background-color: #2e3741;
-  border-radius: 5px;
-}
-
 .phase div.phase_header {
   display: flex;
+  position: relative;
   justify-content: space-between;
 }
 
 .phase h3 {
-  margin: 0px;
-  margin-bottom: 10px;
-  width: fit-content;
+  margin: 10px 0px 20px 0px;
+  font-size: 22px;
+  width: 100%;
+  text-align: center;
   transition: 0.2s ease-in-out;
+
+  padding: 0px 5px;
+  transform: translate(0px, 3px);
+  text-shadow: rgb(51, 51, 51) 3.5px 3.5px;
 }
 
 .phase h4 {
@@ -67,6 +83,8 @@ body {
   padding: 0px 5px;
   width: fit-content;
   height: fit-content;
+  position: absolute;
+  right: -8px;
 }
 
 .phase:hover h4 {
@@ -92,9 +110,14 @@ body {
 .order {
   position: relative;
   display: flex;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)),
+    url("../img/Avengers-logo-black-background_2560x1600.jpg");
+  background-position: center;
+  background-size: cover;
 }
 
 .order > div {
+  padding-top: 10px;
   width: fit-content;
   height: fit-content;
 }
@@ -105,8 +128,11 @@ body {
   justify-content: left;
   align-items: center;
   box-sizing: border-box;
+  width: fit-content;
   height: fit-content;
-  margin-bottom: 15px;
+  margin: 0px 5vw 15px 5vw;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding-top: 10px;
 }
 
 .order_title form {
@@ -131,11 +157,11 @@ body {
 
 .btn_changeOrder {
   padding: 0px 5px;
-  margin: 0px 5px 5px 5px;
-  border: 4px solid rgba(0, 0, 0, 0);
+  margin: 0px 0px 5px 0px;
+  border: 4px solid rgba(44, 32, 32, 0);
   background: none;
 
-  font-size: 30px;
+  font-size: 26px;
   display: flex;
   align-items: center;
   box-sizing: border-box;
@@ -181,11 +207,11 @@ body {
 }
 
 .order_menu {
-  width: 95vw;
+  width: 90%;
   height: 80vh;
   overflow-y: auto;
   padding-top: 10px;
-  margin-right: 5vw;
+  margin: 0px 5vw 0px 5vw;
 }
 
 .documentTitle {
@@ -193,6 +219,8 @@ body {
 }
 
 .eachFeature {
+  width: 50px;
+  height: 75px;
   filter: brightness(75%);
   transition: 0.2s ease-in-out;
 }
@@ -206,13 +234,10 @@ body {
   font-family: "Russo One", sans-serif;
   color: white;
   font-size: 30px;
+  transform: translateY(-8px);
 }
 
-h1 {
-  text-shadow: 2px 2px 4px #95adc1;
-}
-
-#timeline > * {
+#timeline > div {
   padding-bottom: 5px;
 }
 
@@ -267,17 +292,81 @@ a:visited {
   cursor: pointer;
 }
 
+.movie_div_size {
+  width: 150px;
+}
+
+.movie_img_size {
+  width: 100px;
+  height: 150px;
+}
+
+@media (min-width: 421px) {
+  .phase h3 {
+    margin: 0px;
+    margin-bottom: 10px;
+    font-size: 30px;
+    width: fit-content;
+    transition: 0.2s ease-in-out;
+    color: #95adc1;
+
+    padding: 0px 5px;
+    transform: translate(40px, 15px);
+    text-shadow: rgb(51, 51, 51) 3.5px 3.5px;
+  }
+
+  .phase_movie {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .movie_div_size {
+    width: 160px;
+    margin: 25px;
+  }
+
+  .movie_img_size {
+    width: 160px;
+    height: 240px;
+  }
+
+  .btn_changeOrder {
+    padding: 0px 5px;
+    margin: 0px 5px 5px 5px;
+    border: 4px solid rgba(44, 32, 32, 0);
+    background: none;
+
+    font-size: 35px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    height: 40px;
+
+    transition: border-color 0.2s ease-in-out;
+  }
+
+  .currentOrder {
+    padding: 20px 10px;
+    border: 4px solid #2e3741;
+    border-radius: 5px;
+  }
+
+  .eachFeature {
+    filter: brightness(75%);
+    transition: 0.2s ease-in-out;
+  }
+}
+
 @media (min-width: 300px) {
   .order {
     /* flex-direction: column; */
     width: 100vw;
-    height: 75vh;
+    height: 90vh;
     overflow: hidden;
     position: relative;
     padding: 0;
   }
   .order > div {
-    margin: 0em auto;
     width: fit-content;
     height: 100%;
     position: absolute;
@@ -286,6 +375,9 @@ a:visited {
   .order > div:nth-child(1) {
   }
   .order > div:nth-child(2) {
+    transform: translateX(100vw);
+  }
+  .order > div:nth-child(3) {
     transform: translateX(100vw);
   }
   #order_launch {

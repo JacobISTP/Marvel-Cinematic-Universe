@@ -596,6 +596,11 @@ const order_time = document.querySelector(
   "#order_time .phase:first-child .phase_movie"
 );
 
+// 개봉예정 div 지정
+const order_schedule = document.querySelector(
+  "#order_schedule .phase:first-child .phase_movie"
+);
+
 // 시간순배열 생성
 const movies_time = [];
 
@@ -606,10 +611,146 @@ for (let t = 0; t < movies_launch.length; t++) {
     }
   }
 }
+
+// 개봉예정배열 생성
+const movies_schedule = [
+  {
+    name_kr: "샹치와 텐 링즈의 전설",
+    name_en: "Shang-Chi and the Legend of the Ten Rings",
+    launch_year: "2021. 09. 01.",
+    url: "https://www.youtube.com/watch?v=Pj7CadRf82k",
+    img: "img/poster/수정본-300/샹치.jpg",
+    phase: "4",
+    timeline: "25",
+    next_movie: [],
+    character: [{ man_name: "샹치", char_name: "샹치" }],
+    stone: [],
+  },
+  {
+    name_kr: "베놈 2: 렛 데어 비 카니지",
+    name_en: "Venom: Let There Be Carnage",
+    launch_year: "2021. 10. 13.\n마블은 아니지만 추후 MCU 편입 가능성있음",
+    url: "https://www.youtube.com/watch?v=BryJA-Xp-Q4",
+    img: "img/poster/수정본-300/베놈2.jpg",
+    phase: "",
+    timeline: "",
+    next_movie: [],
+    character: [{ man_name: "에디 브록", char_name: "베놈" }],
+    stone: [],
+  },
+  {
+    name_kr: "이터널스",
+    name_en: "Eternals",
+    launch_year: "2021. 11. 5.",
+    url: "https://www.youtube.com/watch?v=BdkSkI61aGo",
+    img: "img/poster/수정본-300/이터널스.jpg",
+    phase: "4",
+    timeline: "26",
+    next_movie: [],
+    character: [{ man_name: "길가메쉬", char_name: "길가메쉬" }],
+    stone: [],
+  },
+  {
+    name_kr: "스파이더맨: 노 웨이 홈",
+    name_en: "Spider-Man: No Way Home",
+    launch_year: "2021. 12. 17",
+    url: "https://www.youtube.com/watch?v=WgU7P6o-GkM&t=12s",
+    img: "img/poster/수정본-300/스파이더맨_노웨이홈.jpg",
+    phase: "4",
+    timeline: "27",
+    next_movie: [],
+    character: [{ man_name: "피터 파커", char_name: "스파이더맨" }],
+    stone: [],
+  },
+  {
+    name_kr: "닥터 스트레인지 인 더 멀티버스 오브 매드니스",
+    name_en: "Doctor Strange in the Multiverse of Madness",
+    launch_year: "2022. 3. 25.",
+    url: "/",
+    img: "img/poster/수정본-300/닥터스트레인지2.jpg",
+    phase: "4",
+    timeline: "28",
+    next_movie: [],
+    character: [{ man_name: "닥터 스트레인지", char_name: "닥터 스트레인지" }],
+    stone: [],
+  },
+  {
+    name_kr: "토르: 러브 앤 썬더",
+    name_en: "Thor: Love and Thunder",
+    launch_year: "2022. 5. 6.",
+    url: "/",
+    img: "img/poster/수정본-300/토르4.jpg",
+    phase: "4",
+    timeline: "29",
+    next_movie: [],
+    character: [{ man_name: "토르", char_name: "토르" }],
+    stone: [],
+  },
+  {
+    name_kr: "블랙팬서: 와칸다 포에버",
+    name_en: "Black Panther: Wakanda Forever",
+    launch_year: "2022. 7. 8.",
+    url: "/",
+    img: "img/poster/수정본-300/블랙팬서2.jpg",
+    phase: "4",
+    timeline: "30",
+    next_movie: [],
+    character: [{ man_name: "", char_name: "" }],
+    stone: [],
+  },
+  {
+    name_kr: "더 마블스",
+    name_en: "The Marvels",
+    launch_year: "2022. 11. 11.",
+    url: "/",
+    img: "img/poster/수정본-300/캡틴마블2.jpg",
+    phase: "4",
+    timeline: "31",
+    next_movie: [],
+    character: [{ man_name: "", char_name: "" }],
+    stone: [],
+  },
+  {
+    name_kr: "앤트맨과 와스프: 퀀터매니아",
+    name_en: "Ant-man and the Wasp: Quantumania",
+    launch_year: "2023. 2. 17.",
+    url: "/",
+    img: "img/poster/수정본-300/앤트맨3.jpg",
+    phase: "4",
+    timeline: "32",
+    next_movie: [],
+    character: [{ man_name: "", char_name: "" }],
+    stone: [],
+  },
+  {
+    name_kr: "블레이드",
+    name_en: "Blade",
+    launch_year: "2023?",
+    url: "/",
+    img: "img/poster/수정본-300/블레이드.jpg",
+    phase: "4",
+    timeline: "33",
+    next_movie: [],
+    character: [{ man_name: "", char_name: "" }],
+    stone: [],
+  },
+  {
+    name_kr: "판타스틱4",
+    name_en: "Fantasitc4",
+    launch_year: "2023?",
+    url: "/",
+    img: "img/poster/수정본-300/판타스틱4.jpg",
+    phase: "4",
+    timeline: "34",
+    next_movie: [],
+    character: [{ man_name: "", char_name: "" }],
+    stone: [],
+  },
+];
 // 함수 생성
 function f_div_movie(div_movie) {
   div_movie.classList.add("eachMovie");
-  div_movie.style.width = "150px";
+  div_movie.classList.add("movie_div_size");
   div_movie.style.display = "flex";
   div_movie.style.flexDirection = "column";
   div_movie.style.alignItems = "center";
@@ -618,8 +759,7 @@ function f_div_movie(div_movie) {
 
 function f_img_movie(img_movie, i, array) {
   img_movie.src = array[i].img;
-  img_movie.style.width = "100px";
-  img_movie.style.height = "150px";
+  img_movie.classList.add("movie_img_size");
 }
 
 function f_a_title(a_title, i, array) {
@@ -668,4 +808,12 @@ for (let il = 0; il < movies_time.length; il++) {
   f_a_title(return_time[1], il, movies_time);
   f_a_title(return_time[2], il, movies_time);
   order_time.appendChild(return_time[0]);
+}
+
+// 개봉예정작
+for (let il = 0; il < movies_schedule.length; il++) {
+  const return_schedule = createDivEach(movies_schedule, il);
+  f_a_title(return_schedule[1], il, movies_schedule);
+  f_a_title(return_schedule[2], il, movies_schedule);
+  order_schedule.appendChild(return_schedule[0]);
 }

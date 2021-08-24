@@ -362,6 +362,13 @@ let statement_sort_char = 0;
 
 // 뒤로가기 element 지정
 const go_to_back = document.querySelector(".phase_header h4");
+const title_header = document.querySelector("article img");
+
+function expandTitle() {
+  title_header.style.opacity = "100%";
+}
+
+expandTitle();
 // 검색배열 생성
 const movies_sort_char = [];
 

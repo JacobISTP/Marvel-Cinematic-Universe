@@ -1,6 +1,13 @@
 // stoneName div
 const div_stone_name = document.querySelector(".stoneName");
 const span_stone_name = document.createElement("span");
+const title_header = document.querySelector("article img");
+
+function expandTitle() {
+  title_header.style.opacity = "100%";
+}
+
+expandTitle();
 let stone_name = "";
 
 div_stone_name.style.height = "30px";
@@ -40,7 +47,7 @@ for (let s = 0; s < stones_sort.length; s++) {
   f_div_movie(div_stone);
   f_img_movie(img_stone, s, stones_sort);
   div_stone.style.transform = "scale(75%)";
-  div_stone.style.width = "150px";
+  div_stone.style.width = "100px";
   img_stone.style.borderRadius = "15px";
   img_stone.style.cursor = "pointer";
   img_stone.style.border = "3px solid rgba(105,122,135,0.6)";
