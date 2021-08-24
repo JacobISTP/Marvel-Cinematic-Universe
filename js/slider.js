@@ -21,18 +21,27 @@ function move1() {
   order_time_slider.style.transform = `translateX(100vw)`;
   order_schedule_slider.style.transform = `translateX(100vw)`;
   position = 0;
+  btn_launch.classList.add("currentOrder");
+  btn_time.classList.remove("currentOrder");
+  btn_schedule.classList.remove("currentOrder");
 }
 function move2() {
   order_launch_slider.style.transform = `translateX(-100vw)`;
   order_time_slider.style.transform = `translateX(0)`;
   order_schedule_slider.style.transform = `translateX(100vw)`;
   position = 1;
+  btn_launch.classList.remove("currentOrder");
+  btn_time.classList.add("currentOrder");
+  btn_schedule.classList.remove("currentOrder");
 }
 function move3() {
   order_launch_slider.style.transform = `translateX(-100vw)`;
   order_time_slider.style.transform = `translateX(-100vw)`;
   order_schedule_slider.style.transform = `translateX(0vw)`;
   position = 2;
+  btn_launch.classList.remove("currentOrder");
+  btn_time.classList.remove("currentOrder");
+  btn_schedule.classList.add("currentOrder");
 }
 
 function prev() {
