@@ -1,6 +1,7 @@
 // 개봉순배열 생성
 const movies_launch = [
   {
+    search: "아이언맨1",
     name_kr: "아이언맨",
     name_en: "Ironman 1",
     launch_year: "2008",
@@ -22,6 +23,7 @@ const movies_launch = [
     stone: [],
   },
   {
+    search: "인크레더블 헐크",
     name_kr: "인크레더블 헐크",
     name_en: "Incredible Hulk",
     launch_year: "2008",
@@ -40,6 +42,7 @@ const movies_launch = [
     stone: [],
   },
   {
+    search: "아이언맨2",
     name_kr: "아이언맨2",
     name_en: "Ironman2",
     launch_year: "2010",
@@ -62,6 +65,7 @@ const movies_launch = [
     stone: [],
   },
   {
+    search: "토르 : 천둥의 신",
     name_kr: "토르 : 천둥의 신",
     name_en: "Thor : God of Thunder",
     launch_year: "2011",
@@ -85,6 +89,7 @@ const movies_launch = [
     stone: ["space"],
   },
   {
+    search: "캡틴 아메리카1",
     name_kr: "캡틴 아메리카 : 퍼스트어벤져",
     name_en: "Captain America : The First Avenger",
     launch_year: "2011",
@@ -92,7 +97,7 @@ const movies_launch = [
     img: "img/poster/수정본/캡틴아메리카1.jpg",
     phase: "1",
     timeline: "1",
-    next_movie: ["토르 : 천둥의 신", "어벤져스", "캡틴 아메리카 : 윈터솔저"],
+    next_movie: ["토르 : 천둥의 신", "어벤져스", "캡틴 아메리카 : 윈터솔져"],
     character: [
       { man_name: "스티브 로저스", char_name: "캡틴 아메리카" },
       { man_name: "요한 슈미트", char_name: "레드 스컬" },
@@ -105,6 +110,7 @@ const movies_launch = [
     stone: ["space"],
   },
   {
+    search: "어벤져스",
     name_kr: "어벤져스",
     name_en: "Avengers",
     launch_year: "2012",
@@ -112,7 +118,7 @@ const movies_launch = [
     img: "img/poster/수정본/어벤져스1.jpg",
     phase: "1",
     timeline: "7",
-    next_movie: ["아이언맨3", "토르 : 다크월드", "캡틴 아메리카 : 윈터솔저"],
+    next_movie: ["아이언맨3", "토르 : 다크월드", "캡틴 아메리카 : 윈터솔져"],
     character: [
       { man_name: "토니 스타크", char_name: "아이언맨" },
       { man_name: "나타샤 로마노프", char_name: "블랙 위도우" },
@@ -130,6 +136,7 @@ const movies_launch = [
     stone: ["space", "mind"],
   },
   {
+    search: "아이언맨3",
     name_kr: "아이언맨3",
     name_en: "Ironman3",
     launch_year: "2013",
@@ -149,6 +156,7 @@ const movies_launch = [
     stone: [],
   },
   {
+    search: "토르 : 다크월드",
     name_kr: "토르 : 다크월드",
     name_en: "Thor : The Dark World",
     launch_year: "2013",
@@ -174,7 +182,8 @@ const movies_launch = [
     stone: ["reality"],
   },
   {
-    name_kr: "캡틴 아메리카 : 윈터솔저",
+    search: "캡틴 아메리카2",
+    name_kr: "캡틴 아메리카 : 윈터솔져",
     name_en: "Captain America : The Winter Soldier",
     launch_year: "2014",
     url: "https://www.youtube.com/watch?v=p3LzFlAIbUk",
@@ -198,6 +207,7 @@ const movies_launch = [
     stone: ["mind"],
   },
   {
+    search: "가디언즈 오브 갤럭시",
     name_kr: "가디언즈 오브 갤럭시",
     name_en: "Guardians of the Galaxy",
     launch_year: "2014",
@@ -221,6 +231,7 @@ const movies_launch = [
     stone: ["reality", "power"],
   },
   {
+    search: "어벤져스 : 에이지 오브 울트론",
     name_kr: "어벤져스 : 에이지 오브 울트론",
     name_en: "Avengers : Age of Ultron",
     launch_year: "2015",
@@ -254,6 +265,7 @@ const movies_launch = [
     stone: ["mind"],
   },
   {
+    search: "앤트맨1",
     name_kr: "앤트맨",
     name_en: "Ant-man",
     launch_year: "2015",
@@ -274,6 +286,7 @@ const movies_launch = [
     stone: [],
   },
   {
+    search: "캡틴 아메리카3",
     name_kr: "캡틴 아메리카 : 시빌 워",
     name_en: "Captain America : Civil War",
     launch_year: "2016",
@@ -309,6 +322,7 @@ const movies_launch = [
     stone: ["mind"],
   },
   {
+    search: "닥터 스트레인지",
     name_kr: "닥터 스트레인지",
     name_en: "Doctor Strange",
     launch_year: "2016",
@@ -328,6 +342,7 @@ const movies_launch = [
     stone: ["time"],
   },
   {
+    search: "가디언즈 오브 갤럭시 VOL.2",
     name_kr: "가디언즈 오브 갤럭시 VOL.2",
     name_en: "Guardians of the Galaxy Vol. 2",
     launch_year: "2017",
@@ -352,6 +367,7 @@ const movies_launch = [
     stone: [],
   },
   {
+    search: "스파이더맨 : 홈커밍",
     name_kr: "스파이더맨 : 홈커밍",
     name_en: "Spider-Man : Homecoming",
     launch_year: "2017",
@@ -372,6 +388,7 @@ const movies_launch = [
     stone: [],
   },
   {
+    search: "토르 : 라그나로크",
     name_kr: "토르 : 라그나로크",
     name_en: "Thor : Ragnarok",
     launch_year: "2017",
@@ -394,6 +411,7 @@ const movies_launch = [
     stone: [],
   },
   {
+    search: "블랙 팬서1",
     name_kr: "블랙 팬서",
     name_en: "Black Panther",
     launch_year: "2018",
@@ -411,6 +429,7 @@ const movies_launch = [
     stone: [],
   },
   {
+    search: "어벤져스 : 인피니티 워",
     name_kr: "어벤져스 : 인피니티 워",
     name_en: "Avengers : Infinity War",
     launch_year: "2018",
@@ -456,6 +475,7 @@ const movies_launch = [
     stone: ["space", "mind", "power", "time", "soul", "reality"],
   },
   {
+    search: "앤트맨과 와스프",
     name_kr: "앤트맨과 와스프",
     name_en: "Ant-Man and the Wasp",
     launch_year: "2018",
@@ -475,6 +495,7 @@ const movies_launch = [
     stone: [],
   },
   {
+    search: "캡틴 마블",
     name_kr: "캡틴 마블",
     name_en: "Captain Marvel",
     launch_year: "2019",
@@ -492,6 +513,7 @@ const movies_launch = [
     stone: ["space"],
   },
   {
+    search: "어벤져스 : 엔드게임",
     name_kr: "어벤져스 : 엔드게임",
     name_en: "Avengers : Endgame",
     launch_year: "2019",
@@ -546,6 +568,7 @@ const movies_launch = [
     stone: ["space", "mind", "power", "time", "soul", "reality"],
   },
   {
+    search: "스파이더맨 : 파 프롬 홈",
     name_kr: "스파이더맨 : 파 프롬 홈",
     name_en: "Spider-Man : Far From Home",
     launch_year: "2019",
@@ -565,6 +588,7 @@ const movies_launch = [
     stone: [],
   },
   {
+    search: "블랙위도우",
     name_kr: "블랙위도우",
     name_en: "Black Widow",
     launch_year: "2021",
@@ -615,6 +639,7 @@ for (let t = 0; t < movies_launch.length; t++) {
 // 개봉예정배열 생성
 const movies_schedule = [
   {
+    search: "샹치와 텐 링즈의 전설",
     name_kr: "샹치와 텐 링즈의 전설",
     name_en: "Shang-Chi and the Legend of the Ten Rings",
     launch_year: "2021. 09. 01.",
@@ -627,8 +652,9 @@ const movies_schedule = [
     stone: [],
   },
   {
-    name_kr: "베놈 2: 렛 데어 비 카니지",
-    name_en: "Venom: Let There Be Carnage",
+    search: "베놈 2 : 렛 데어 비 카니지",
+    name_kr: "베놈 2 : 렛 데어 비 카니지",
+    name_en: "Venom : Let There Be Carnage",
     launch_year: "2021. 10. 13.\n마블은 아니지만 추후 MCU 편입 가능성있음",
     url: "https://www.youtube.com/watch?v=BryJA-Xp-Q4",
     img: "img/poster/수정본-300/베놈2.jpg",
@@ -639,6 +665,7 @@ const movies_schedule = [
     stone: [],
   },
   {
+    search: "이터널스",
     name_kr: "이터널스",
     name_en: "Eternals",
     launch_year: "2021. 11. 5.",
@@ -651,8 +678,9 @@ const movies_schedule = [
     stone: [],
   },
   {
-    name_kr: "스파이더맨: 노 웨이 홈",
-    name_en: "Spider-Man: No Way Home",
+    search: "스파이더맨 : 노 웨이 홈",
+    name_kr: "스파이더맨 : 노 웨이 홈",
+    name_en: "Spider-Man : No Way Home",
     launch_year: "2021. 12. 17",
     url: "https://www.youtube.com/watch?v=WgU7P6o-GkM&t=12s",
     img: "img/poster/수정본-300/스파이더맨_노웨이홈.jpg",
@@ -663,6 +691,7 @@ const movies_schedule = [
     stone: [],
   },
   {
+    search: "닥터 스트레인지 인 더 멀티버스 오브 매드니스",
     name_kr: "닥터 스트레인지 인 더 멀티버스 오브 매드니스",
     name_en: "Doctor Strange in the Multiverse of Madness",
     launch_year: "2022. 3. 25.",
@@ -675,8 +704,9 @@ const movies_schedule = [
     stone: [],
   },
   {
-    name_kr: "토르: 러브 앤 썬더",
-    name_en: "Thor: Love and Thunder",
+    search: "토르 : 러브 앤 썬더",
+    name_kr: "토르 : 러브 앤 썬더",
+    name_en: "Thor : Love and Thunder",
     launch_year: "2022. 5. 6.",
     url: "",
     img: "img/poster/수정본-300/토르4.jpg",
@@ -687,6 +717,7 @@ const movies_schedule = [
     stone: [],
   },
   {
+    search: "블랙팬서: 와칸다 포에버",
     name_kr: "블랙팬서: 와칸다 포에버",
     name_en: "Black Panther: Wakanda Forever",
     launch_year: "2022. 7. 8.",
@@ -699,6 +730,7 @@ const movies_schedule = [
     stone: [],
   },
   {
+    search: "더 마블스",
     name_kr: "더 마블스",
     name_en: "The Marvels",
     launch_year: "2022. 11. 11.",
@@ -711,8 +743,9 @@ const movies_schedule = [
     stone: [],
   },
   {
-    name_kr: "앤트맨과 와스프: 퀀터매니아",
-    name_en: "Ant-man and the Wasp: Quantumania",
+    search: "앤트맨과 와스프 : 퀀터매니아",
+    name_kr: "앤트맨과 와스프 : 퀀터매니아",
+    name_en: "Ant-man and the Wasp : Quantumania",
     launch_year: "2023. 2. 17.",
     url: "",
     img: "img/poster/수정본-300/앤트맨3.jpg",
@@ -723,6 +756,7 @@ const movies_schedule = [
     stone: [],
   },
   {
+    search: "가디언즈 오브 갤럭시 VOL.3",
     name_kr: "가디언즈 오브 갤럭시 VOL.3",
     name_en: "Guardians of the Galaxy Vol. 3",
     launch_year: "2023. 5. 5.",
@@ -735,6 +769,7 @@ const movies_schedule = [
     stone: [],
   },
   {
+    search: "마블 블레이드1",
     name_kr: "블레이드",
     name_en: "Blade",
     launch_year: "2023?",
@@ -747,6 +782,7 @@ const movies_schedule = [
     stone: [],
   },
   {
+    search: "마블 판타스틱4",
     name_kr: "판타스틱4",
     name_en: "Fantasitc4",
     launch_year: "2023?",

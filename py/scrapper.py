@@ -1,21 +1,24 @@
 import requests
+import csv
 from bs4 import BeautifulSoup
-from flask import render_template, send_file, request, Flask
+from exporter import export_to_csv
+
+with open('search.csv', newline='\n', encoding='UTF8') as f:
+    reader = csv.reader(f)
+    movies = list(reader)
 
 basicUrl = "https://search.naver.com/search.naver?query="
-app = Flask("content_scrape")
+content_movies = []
 
-@app.route("/")
-def home():
-    return render_template("../index.html")
+for movie in movies[1:]:
+    try:
+        print(f"스크랩 : {movie[0]}")
+        url = f"{basicUrl}영화 {movie[0]} 정보"
+        soup = BeautifulSoup(requests.get(url).text, "html.parser")
+        synopsys = soup.find("div", {"class":"_cm_content_area_synopsis"}).find("p").text
+    except:
+        synopsys = "Coming Soon!"
+    content_movies.append({"search": movie[0], "synopsys": synopsys})
 
-@app.route("/search")
-def search():
-    word=request.args.get("word")
-
-    # url = basicUrl+word+" 정보"
-    url = basicUrl+"아이언맨1"+" 정보"
-    soup = BeautifulSoup(requests.get(url).text, "html.parser")
-    synopsys = soup.find("div", {"class":"_cm_content_area_synopsis"}).find("p").text
-
-    return render_template("../content_movie.html", word=word, synopsys=synopsys)
+print(content_movies)
+export_to_csv(content_movies, "content_movies")
