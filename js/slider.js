@@ -6,8 +6,14 @@ const btn_launch = document.querySelector("#btn_launch");
 const btn_schedule = document.querySelector("#btn_schedule");
 const title_header = document.querySelector("article img");
 
-function expandTitle() {
-  title_header.style.opacity = "100%";
+function actionTitleRemain() {
+  title_header.classList.remove("logo_transition");
+  title_header.classList.add("logo_opacity_100");
+  console.log("work");
+}
+function actionTitle() {
+  title_header.classList.remove("logo_opacity_100");
+  title_header.classList.add("logo_transition");
 }
 
 let mobileJs = window.matchMedia("(max-width: 420px)");
@@ -81,7 +87,7 @@ function resizeWidth() {
   position = 0;
 }
 
-window.addEventListener("pageshow", expandTitle);
+window.addEventListener("pageshow", actionTitle);
 window.addEventListener("resize", resizeWidth);
 order_launch.addEventListener("touchstart", touchStart);
 order_launch.addEventListener("touchend", touchEnd);
@@ -92,3 +98,5 @@ order_schedule.addEventListener("touchend", touchEnd);
 btn_launch.addEventListener("click", move1);
 btn_time.addEventListener("click", move2);
 btn_schedule.addEventListener("click", move3);
+title_header.addEventListener("animationend", actionTitleRemain);
+title_header.addEventListener("click", actionTitle);

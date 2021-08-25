@@ -25,10 +25,27 @@ header > article {
   background-size: cover;
 }
 
-article > img {
+article img {
   width: 50vw;
   opacity: 0%;
-  transition: 1s ease-in-out;
+  cursor: pointer;
+}
+
+@keyframes refreshElement {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+
+.logo_opacity_100 {
+  opacity: 100%;
+}
+
+.logo_transition {
+  animation: refreshElement 1s ease-in-out;
 }
 
 .font_basic {
