@@ -9,7 +9,6 @@ const title_header = document.querySelector("article img");
 function actionTitleRemain() {
   title_header.classList.remove("logo_transition");
   title_header.classList.add("logo_opacity_100");
-  console.log("work");
 }
 function actionTitle() {
   title_header.classList.remove("logo_opacity_100");
