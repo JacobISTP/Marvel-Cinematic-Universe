@@ -14,6 +14,11 @@ function actionTitle() {
   title_header.classList.remove("logo_opacity_100");
   title_header.classList.add("logo_transition");
 }
+function sliderInitialize() {
+  order_launch_slider.style.transform = "translateX(0%)";
+  order_time_slider.style.transform = "translateX(100%)";
+  order_schedule_slider.style.transform = "translateX(100%)";
+}
 
 let mobileJs = window.matchMedia("(max-width: 420px)");
 let pcJs = window.matchMedia("(min-width: 421px)");
@@ -21,31 +26,48 @@ let startX, endX, startY, endY;
 let position = 0;
 let goalPosition = 0;
 
-function move1() {
-  order_launch_slider.style.transform = `translateX(0)`;
-  order_time_slider.style.transform = `translateX(100vw)`;
-  order_schedule_slider.style.transform = `translateX(100vw)`;
-  position = 0;
-  btn_launch.classList.add("currentOrder");
+const move_statements = ["moveToLeft", "moveToMiddle", "moveToRight"];
+
+function remove_move_statements() {
+  order_launch_slider.style = null;
+  order_time_slider.style = null;
+  order_schedule_slider.style = null;
+  order_launch_slider.classList.remove(...move_statements);
+  order_time_slider.classList.remove(...move_statements);
+  order_schedule_slider.classList.remove(...move_statements);
+}
+
+function remove_currentOrder() {
+  btn_launch.classList.remove("currentOrder");
   btn_time.classList.remove("currentOrder");
   btn_schedule.classList.remove("currentOrder");
+}
+
+function move1() {
+  remove_move_statements();
+  order_launch_slider.classList.add("moveToMiddle");
+  order_time_slider.classList.add("moveToRight");
+  order_schedule_slider.classList.add("moveToRight");
+  position = 0;
+  remove_currentOrder();
+  btn_launch.classList.add("currentOrder");
 }
 function move2() {
-  order_launch_slider.style.transform = `translateX(-100vw)`;
-  order_time_slider.style.transform = `translateX(0)`;
-  order_schedule_slider.style.transform = `translateX(100vw)`;
+  remove_move_statements();
+  order_launch_slider.classList.add("moveToLeft");
+  order_time_slider.classList.add("moveToMiddle");
+  order_schedule_slider.classList.add("moveToRight");
   position = 1;
-  btn_launch.classList.remove("currentOrder");
+  remove_currentOrder();
   btn_time.classList.add("currentOrder");
-  btn_schedule.classList.remove("currentOrder");
 }
 function move3() {
-  order_launch_slider.style.transform = `translateX(-100vw)`;
-  order_time_slider.style.transform = `translateX(-100vw)`;
-  order_schedule_slider.style.transform = `translateX(0vw)`;
+  remove_move_statements();
+  order_launch_slider.classList.add("moveToLeft");
+  order_time_slider.classList.add("moveToLeft");
+  order_schedule_slider.classList.add("moveToMiddle");
   position = 2;
-  btn_launch.classList.remove("currentOrder");
-  btn_time.classList.remove("currentOrder");
+  remove_currentOrder();
   btn_schedule.classList.add("currentOrder");
 }
 
@@ -87,6 +109,7 @@ function resizeWidth() {
 }
 
 window.addEventListener("pageshow", actionTitle);
+window.addEventListener("pageshow", sliderInitialize);
 window.addEventListener("resize", resizeWidth);
 order_launch.addEventListener("touchstart", touchStart);
 order_launch.addEventListener("touchend", touchEnd);

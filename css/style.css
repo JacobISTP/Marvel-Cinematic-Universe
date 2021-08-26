@@ -213,16 +213,6 @@ article img {
   border-radius: 5px;
 }
 
-.moveToRight {
-  transform: translateX(-100vw);
-  transition: transform 0.5s ease-in-out;
-}
-
-.moveToLeft {
-  transform: translateX(0vw);
-  transition: transform 0.5s ease-in-out;
-}
-
 .order_menu {
   width: 90%;
   height: 80vh;
@@ -389,13 +379,17 @@ a:visited {
     position: absolute;
     transition: 0.5s;
   }
-  .order > div:nth-child(1) {
-  }
-  .order > div:nth-child(2) {
+
+  .moveToRight {
     transform: translateX(100vw);
   }
-  .order > div:nth-child(3) {
-    transform: translateX(100vw);
+
+  .moveToMiddle {
+    transform: translateX(0vw);
+  }
+
+  .moveToLeft {
+    transform: translateX(-100vw);
   }
   #order_launch {
     height: 100%;
