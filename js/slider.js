@@ -95,15 +95,7 @@ function touchEnd(event) {
   }
 }
 
-function resizeWidth() {
-  order_launch_slider.style.transform = `translateX(0)`;
-  order_time_slider.style.transform = `translateX(100vw)`;
-  order_schedule_slider.style.transform = `translateX(100vw)`;
-  position = 0;
-}
-
 window.addEventListener("pageshow", actionTitle);
-// window.addEventListener("resize", resizeWidth);
 order_launch.addEventListener("touchstart", touchStart);
 order_launch.addEventListener("touchend", touchEnd);
 order_time.addEventListener("touchstart", touchStart);
