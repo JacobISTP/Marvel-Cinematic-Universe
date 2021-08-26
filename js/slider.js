@@ -14,17 +14,11 @@ function actionTitle() {
   title_header.classList.remove("logo_opacity_100");
   title_header.classList.add("logo_transition");
 }
-function sliderInitialize() {
-  order_launch_slider.style.transform = "translateX(0%)";
-  order_time_slider.style.transform = "translateX(100%)";
-  order_schedule_slider.style.transform = "translateX(100%)";
-}
 
 let mobileJs = window.matchMedia("(max-width: 420px)");
 let pcJs = window.matchMedia("(min-width: 421px)");
 let startX, endX, startY, endY;
-let position = 0;
-let goalPosition = 0;
+let position = 2;
 
 const move_statements = ["moveToLeft", "moveToMiddle", "moveToRight"];
 
@@ -109,8 +103,7 @@ function resizeWidth() {
 }
 
 window.addEventListener("pageshow", actionTitle);
-window.addEventListener("pageshow", sliderInitialize);
-window.addEventListener("resize", resizeWidth);
+// window.addEventListener("resize", resizeWidth);
 order_launch.addEventListener("touchstart", touchStart);
 order_launch.addEventListener("touchend", touchEnd);
 order_time.addEventListener("touchstart", touchStart);

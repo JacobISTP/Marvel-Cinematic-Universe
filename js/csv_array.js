@@ -26,36 +26,17 @@ function csvToJSON(csv_string) {
   // return JSON.stringify(jsonArray);
 }
 
-function csvFileToJSON(file) {
-  console.log(file);
-  if (!window.FileReader || !window.File) {
-    return Promise.reject("Does not support File API");
-  }
-  if (!(file instanceof File)) {
-    return Promise.reject("Not a file");
-  }
+function csvFileToJSON(file) {}
 
-  return new Promise(function (resolve, reject) {
-    var reader = new FileReader();
-
-    reader.onerror = function (err) {
-      reject(err);
-    };
-
-    // Closure to capture the file information.
-    reader.onload = function () {
-      var text = reader.result;
-      resolve(CSVToArray(text));
-    };
-
-    // Read in the image file as a data URL.
-    reader.readAsText(file);
-  });
+function printFile(file) {
+  const reader = new FileReader();
+  reader.onload = function (evt) {
+    console.log(evt.target.result);
+  };
+  reader.readAsText(file);
 }
 
-csv_string = csvFileToJSON(
-  "C:/Users/user/Desktop/Marvel-Cinematic-Universe/content_movies.csv"
-);
+csv_string = printFile("content_movies.csv");
 console.log(csv_string);
 movies_content = csvToJSON(csv_string);
 console.log(movies_content);
