@@ -1,0 +1,30 @@
+.balloonMenu {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+}
+.balloonMenu > div {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: rgba(46, 55, 65, 0.8);
+}
+.balloonMenu > div > * {
+  margin: 3px 5px;
+}
+.balloonMenuBtn {
+  width: fit-content;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+.balloonMenuAnchor {
+}
+.balloonMenuLogo {
+  width: 28px;
+  height: 20px;
+}

@@ -147,3 +147,50 @@ const content_movies_synopsys = [
   { search: "마블 블레이드1", synopsys: "Coming Soon!" },
   { search: "마블 판타스틱4", synopsys: "Coming Soon!" },
 ];
+
+const selected_movie = document.querySelectorAll(".eachMovie");
+
+function balloonMenuEachMovie(event) {
+  console.log("work");
+  const balloonMenu_div = document.createElement("div");
+  const balloonMenu_div_div = document.createElement("div");
+  const balloonMenu_div_specific = document.createElement("button");
+  const balloonMenu_a_youtube = document.createElement("a");
+  const balloonMenu_a_youtube_img = document.createElement("img");
+
+  balloonMenu_div.classList.add("balloonMenu");
+  balloonMenu_div_specific.classList.add("balloonMenuBtn");
+  balloonMenu_div_specific.classList.add("font_basic");
+  balloonMenu_a_youtube.classList.add("balloonMenuAnchor");
+  balloonMenu_a_youtube_img.classList.add("balloonMenuLogo");
+
+  balloonMenu_div_specific.innerText = "상세정보";
+  balloonMenu_a_youtube_img.src = "./img/logo/youtube.png";
+
+  balloonMenu_a_youtube.appendChild(balloonMenu_a_youtube_img);
+  balloonMenu_div_div.appendChild(balloonMenu_div_specific);
+  balloonMenu_div_div.appendChild(balloonMenu_a_youtube);
+  balloonMenu_div.appendChild(balloonMenu_div_div);
+  event.target.appendChild(balloonMenu_div);
+}
+
+function removeBalloonMenuEachMovie() {
+  let mouseout_movie = document.querySelector(".balloonMenu");
+  mouseout_movie.remove();
+}
+
+function specificContents() {
+  const eachmovie_div = document.createElement("div");
+  const eachmovie_div_poster = document.createElement("img");
+  const eachmovie_div_title = document.createElement("h4");
+  const eachmovie_div_synopsys = document.createElement("span");
+}
+
+function removeSpecificContents() {}
+
+for (let i = 0; i < selected_movie.length; i++) {
+  selected_movie[i].addEventListener("mouseenter", balloonMenuEachMovie);
+  selected_movie[i].addEventListener("mouseleave", removeBalloonMenuEachMovie);
+  selected_movie[i].addEventListener("click", specificContents);
+  // 닫기 버튼.addEventListener("click", removeSpecificContents);
+}

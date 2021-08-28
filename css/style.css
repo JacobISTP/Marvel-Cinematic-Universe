@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+@import "balloonMenu.css";
 
 * {
   box-sizing: border-box;
@@ -294,6 +295,11 @@ a:link {
 a:visited {
   color: #95adc1;
 }
+
+.eachMovie {
+  position: relative;
+}
+
 .eachMovie:hover a {
   color: tomato;
   cursor: pointer;
