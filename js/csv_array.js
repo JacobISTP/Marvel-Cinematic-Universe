@@ -1,8 +1,8 @@
 function csvToJSON(csv_string) {
   // 1. 문자열을 줄바꿈으로 구분 => 배열에 저장
-  //   const rows = csv_string.split("\r\n");
+  const rows = csv_string.split("\r\n");
   // 줄바꿈을 \n으로만 구분해야하는 경우, 아래 코드 사용
-  const rows = csv_string.split("\n");
+  // const rows = csv_string.split("\n");
   // 2. 빈 배열 생성: CSV의 각 행을 담을 JSON 객체임
   const jsonArray = [];
   // 3. 제목 행 추출 후, 콤마로 구분 => 배열에 저장
@@ -13,7 +13,7 @@ function csvToJSON(csv_string) {
     let obj = {};
     // 각 내용 행을 콤마로 구분
     let row = rows[i].split(",");
-    // 각 내용행을 {제목1:내용1, 제목2:내용2, ...}형태의 객체로 생성
+    // 각 내용행을 {제목1:내용, 제목2:내용, ...}형태의 객체로 생성
     for (let j = 0; j < header.length; j++) {
       obj[header[j]] = row[j];
     }
@@ -26,17 +26,16 @@ function csvToJSON(csv_string) {
   // return JSON.stringify(jsonArray);
 }
 
-function csvFileToJSON(file) {}
-
-function printFile(file) {
-  const reader = new FileReader();
-  reader.onload = function (evt) {
-    console.log(evt.target.result);
-  };
-  reader.readAsText(file);
+const reader = new FileReader();
+let csvArray = [];
+function read(input) {
+  const csv = input.files[0];
+  reader.readAsText(csv);
 }
 
-csv_string = printFile("content_movies.csv");
-console.log(csv_string);
-movies_content = csvToJSON(csv_string);
-console.log(movies_content);
+reader.onload = function (e) {
+  console.dir(e.target);
+  csvArray = e.target.result;
+  console.log(typeof csvArray);
+  console.log(csvToJSON(csvArray));
+};

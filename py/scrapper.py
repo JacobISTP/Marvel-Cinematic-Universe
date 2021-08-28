@@ -15,7 +15,8 @@ for movie in movies[1:]:
         print(f"스크랩 : {movie[0]}")
         url = f"{basicUrl}영화 {movie[0]} 정보"
         soup = BeautifulSoup(requests.get(url).text, "html.parser")
-        synopsys = soup.find("div", {"class":"_cm_content_area_synopsis"}).find("p").text
+        synopsys = soup.find("div", {"class":"_cm_content_area_synopsis"}).find("p").text.replace(',',"")
+        print(synopsys)
     except:
         synopsys = "Coming Soon!"
     content_movies.append({"search": movie[0], "synopsys": synopsys})
