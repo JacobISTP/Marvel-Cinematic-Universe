@@ -66,7 +66,11 @@ function f_backToTheResult_movie() {
 }
 
 function selectMovie(event) {
-  const select_movie = event.target.parentElement.parentElement;
+  let select_movie = event.target.parentElement.parentElement;
+  console.dir(select_movie);
+  if (select_movie.className === "") {
+    return;
+  }
   const select_movie_a = select_movie.querySelector(".eachMovie div a");
   const select_movie_a_img = select_movie.querySelector(".eachMovie a");
   const select_movie_text = select_movie_a.innerText;
@@ -74,10 +78,12 @@ function selectMovie(event) {
     0,
     select_movie_text.indexOf("(")
   );
+  console.log(select_movie);
+
   initializeDiv(order_sort);
 
   order_sort.appendChild(select_movie);
-
+  console.log(select_movie_name);
   f_movies_sort_movie_prev(select_movie_name);
   f_movies_sort_movie_next(select_movie_name);
 

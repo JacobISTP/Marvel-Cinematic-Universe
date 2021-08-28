@@ -808,10 +808,10 @@ function f_div_movie(div_movie) {
 function f_img_movie(img_movie, i, array) {
   img_movie.src = array[i].img;
   img_movie.classList.add("movie_img_size");
+  img_movie.alt = "no image";
 }
 
-function f_a_title(a_title, i, array) {
-  a_title.href = array[i].url;
+function f_a_title(a_title) {
   a_title.rel = "noreferrer";
   a_title.target = "_blank";
   a_title.style.textAlign = "center";
@@ -834,6 +834,8 @@ function createDivEach(array, index) {
   div_movie.appendChild(a_img);
   div_title.appendChild(a_title);
   div_movie.appendChild(div_title);
+  div_movie.addEventListener("mouseenter", balloonMenuEachMovie);
+  div_movie.addEventListener("mouseleave", removeBalloonMenuEachMovie);
 
   return returnArray;
 }

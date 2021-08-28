@@ -150,8 +150,19 @@ const content_movies_synopsys = [
 
 const selected_movie = document.querySelectorAll(".eachMovie");
 
+console.log(selected_movie);
+
+function getMatchedValueByKey(array, key, name_kr) {
+  for (let index = 0; index < array.length; index++) {
+    if (name_kr === array[index].name_kr) {
+      return array[index][key];
+    }
+  }
+
+  return;
+}
+
 function balloonMenuEachMovie(event) {
-  console.log("work");
   const balloonMenu_div = document.createElement("div");
   const balloonMenu_div_div = document.createElement("div");
   const balloonMenu_div_specific = document.createElement("button");
@@ -164,7 +175,23 @@ function balloonMenuEachMovie(event) {
   balloonMenu_a_youtube.classList.add("balloonMenuAnchor");
   balloonMenu_a_youtube_img.classList.add("balloonMenuLogo");
 
+  let balloon_a_title = event.target.innerText;
+  balloon_a_title = balloon_a_title.substring(0, balloon_a_title.indexOf("("));
+
   balloonMenu_div_specific.innerText = "상세정보";
+  f_a_title(balloonMenu_a_youtube);
+  balloonMenu_a_youtube.href = getMatchedValueByKey(
+    movies_launch,
+    "url",
+    balloon_a_title
+  );
+  if (balloonMenu_a_youtube.href.indexOf("undefined") !== -1) {
+    balloonMenu_a_youtube.href = getMatchedValueByKey(
+      movies_schedule,
+      "url",
+      balloon_a_title
+    );
+  }
   balloonMenu_a_youtube_img.src = "./img/logo/youtube.png";
 
   balloonMenu_a_youtube.appendChild(balloonMenu_a_youtube_img);
@@ -189,8 +216,6 @@ function specificContents() {
 function removeSpecificContents() {}
 
 for (let i = 0; i < selected_movie.length; i++) {
-  selected_movie[i].addEventListener("mouseenter", balloonMenuEachMovie);
-  selected_movie[i].addEventListener("mouseleave", removeBalloonMenuEachMovie);
   selected_movie[i].addEventListener("click", specificContents);
   // 닫기 버튼.addEventListener("click", removeSpecificContents);
 }
