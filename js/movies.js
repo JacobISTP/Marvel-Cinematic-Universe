@@ -842,30 +842,36 @@ function createDivEach(array, index) {
 
 // 개봉순 정렬
 for (let p = 0; p < 4; p++) {
-  for (let i = 0; i < movies_launch.length; i++) {
-    const return_launch = createDivEach(movies_launch, i);
-    f_a_title(return_launch[1], i, movies_launch);
-    f_a_title(return_launch[2], i, movies_launch);
-    if (String(p + 1) === movies_launch[i].phase) {
-      order_launch_p[p].appendChild(return_launch[0]);
+  if (order_launch_p[p] != null) {
+    for (let i = 0; i < movies_launch.length; i++) {
+      const return_launch = createDivEach(movies_launch, i);
+      f_a_title(return_launch[1], i, movies_launch);
+      f_a_title(return_launch[2], i, movies_launch);
+      if (String(p + 1) === movies_launch[i].phase) {
+        order_launch_p[p].appendChild(return_launch[0]);
+      }
     }
   }
 }
 
 // 타임라인순 정렬
 for (let il = 0; il < movies_time.length; il++) {
-  const return_time = createDivEach(movies_time, il);
-  f_a_title(return_time[1], il, movies_time);
-  f_a_title(return_time[2], il, movies_time);
-  order_time.appendChild(return_time[0]);
+  if (order_time != null) {
+    const return_time = createDivEach(movies_time, il);
+    f_a_title(return_time[1], il, movies_time);
+    f_a_title(return_time[2], il, movies_time);
+    order_time.appendChild(return_time[0]);
+  }
 }
 
 // 개봉예정작
 for (let il = 0; il < movies_schedule.length; il++) {
-  const return_schedule = createDivEach(movies_schedule, il);
-  f_a_title(return_schedule[1], il, movies_schedule);
-  f_a_title(return_schedule[2], il, movies_schedule);
-  order_schedule.appendChild(return_schedule[0]);
+  if (order_schedule != null) {
+    const return_schedule = createDivEach(movies_schedule, il);
+    f_a_title(return_schedule[1], il, movies_schedule);
+    f_a_title(return_schedule[2], il, movies_schedule);
+    order_schedule.appendChild(return_schedule[0]);
+  }
 }
 
 //영화 세부정보 배열 read in content_movies.csv

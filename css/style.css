@@ -103,6 +103,7 @@ article img {
   height: fit-content;
   position: absolute;
   right: -8px;
+  cursor: pointer;
 }
 
 .phase:hover h4 {

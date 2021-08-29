@@ -150,8 +150,6 @@ const content_movies_synopsys = [
 
 const selected_movie = document.querySelectorAll(".eachMovie");
 
-console.log(selected_movie);
-
 function getMatchedValueByKey(array, key, name_kr) {
   for (let index = 0; index < array.length; index++) {
     if (name_kr === array[index].name_kr) {
