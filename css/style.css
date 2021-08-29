@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
 @import "balloonMenu.css";
+@import "menuBtn.css";
+@import "specificContent.css";
 
 * {
   box-sizing: border-box;
@@ -24,6 +26,10 @@ header > article {
   background-image: url("../img/universe.png");
   background-position: center;
   background-size: cover;
+}
+
+main {
+  position: relative;
 }
 
 article img {
@@ -58,10 +64,6 @@ article img {
   font-family: "Do Hyeon", sans-serif;
   color: rgba(255, 220, 0, 0);
   transition: 1s ease-in-out;
-}
-
-#btn_sort:hover .font_basic_sm {
-  color: rgb(228, 228, 228);
 }
 
 .phase {
@@ -248,41 +250,6 @@ article img {
 
 #timeline > div {
   padding-bottom: 5px;
-}
-
-#btn_sort {
-  display: flex;
-}
-
-#btn_sort:hover a {
-  visibility: visible;
-  background-color: rgba(46, 55, 65, 0.8);
-}
-
-#btn_sort:hover #sortMenuId a:first-child {
-  transform: translate(10px, 40px);
-}
-#btn_sort:hover #sortMenuId a:nth-child(2) {
-  transform: translate(50px, 40px);
-}
-#btn_sort:hover #sortMenuId a:nth-child(3) {
-  transform: translate(105px, 40px);
-}
-
-#sortMenuId {
-  position: relative;
-  left: -100%;
-  display: flex;
-  align-items: center;
-  z-index: 1;
-}
-
-#sortMenuId a {
-  position: absolute;
-  left: 0;
-  width: max-content;
-  visibility: hidden;
-  transition: 0.3s ease-in-out;
 }
 
 #input_sort input:last-child:hover {

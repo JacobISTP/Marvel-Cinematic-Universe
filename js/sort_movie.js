@@ -67,7 +67,13 @@ function f_backToTheResult_movie() {
 
 function selectMovie(event) {
   let select_movie = event.target.parentElement.parentElement;
-  console.dir(select_movie);
+  console.dir(select_movie.classList["value"]);
+  for (let q = 0; q < 5; q++) {
+    if (select_movie.classList["value"].indexOf("eachMovie") !== -1) {
+      break;
+    }
+    select_movie = select_movie.parentElement;
+  }
   if (select_movie.className === "") {
     return;
   }

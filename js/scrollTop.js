@@ -13,6 +13,8 @@ function screenMoveBottom() {
 function screenMoveWindow(event) {
   if (event.target.URL.indexOf("index") === -1) {
     screenMoveBottom();
+  } else {
+    screenMoveTop();
   }
 }
 
@@ -20,3 +22,6 @@ for (let btn = 0; btn < btn_changeOrder.length - 1; btn++) {
   btn_changeOrder[btn].addEventListener("click", screenMoveBottom);
 }
 window.addEventListener("pageshow", screenMoveWindow);
+try {
+  form_sort.addEventListener("submit", screenMoveBottom);
+} catch {}

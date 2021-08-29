@@ -1,0 +1,38 @@
+#btn_sort {
+  display: flex;
+}
+
+#btn_sort:hover a {
+  visibility: visible;
+  background-color: rgba(46, 55, 65, 0.8);
+}
+
+#btn_sort:hover .font_basic_sm {
+  color: rgb(228, 228, 228);
+}
+
+#btn_sort:hover #sortMenuId a:first-child {
+  transform: translate(20px, 40px);
+}
+#btn_sort:hover #sortMenuId a:nth-child(2) {
+  transform: translate(20px, 80px);
+}
+#btn_sort:hover #sortMenuId a:nth-child(3) {
+  transform: translate(20px, 120px);
+}
+
+#sortMenuId {
+  position: relative;
+  left: -100%;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+}
+
+#sortMenuId a {
+  position: absolute;
+  left: 0;
+  width: max-content;
+  visibility: hidden;
+  transition: 0.3s ease-in-out;
+}
