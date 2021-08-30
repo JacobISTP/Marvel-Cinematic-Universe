@@ -224,7 +224,7 @@ function specificContents(event) {
   const eachmovie_div_a_youtube_img = document.createElement("img");
   const eachmovie_div_title = document.createElement("span");
   const eachMovie_div_synopsys_div = document.createElement("div");
-  const eachmovie_div_synopsys = document.createElement("span");
+  const eachmovie_div_synopsys = document.createElement("p");
   const removeBtn = document.createElement("button");
 
   const main = document.querySelector("main");
@@ -261,17 +261,16 @@ function specificContents(event) {
   eachmovie_div_a_youtube_img.style = `width:${
     eachmovie_div_poster.height * 0.1
   }px; height: ${eachmovie_div_poster.width * 0.1}px;`;
-  eachmovie_div_title.style.fontSize = "24px";
-  eachmovie_div_title.style.textAlign = "center";
   eachmovie_div.style = `width: ${main.offsetWidth * 0.9}px; height: ${
-    main.offsetHeight * 0.9
-  }px;`;
+    main.offsetHeight * 0.97
+  }px; border: 2px solid white;`;
 
   eachmovie_div.classList.add("specificContent");
-  eachmovie_div_poster.classList.add("movie_img_size");
+  eachmovie_div_poster.classList.add("specificContent_img_size");
+  eachmovie_div_title.classList.add("specificContentTitle");
   eachMovie_div_a_div.classList.add("specificContentAnchorDiv");
   eachMovie_div_synopsys_div.classList.add("specificContentSynopsysDiv");
-  eachmovie_div_synopsys.style.fontSize = "20px";
+  eachmovie_div_synopsys.classList.add("specificContentSynopsys");
   removeBtn.classList.add("removeBtn");
   removeBtn.classList.add("font_basic");
   eachMovie_div_div.classList.add("specificContentImgDiv");

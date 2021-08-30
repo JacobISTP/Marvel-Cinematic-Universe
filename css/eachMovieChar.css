@@ -4,7 +4,6 @@
 
 .eachMovie:hover a {
   color: tomato;
-  cursor: pointer;
 }
 
 .eachFeature {
