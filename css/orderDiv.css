@@ -1,0 +1,73 @@
+.order {
+  position: relative;
+  display: flex;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)),
+    url("../img/Avengers-logo-black-background_2560x1600.jpg");
+  background-position: center;
+  background-size: cover;
+  width: 100vw;
+  height: 90vh;
+  overflow: hidden;
+  padding: 0;
+}
+
+.order > div {
+  padding-top: 10px;
+  width: fit-content;
+  height: 100%;
+  position: absolute;
+  transition: 0.5s;
+}
+
+.order_menu {
+  width: 90%;
+  height: 80vh;
+  overflow-y: auto;
+  padding-top: 10px;
+  margin: 0px 5vw 0px 5vw;
+}
+
+.documentTitle {
+  position: relative;
+}
+
+#timeline > div {
+  padding-bottom: 5px;
+}
+
+a:link {
+  color: #95adc1;
+  text-decoration: none;
+}
+a:visited {
+  color: #95adc1;
+}
+
+.movie_div_size {
+  width: 150px;
+}
+
+.movie_img_size {
+  width: 100px;
+  height: 150px;
+}
+
+.moveToRight {
+  transform: translateX(100vw);
+}
+
+.moveToMiddle {
+  transform: translateX(0vw);
+}
+
+.moveToLeft {
+  transform: translateX(-100vw);
+}
+#order_launch {
+  height: 100%;
+  width: 95%;
+}
+#order_time {
+  height: 100%;
+  width: 95%;
+}

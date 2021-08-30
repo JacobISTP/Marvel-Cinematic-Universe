@@ -53,7 +53,7 @@ function f_movies_sort_movie(event = "", array = []) {
 
 function for_createMovieDiv_movie(array) {
   for (let i = 0; i < array.length; i++) {
-    const div_movie_sort = createDivEach(array, i)[0];
+    const div_movie_sort = createDivEach(array, i, false)[0];
     div_movie_sort.addEventListener("click", selectMovie);
     div_movie_sort.addEventListener("click", createPrevMovieDiv);
     div_movie_sort.addEventListener("click", createNextMovieDiv);
@@ -67,7 +67,6 @@ function f_backToTheResult_movie() {
 
 function selectMovie(event) {
   let select_movie = event.target.parentElement.parentElement;
-  console.dir(select_movie.classList["value"]);
   for (let q = 0; q < 5; q++) {
     if (select_movie.classList["value"].indexOf("eachMovie") !== -1) {
       break;
@@ -77,6 +76,7 @@ function selectMovie(event) {
   if (select_movie.className === "") {
     return;
   }
+
   const select_movie_a = select_movie.querySelector(".eachMovie div a");
   const select_movie_a_img = select_movie.querySelector(".eachMovie a");
   const select_movie_text = select_movie_a.innerText;
@@ -84,12 +84,10 @@ function selectMovie(event) {
     0,
     select_movie_text.indexOf("(")
   );
-  console.log(select_movie);
 
   initializeDiv(order_sort);
 
   order_sort.appendChild(select_movie);
-  console.log(select_movie_name);
   f_movies_sort_movie_prev(select_movie_name);
   f_movies_sort_movie_next(select_movie_name);
 
@@ -103,6 +101,12 @@ function selectMovie(event) {
   if (statement_sort_movie === 0) {
     event.preventDefault();
   }
+
+  balloonMenuEachMovie("", order_sort, select_movie_name);
+  const selected_balloonMenu = document.querySelector(
+    ".phase_movie .balloonMenu"
+  );
+  selected_balloonMenu.style = `position: static; margin-bottom: 20px;`;
 
   statement_sort_movie = 1;
 }

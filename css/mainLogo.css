@@ -1,0 +1,36 @@
+header > article {
+  width: 100%;
+  padding: 100px;
+  padding-top: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  background-image: url("../img/universe.png");
+  background-position: center;
+  background-size: cover;
+}
+
+article img {
+  width: 50vw;
+  opacity: 0%;
+  cursor: pointer;
+}
+
+.logo_opacity_100 {
+  opacity: 100%;
+}
+
+.logo_transition {
+  animation: refreshElement 1s ease-in-out;
+}
+
+@keyframes refreshElement {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
+}

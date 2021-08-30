@@ -1,7 +1,7 @@
 .specificContent {
   display: flex;
   position: absolute;
-  top: 5%;
+  top: 0%;
   left: 5%;
   z-index: 1000;
   background-color: rgba(0, 0, 0, 0.8);

@@ -159,7 +159,7 @@ function getMatchedValueByKey(array, key, name_kr) {
   return;
 }
 
-function balloonMenuEachMovie(event) {
+function balloonMenuEachMovie(event, target_element = "", name_kr = "") {
   const movies = movies_launch.concat(movies_schedule);
 
   const balloonMenu_div = document.createElement("div");
@@ -173,9 +173,15 @@ function balloonMenuEachMovie(event) {
   balloonMenu_div_specific.classList.add("font_basic");
   balloonMenu_a_youtube.classList.add("balloonMenuAnchor");
   balloonMenu_a_youtube_img.classList.add("balloonMenuLogo");
-
-  let balloon_a_title = event.target.innerText;
-  balloon_a_title = balloon_a_title.substring(0, balloon_a_title.indexOf("("));
+  let balloon_a_title;
+  try {
+    balloon_a_title = event.target.innerText.substring(
+      0,
+      event.target.innerText.indexOf("(")
+    );
+  } catch {
+    balloon_a_title = name_kr;
+  }
 
   balloonMenu_div_specific.innerText = "상세정보";
   f_a_title(balloonMenu_a_youtube);
@@ -190,14 +196,21 @@ function balloonMenuEachMovie(event) {
   balloonMenu_div_div.appendChild(balloonMenu_div_specific);
   balloonMenu_div_div.appendChild(balloonMenu_a_youtube);
   balloonMenu_div.appendChild(balloonMenu_div_div);
-  event.target.appendChild(balloonMenu_div);
+  if (target_element === "") {
+    event.target.appendChild(balloonMenu_div);
+  } else {
+    target_element.appendChild(balloonMenu_div);
+  }
 
   balloonMenu_div_specific.addEventListener("click", specificContents);
 }
 
 function removeBalloonMenuEachMovie() {
-  let mouseout_movie = document.querySelector(".balloonMenu");
-  mouseout_movie.remove();
+  let mouseout_movie = document.querySelectorAll(".balloonMenu");
+  mouseout_movie = mouseout_movie[mouseout_movie.length - 1];
+  try {
+    mouseout_movie.remove();
+  } catch {}
 }
 
 function specificContents(event) {

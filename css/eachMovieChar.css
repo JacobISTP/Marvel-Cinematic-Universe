@@ -1,0 +1,20 @@
+.eachMovie {
+  position: relative;
+}
+
+.eachMovie:hover a {
+  color: tomato;
+  cursor: pointer;
+}
+
+.eachFeature {
+  width: 50px;
+  height: 75px;
+  filter: brightness(75%);
+  transition: 0.2s ease-in-out;
+}
+
+.eachFeature:hover {
+  filter: brightness(100%);
+  transform: scale(110%) translateY(-5%);
+}

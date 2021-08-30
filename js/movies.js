@@ -817,7 +817,7 @@ function f_a_title(a_title) {
   a_title.style.textAlign = "center";
 }
 
-function createDivEach(array, index) {
+function createDivEach(array, index, balloon = true) {
   const div_movie = document.createElement("div");
   const div_title = document.createElement("div");
   const img_movie = document.createElement("img");
@@ -834,8 +834,10 @@ function createDivEach(array, index) {
   div_movie.appendChild(a_img);
   div_title.appendChild(a_title);
   div_movie.appendChild(div_title);
-  div_movie.addEventListener("mouseenter", balloonMenuEachMovie);
-  div_movie.addEventListener("mouseleave", removeBalloonMenuEachMovie);
+  if (balloon === true) {
+    div_movie.addEventListener("mouseenter", balloonMenuEachMovie);
+    div_movie.addEventListener("mouseleave", removeBalloonMenuEachMovie);
+  }
 
   return returnArray;
 }
