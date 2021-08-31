@@ -12,7 +12,10 @@ function screenMoveBottom() {
 }
 
 function screenMoveWindow(event) {
-  if (event.target.URL.indexOf("index") === -1) {
+  if (
+    event.target.URL.indexOf("index") === -1 &&
+    event.target.URL.indexOf("html") !== -1
+  ) {
     screenMoveBottom();
   } else {
     screenMoveTop();
