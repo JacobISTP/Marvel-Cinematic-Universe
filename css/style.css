@@ -32,7 +32,6 @@ main {
 .font_basic_sm {
   font-family: "Do Hyeon", sans-serif;
   color: rgba(255, 220, 0, 0);
-  transition: 1s ease-in-out;
 }
 
 .stoneName span {
