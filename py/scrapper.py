@@ -13,13 +13,24 @@ content_movies = []
 for movie in movies[1:]:
     try:
         print(f"스크랩 : {movie[0]}")
-        url = f"{basicUrl}영화 {movie[0]} 정보"
+        url = f"{basicUrl}영화 {movie[0]}"
+        url_info = f"{basicUrl}영화 {movie[0]} 정보"
+
         soup = BeautifulSoup(requests.get(url).text, "html.parser")
-        synopsys = soup.find("div", {"class":"_cm_content_area_synopsis"}).find("p").text.replace(',',"")
-        print(synopsys)
+        soup_info = BeautifulSoup(requests.get(url_info).text, "html.parser")
+
+        starPoint = soup.find("div", {"class": "detail_info"}).find("dl",{"class":"info txt_3"}).findAll("div",{"class":"info_group"})[2].find("dd").text
+        audienceCount = soup.find("div", {"class": "detail_info"}).find("dl",{"class":"info txt_3"}).findAll("div",{"class":"info_group"})[3].find("dd").text
+        synopsys = soup_info.find("div", {"class":"_cm_content_area_synopsis"}).find("p").text.replace(',',".")
+
+        print(launchDate)
     except:
         synopsys = "Coming Soon!"
-    content_movies.append({"search": movie[0], "synopsys": synopsys})
+        starPoint = "-"
+        audienceCount = "-"
+
+    content_movies.append({"search": movie[0], "synopsys": synopsys, "starPoint":starPoint, "audienceCount":audienceCount})
+
 
 print(content_movies)
 export_to_csv(content_movies, "content_movies")

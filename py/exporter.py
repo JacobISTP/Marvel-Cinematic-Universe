@@ -4,7 +4,7 @@ def export_to_csv(movies, file_name):
 
   file = open(f"{file_name}.csv", mode="w", encoding='UTF8', newline='\n', )
   writer = csv.writer(file)
-  writer.writerow(["search", "synopsys"])
+  writer.writerow(["search", "synopsys","starPoint","audienceCount"])
 
   for movie in movies:
-    writer.writerow([movie["search"], movie["synopsys"]])
+    writer.writerow([movie["search"], movie["synopsys"], movie["starPoint"],movie["audienceCount"]])

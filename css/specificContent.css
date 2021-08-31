@@ -1,3 +1,10 @@
+.specificContentOuter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
 .specificContent {
   display: flex;
   position: absolute;
@@ -7,6 +14,7 @@
   background-color: rgba(0, 0, 0, 0.8);
   justify-content: left;
   padding: 2.5%;
+  transition: 0.5s ease-in-out;
 }
 
 .specificContent > * {
@@ -19,8 +27,20 @@
 }
 
 .specificContentTitle {
-  font-size: 22px;
+  font-size: 25px;
   text-align: center;
+  margin: 15px 0px;
+}
+
+.specificContentStar {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.specificContentText {
+  margin: none;
+  font-size: 18px;
 }
 
 .specificContentAnchorDiv {
@@ -40,10 +60,12 @@
 }
 .removeBtn {
   position: absolute;
-  top: -5%;
-  right: 0%;
+  display: flex;
+  top: -3%;
+  right: -2%;
   width: max-content;
   height: fit-content;
+  padding: 3px 6px;
   background: rgb(0, 0, 0);
   border: 2px solid whitesmoke;
   border-radius: 5px;
@@ -54,6 +76,7 @@
 
 .removeBtn:hover {
   background-color: rgb(99, 99, 99);
+  animation: none;
 }
 .specificContentImgDiv {
   display: flex;
@@ -73,13 +96,21 @@
 
 @media (max-width: 420px) {
   .specificContentTitle {
-    font-size: 18px;
+    font-size: 16px;
     text-align: center;
+    margin: 10px 0px;
+  }
+
+  .specificContentText {
+    margin: none;
+    margin-left: 10px;
+    align-self: flex-start;
+    font-size: 14px;
   }
 
   .specificContentSynopsys {
-    font-size: 16px;
-    text-indent: 16px;
+    font-size: 14px;
+    text-indent: 14px;
     background: black;
   }
 
