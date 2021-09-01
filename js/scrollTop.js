@@ -12,7 +12,6 @@ function screenMoveBottom() {
 }
 
 function screenMoveWindow(event) {
-  console.log(event.target.URL);
   if (
     event.target.URL.indexOf("index") === -1 &&
     event.target.URL.indexOf("html") !== -1

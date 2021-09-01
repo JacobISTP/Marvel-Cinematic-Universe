@@ -24,12 +24,12 @@ for movie in movies[1:]:
         audienceCount = soup.find("div", {"class": "detail_info"}).find("dl",{"class":"info txt_3"}).findAll("div",{"class":"info_group"})[3].find("dd").text
         synopsys = soup_info.find("div", {"class":"_cm_content_area_synopsis"}).find("p").text.replace(',',".")
 
-        print(summary)
     except:
         synopsys = "Coming Soon!"
         starPoint = "-"
         audienceCount = "-"
         summary = "-"
+        sentence_array = "-"
 
     content_movies.append({"search": movie[0], "synopsys": synopsys, "starPoint":starPoint, "audienceCount":audienceCount, "summary":summary})
 

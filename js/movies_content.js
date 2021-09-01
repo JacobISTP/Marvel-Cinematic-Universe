@@ -291,6 +291,7 @@ function getMatchedValueByKey(array, key, name_kr) {
   return;
 }
 
+// 풍선메뉴
 function balloonMenuEachMovie(event, target_element = "", name_kr = "") {
   const movies = movies_launch.concat(movies_schedule);
 
@@ -345,7 +346,9 @@ function removeBalloonMenuEachMovie() {
   } catch {}
 }
 
+//상세정보창
 function specificContents(event) {
+  //요소 선언
   const movies = movies_launch.concat(movies_schedule);
 
   const eachmovie_div_outer = document.createElement("div");
@@ -370,6 +373,7 @@ function specificContents(event) {
 
   let pcJs = window.matchMedia("(min-width: 421px)");
 
+  //요소 내용 지정
   const eachmovie_titleName = eachmovie.innerText.replace("상세정보", "");
   eachmovie_title = eachmovie_titleName.substring(
     0,
@@ -430,7 +434,7 @@ function specificContents(event) {
     } else {
       star_i.classList.add("far");
       star_i.classList.add("fa-star");
-      star_i.style.opacity = "0%";
+      star_i.style.opacity = "30%";
       if (!pcJs.matches) {
         star_i.classList.add("fa-xs");
       }
@@ -471,6 +475,7 @@ function specificContents(event) {
   }
   removeBtn.appendChild(xicon);
 
+  //스타일 추가
   eachmovie_div.style = `width: ${main.offsetWidth * 0.9}px; height: ${
     main.offsetHeight * 0.97
   }px; border: 2px solid white;`;
@@ -486,6 +491,7 @@ function specificContents(event) {
   eachmovie_div_outer.style = `height: ${body.offsetHeight}px;`;
   // console.dir(eachmovie_div_poster);
 
+  //클래스 추가
   eachmovie_div.classList.add("specificContent");
   eachmovie_div_poster.classList.add("specificContent_img_size");
   eachmovie_div_title.classList.add("specificContentTitle");
@@ -501,6 +507,7 @@ function specificContents(event) {
   eachMovie_div_div.classList.add("specificContentImgDiv");
   eachmovie_div_outer.classList.add("specificContentOuter");
 
+  //요소 추가
   eachmovie_div_a_youtube.appendChild(eachmovie_div_a_youtube_img);
   eachMovie_div_a_div.appendChild(eachmovie_div_a_youtube);
 

@@ -1,0 +1,18 @@
+#movie_sentences {
+  border: none;
+  position: absolute;
+  top: 0;
+  left: 6vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  filter: brightness(90%);
+}
+
+#movie_sentences .eachMovie div:first-child {
+  box-shadow: 0 0 5px 5px black inset;
+}
+#movie_sentences .eachMovie img {
+  opacity: 0%;
+}
