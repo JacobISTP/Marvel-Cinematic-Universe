@@ -29,7 +29,7 @@
 .specificContentTitle {
   font-size: 25px;
   text-align: center;
-  margin: 15px 0px;
+  margin: 0px 0px 15px 0px;
 }
 
 .specificContentStar {
@@ -37,7 +37,6 @@
   justify-content: center;
   flex-wrap: wrap;
 }
-
 .specificContentText {
   margin: none;
   font-size: 18px;
@@ -96,16 +95,15 @@
 
 @media (max-width: 420px) {
   .specificContentTitle {
-    font-size: 16px;
+    font-size: 14px;
     text-align: center;
-    margin: 10px 0px;
+    margin: 0px 0px 10px 0px;
   }
 
   .specificContentText {
     margin: none;
-    margin-left: 10px;
-    align-self: flex-start;
-    font-size: 14px;
+    align-self: center;
+    font-size: 12px;
   }
 
   .specificContentSynopsys {

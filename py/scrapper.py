@@ -19,17 +19,19 @@ for movie in movies[1:]:
         soup = BeautifulSoup(requests.get(url).text, "html.parser")
         soup_info = BeautifulSoup(requests.get(url_info).text, "html.parser")
 
+        summary = soup.find("div", {"class": "detail_info"}).find("dl",{"class":"info txt_3"}).findAll("div",{"class":"info_group"})[0].find("dd").get_text(" | ", strip=True)
         starPoint = soup.find("div", {"class": "detail_info"}).find("dl",{"class":"info txt_3"}).findAll("div",{"class":"info_group"})[2].find("dd").text
         audienceCount = soup.find("div", {"class": "detail_info"}).find("dl",{"class":"info txt_3"}).findAll("div",{"class":"info_group"})[3].find("dd").text
         synopsys = soup_info.find("div", {"class":"_cm_content_area_synopsis"}).find("p").text.replace(',',".")
 
-        print(launchDate)
+        print(summary)
     except:
         synopsys = "Coming Soon!"
         starPoint = "-"
         audienceCount = "-"
+        summary = "-"
 
-    content_movies.append({"search": movie[0], "synopsys": synopsys, "starPoint":starPoint, "audienceCount":audienceCount})
+    content_movies.append({"search": movie[0], "synopsys": synopsys, "starPoint":starPoint, "audienceCount":audienceCount, "summary":summary})
 
 
 print(content_movies)

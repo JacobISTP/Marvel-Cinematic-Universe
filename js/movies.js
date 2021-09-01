@@ -207,7 +207,7 @@ const movies_launch = [
     stone: ["mind"],
   },
   {
-    search: "가디언즈 오브 갤럭시",
+    search: "가디언즈 오브 갤럭시1",
     name_kr: "가디언즈 오브 갤럭시",
     name_en: "Guardians of the Galaxy",
     launch_year: "2014.07.31.",
