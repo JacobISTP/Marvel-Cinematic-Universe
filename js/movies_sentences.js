@@ -43,7 +43,7 @@ function removeRandomSentences() {
   main_sentences.remove();
 }
 
-const interval_random_number = setInterval(createRandomMovieSetence, 100000000);
+const interval_random_number = setInterval(createRandomMovieSetence, 10000);
 
 window.addEventListener("pageshow", createRandomMovieSetence);
 title_menu.addEventListener("click", clearRandomNumber);
