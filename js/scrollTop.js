@@ -1,3 +1,5 @@
+"use strict";
+
 const body = document.querySelector("body");
 const btn_changeOrder = document.querySelectorAll(".btn_changeOrder");
 let lastKnownScrollPosition = 0;

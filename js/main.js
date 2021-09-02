@@ -1,3 +1,5 @@
+"use strict";
+
 // 시간순 div 지정
 const order_time = document.querySelector(
   "#order_time .phase:first-child .phase_movie"

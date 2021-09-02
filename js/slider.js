@@ -1,3 +1,5 @@
+"use strict";
+
 const order_launch_slider = document.querySelector(".order>div:first-child");
 const order_time_slider = document.querySelector(".order>div:nth-child(2)");
 const order_schedule_slider = document.querySelector(".order>div:last-child");

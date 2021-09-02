@@ -1,3 +1,5 @@
+"use strict";
+
 const main_sentences = document.querySelector("#movie_sentences");
 const title_menu = document.querySelector(".order_title");
 

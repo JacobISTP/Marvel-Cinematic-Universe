@@ -1,3 +1,5 @@
+"use strict";
+
 // 개봉순배열 생성
 const movies_launch = [
   {
@@ -1184,3 +1186,4 @@ const content_movies_info = [
   },
 ];
 
+const movies = movies_launch.concat(movies_schedule);

@@ -1,3 +1,5 @@
+"use strict";
+
 const btn_sort = document.querySelector("#btn_sort");
 const sort_href = ["sort_movie.html", "sort_character.html", "sort_stone.html"];
 const sort_button = ["영화", "캐릭터", "스톤"];
