@@ -1183,3 +1183,5 @@ const content_movies_info = [
     summary: "-",
   },
 ];
+
+const movies = movies_launch.concat(movies_schedule);

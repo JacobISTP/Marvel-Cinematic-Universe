@@ -12,8 +12,6 @@ function getMatchedValueByKey(array, key, name_kr) {
 
 // 풍선메뉴
 function balloonMenuEachMovie(event, target_element = "", name_kr = "") {
-  const movies = movies_launch.concat(movies_schedule);
-
   const balloonMenu_div = document.createElement("div");
   const balloonMenu_div_div = document.createElement("div");
   const balloonMenu_div_specific = document.createElement("button");
@@ -68,8 +66,6 @@ function removeBalloonMenuEachMovie() {
 //상세정보창
 function specificContents(event) {
   //요소 선언
-  const movies = movies_launch.concat(movies_schedule);
-
   const eachmovie_div_outer = document.createElement("div");
   const eachmovie_div = document.createElement("div");
   const eachMovie_div_div = document.createElement("div");
