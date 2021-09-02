@@ -713,6 +713,21 @@ const movies_launch = [
       "스칼렛 요한슨",
     ],
   },
+
+  {
+    search: "샹치와 텐 링즈의 전설",
+    name_kr: "샹치와 텐 링즈의 전설",
+    name_en: "Shang-Chi and the Legend of the Ten Rings",
+    launch_year: "2021. 09. 01.",
+    url: "https://www.youtube.com/watch?v=Pj7CadRf82k",
+    img: "img/poster/수정본-300/샹치.jpg",
+    phase: "4",
+    timeline: "25",
+    next_movie: [],
+    character: [{ man_name: "샹치", char_name: "샹치" }],
+    stone: [],
+    sentence: "",
+  },
 ];
 
 // 시간순배열 생성
@@ -728,20 +743,6 @@ for (let t = 0; t < movies_launch.length; t++) {
 
 // 개봉예정배열 생성
 const movies_schedule = [
-  {
-    search: "샹치와 텐 링즈의 전설",
-    name_kr: "샹치와 텐 링즈의 전설",
-    name_en: "Shang-Chi and the Legend of the Ten Rings",
-    launch_year: "2021. 09. 01.",
-    url: "https://www.youtube.com/watch?v=Pj7CadRf82k",
-    img: "img/poster/수정본-300/샹치.jpg",
-    phase: "4",
-    timeline: "25",
-    next_movie: [],
-    character: [{ man_name: "샹치", char_name: "샹치" }],
-    stone: [],
-    sentence: "",
-  },
   {
     search: "베놈 2 : 렛 데어 비 카니지",
     name_kr: "베놈 2 : 렛 데어 비 카니지",
