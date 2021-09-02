@@ -23,11 +23,12 @@
 #movie_sentences_famous {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   align-self: flex-start;
   margin-left: 30px;
   width: 50vw;
-  height: 100%;
+  height: 300px;
   padding-top: 50px;
   font-family: "Nanum Myeongjo", serif;
 }
