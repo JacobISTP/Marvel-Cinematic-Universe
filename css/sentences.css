@@ -37,6 +37,7 @@
   font-weight: 700;
   text-indent: 15px;
   font-style: italic;
+  text-align: center;
 }
 
 #movie_sentences_famous_names {
@@ -56,6 +57,7 @@
     width: 95vw;
     left: 0;
     display: flex;
+    align-items: center;
     flex-direction: column;
   }
   #movie_sentences_famous {
@@ -70,7 +72,6 @@
     font-size: 22px;
     font-weight: 800;
     text-indent: 0px;
-    text-align: center;
   }
 
   #movie_sentences_famous_names {
