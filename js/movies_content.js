@@ -186,7 +186,6 @@ function specificContents(event) {
 
   xicon.classList.add("fas");
   xicon.classList.add("fa-times");
-  console.log(pcJs);
   if (pcJs.matches) {
     xicon.classList.add("fa-2x");
   }

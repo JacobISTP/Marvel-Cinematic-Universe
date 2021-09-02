@@ -24,7 +24,7 @@ const movies_launch = [
     ],
     stone: [],
     sentence: [
-      "진실은....내가 '아이언맨'입니다.",
+      'The truth is...\n"I am IRON MAN"',
       "토니 스타크/아이언맨",
       "로버트 다우니 주니어",
     ],
@@ -47,7 +47,7 @@ const movies_launch = [
       { man_name: "스탠 리", char_name: "" },
     ],
     stone: [],
-    sentence: ["Hulk...Smash!!!!!!!", "브루스 배너", "에드워드 노튼"],
+    sentence: ["HULK...SMASH!!!!!!!", "브루스 배너", "에드워드 노튼"],
   },
   {
     search: "아이언맨2",
@@ -101,7 +101,7 @@ const movies_launch = [
     ],
     stone: ["space"],
     sentence: [
-      "난 단 한번도 왕좌를 원한적 없어. 난 인정받기를 원했을 뿐이야",
+      `난 단 한번도 왕좌를 원한적 없어. 난 인정받기를 원했을 뿐이야`,
       "로키",
       "톰 히들스턴",
     ],
@@ -127,7 +127,7 @@ const movies_launch = [
     ],
     stone: ["space"],
     sentence: [
-      "종일 싸울 수도 있어.",
+      "하루종일 싸울 수도 있어.",
       "스티브 로저스/캡틴 아메리카",
       "크리스 에반스",
     ],
@@ -183,7 +183,7 @@ const movies_launch = [
     ],
     stone: [],
     sentence: [
-      '다른 건 다 뺏어가도, 한가지 절대 빼앗아 갈 수 없는게 있죠. "I am IRON MAN"',
+      '다른 건 다 뺏어가도, 한가지 절대 빼앗아 갈 수 없는게 있죠. \n "I am IRON MAN"',
       "토니 스타크/아이언맨",
       "로버트 다우니 주니어",
     ],
@@ -334,7 +334,7 @@ const movies_launch = [
     ],
     stone: [],
     sentence: [
-      "No, I'm Ant-Man! I know, it wasn't my idea.",
+      "No, I'm Ant-Man!\nI know, it wasn't my idea.",
       "스캇 랭/앤트맨",
       "폴 러드",
     ],
@@ -557,11 +557,7 @@ const movies_launch = [
       { man_name: "스탠 리", char_name: "" },
     ],
     stone: ["space", "mind", "power", "time", "soul", "reality"],
-    sentence: [
-      "실수한거야. 내 머리를 잘랐어야지.(핑거스냅)",
-      "타노스",
-      "조슈 브롤린",
-    ],
+    sentence: [`실수한거야. 내 머리를 잘랐어야지.`, "타노스", "조슈 브롤린"],
   },
   {
     search: "앤트맨과 와스프",
@@ -662,7 +658,7 @@ const movies_launch = [
     ],
     stone: ["space", "mind", "power", "time", "soul", "reality"],
     sentence: [
-      "I AM IRON MAN.",
+      "And I... am... \t IRON MAN.",
       "토니 스타크 / 아이언맨",
       "로버트 다우니 주니어",
     ],
@@ -728,7 +724,7 @@ const movies_launch = [
     next_movie: [],
     character: [{ man_name: "샹치", char_name: "샹치" }],
     stone: [],
-    sentence: "",
+    sentence: ["상영중인 영화입니다.", "스포", "금지"],
   },
 ];
 
