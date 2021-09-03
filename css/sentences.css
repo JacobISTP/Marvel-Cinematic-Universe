@@ -2,7 +2,7 @@
   z-index: 1;
   border: none;
   position: absolute;
-  top: -20px;
+  top: 0px;
   left: 6vw;
   height: 100%;
   display: flex;
@@ -63,7 +63,9 @@
   }
   #movie_sentences_famous {
     flex-direction: column;
+    justify-content: flex-start;
     margin: 0px;
+    margin-top: 20px;
     width: 100%;
     height: 100%;
     padding-top: 0px;
