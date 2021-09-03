@@ -6,8 +6,8 @@
   box-sizing: border-box;
   height: fit-content;
   margin: 0px 5vw 15px 5vw;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding-top: 10px;
+  background-color: black;
+  padding: 10px 5vw 0px 5vw;
 }
 
 .order_title form {
@@ -31,18 +31,22 @@
 }
 
 .btn_changeOrder {
-  padding: 0px 5px;
+  padding: 0px 5px 10px 5px;
   margin: 0px 0px 5px 0px;
-  border: 4px solid rgba(44, 32, 32, 0);
-  background: none;
+  border: none;
+  border-bottom: 4px solid rgba(0, 0, 0, 0);
+  background: linear-gradient(black, black, black, black, #460708);
 
   font-size: 26px;
   display: flex;
   align-items: center;
   box-sizing: border-box;
+  font-weight: 600;
+  letter-spacing: -1px;
   height: 40px;
+  text-shadow: 2px 2px gray;
 
-  transition: border-color 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 .btn_changeOrder_sm {
@@ -67,17 +71,18 @@
 
 .animation_blink {
   animation: blinkUntilClick 2s ease-in-out infinite;
+  animation-timing-function: ease-in-out;
 }
 
 @keyframes blinkUntilClick {
   0% {
-    border-bottom: 4px solid rgba(0, 0, 0, 0);
+    background: linear-gradient(black, black, black, black, #460708);
   }
-  25% {
-    border-bottom: 4px solid #9fa2a3;
+  20% {
+    background: linear-gradient(black, black, black, black, #5e5e5e);
   }
-  50% {
-    border-bottom: 4px solid rgba(0, 0, 0, 0);
+  40% {
+    background: linear-gradient(black, black, black, black, #460708);
   }
 }
 

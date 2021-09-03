@@ -49,7 +49,7 @@ for (let btn = 0; btn < btn_changeOrder.length - 1; btn++) {
   btn_changeOrder[btn].addEventListener("click", titleMenuBlink);
 }
 window.addEventListener("pageshow", screenMoveWindow);
-window.addEventListener("pageshow", titleMenuBlink);
+// window.addEventListener("pageshow", titleMenuBlink);
 try {
   form_sort.addEventListener("submit", screenMoveBottom);
 } catch {}

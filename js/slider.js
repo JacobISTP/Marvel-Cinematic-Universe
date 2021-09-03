@@ -17,6 +17,10 @@ function actionTitle() {
   title_header.classList.add("logo_transition");
 }
 
+function reloadPage() {
+  window.location.reload();
+}
+
 let mobileJs = window.matchMedia("(max-width: 420px)");
 let pcJs = window.matchMedia("(min-width: 421px)");
 let startX, endX, startY, endY;
@@ -108,4 +112,4 @@ btn_launch.addEventListener("click", move1);
 btn_time.addEventListener("click", move2);
 btn_schedule.addEventListener("click", move3);
 title_header.addEventListener("animationend", actionTitleRemain);
-title_header.addEventListener("click", actionTitle);
+title_header.addEventListener("click", reloadPage);

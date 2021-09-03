@@ -25,16 +25,16 @@
       </article>
       <div class="order_title">
         <button class="btn_changeOrder font_basic" id="btn_launch">
-          개봉순
+          Release
         </button>
         <button class="btn_changeOrder font_basic" id="btn_time">
-          타임라인
+          Timeline
         </button>
         <button class="btn_changeOrder font_basic" id="btn_schedule">
-          개봉예정
+          Scheduled
         </button>
         <div id="btn_sort">
-          <button class="btn_changeOrder font_basic">검색</button>
+          <button class="btn_changeOrder font_basic">Search</button>
         </div>
       </div>
     </header>
@@ -78,7 +78,15 @@
           </div>
         </div>
       </div>
-      <div class="phase" id="movie_sentences"></div>
+      <div class="phase" id="movie_sentences">
+        <button id="prev_sentence_btn" class="icon_sentence">
+          <i class="fas fa-caret-left"></i>
+        </button>
+        <div></div>
+        <button id="next_sentence_btn" class="icon_sentence">
+          <i class="fas fa-caret-right"></i>
+        </button>
+      </div>
     </main>
   </body>
   <script
