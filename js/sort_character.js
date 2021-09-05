@@ -511,13 +511,25 @@ function selectMovie_char(event) {
 
 const movies_sort_movie_char = [];
 
-function f_movies_sort_movie_char(select_char_name) {
+function f_movies_sort_movie_char(selected_char_name) {
   movies_sort_movie_char.length = 0;
+  let select_char_name = "";
 
-  for (let n = 0; n < movies_time.length; n++) {
-    for (let c = 0; c < movies_time[n].character.length; c++) {
-      if (select_char_name.includes(movies_time[n].character[c].man_name)) {
-        movies_sort_movie_char.push(movies_time[n]);
+  if (selected_char_name.indexOf("/") > 0) {
+    select_char_name = selected_char_name.substring(
+      0,
+      selected_char_name.indexOf("/") - 1
+    );
+  } else {
+    select_char_name = selected_char_name;
+  }
+
+  console.log(selected_char_name.indexOf("/"));
+
+  for (let n = 0; n < movies.length; n++) {
+    for (let c = 0; c < movies[n].character.length; c++) {
+      if (select_char_name === movies[n].character[c].man_name) {
+        movies_sort_movie_char.push(movies[n]);
       }
     }
   }

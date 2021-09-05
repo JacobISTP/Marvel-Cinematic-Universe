@@ -103,9 +103,9 @@ function selectStone(event) {
   order_sort_result.appendChild(select_stone_div);
   // select_stone_copy.childNodes.classList.remove("eachFeature");
 
-  for (let s = 0; s < movies_time.length; s++) {
-    if (movies_time[s].stone.includes(select_stone_name)) {
-      stones_sort_movie.push(movies_time[s]);
+  for (let s = 0; s < movies.length; s++) {
+    if (movies[s].stone.includes(select_stone_name)) {
+      stones_sort_movie.push(movies[s]);
     }
   }
 
