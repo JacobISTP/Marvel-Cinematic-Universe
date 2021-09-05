@@ -899,6 +899,9 @@ const movies_schedule = [
   },
 ];
 
+// 소니 마블 영화 배열 생성
+const movies_sony = [];
+
 // 영화별 세부정보
 const content_movies_info = [
   {
