@@ -753,7 +753,7 @@ const movies_schedule = [
     next_movie: [],
     character: [{ man_name: "에디 브록", char_name: "베놈" }],
     stone: [],
-    sentence: "",
+    sentence: [],
   },
   {
     search: "이터널스",
@@ -767,7 +767,7 @@ const movies_schedule = [
     next_movie: [],
     character: [{ man_name: "길가메쉬", char_name: "길가메쉬" }],
     stone: [],
-    sentence: "",
+    sentence: [],
   },
   {
     search: "스파이더맨 : 노 웨이 홈",
@@ -797,7 +797,7 @@ const movies_schedule = [
       { man_name: "스티븐 스트레인지", char_name: "닥터 스트레인지" },
     ],
     stone: [],
-    sentence: "",
+    sentence: [],
   },
   {
     search: "토르 : 러브 앤 썬더",
@@ -811,7 +811,7 @@ const movies_schedule = [
     next_movie: [],
     character: [{ man_name: "토르", char_name: "토르" }],
     stone: [],
-    sentence: "",
+    sentence: [],
   },
   {
     search: "블랙팬서: 와칸다 포에버",
@@ -825,7 +825,7 @@ const movies_schedule = [
     next_movie: [],
     character: [{ man_name: "", char_name: "" }],
     stone: [],
-    sentence: "",
+    sentence: [],
   },
   {
     search: "더 마블스",
@@ -839,7 +839,7 @@ const movies_schedule = [
     next_movie: [],
     character: [{ man_name: "", char_name: "" }],
     stone: [],
-    sentence: "",
+    sentence: [],
   },
   {
     search: "앤트맨과 와스프 : 퀀터매니아",
@@ -853,7 +853,7 @@ const movies_schedule = [
     next_movie: [],
     character: [{ man_name: "", char_name: "" }],
     stone: [],
-    sentence: "",
+    sentence: [],
   },
   {
     search: "가디언즈 오브 갤럭시 VOL.3",
@@ -867,7 +867,7 @@ const movies_schedule = [
     next_movie: [],
     character: [{ man_name: "", char_name: "" }],
     stone: [],
-    sentence: "",
+    sentence: [],
   },
   {
     search: "마블 블레이드1",
@@ -881,7 +881,7 @@ const movies_schedule = [
     next_movie: [],
     character: [{ man_name: "", char_name: "" }],
     stone: [],
-    sentence: "",
+    sentence: [],
   },
   {
     search: "마블 판타스틱4",
@@ -895,7 +895,7 @@ const movies_schedule = [
     next_movie: [],
     character: [{ man_name: "", char_name: "" }],
     stone: [],
-    sentence: "",
+    sentence: [],
   },
 ];
 
