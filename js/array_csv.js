@@ -28,9 +28,7 @@ function jsonToCSV(json_data) {
   // 6. CSV 문자열 반환: 최종 결과물(string)
   return csv_string;
 }
-movies = movies_launch.concat(movies_schedule);
 
-console.log(movies);
 csvContent = jsonToCSV(movies);
 console.log(csvContent);
 

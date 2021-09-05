@@ -675,8 +675,8 @@ const movies_launch = [
       { man_name: "닉 퓨리", char_name: "" },
       { man_name: "피터 파커", char_name: "스파이더맨" },
       { man_name: "해피", char_name: "" },
-      { man_name: "미쉘 존스", char_name: "" },
       { man_name: "퀜틴 벡", char_name: "미스테리오" },
+      { man_name: "미쉘 존스", char_name: "" },
       { man_name: "J. 조너 제임슨", char_name: "편집장" },
     ],
     stone: [],
@@ -705,7 +705,7 @@ const movies_launch = [
     stone: [],
     sentence: [
       "내겐 가족이 없는 줄 알았는데 둘이나 있더라고요. 한 가족은 감옥에 있으니 그들을 구하러 가야 해요.",
-      "나타샤 로마노프/블랙 위도우",
+      "나타샤 로마노프 / 블랙 위도우",
       "스칼렛 요한슨",
     ],
   },
@@ -777,7 +777,21 @@ const movies_schedule = [
     phase: "4",
     timeline: "27",
     next_movie: [],
-    character: [{ man_name: "피터 파커", char_name: "스파이더맨" }],
+    character: [
+      { man_name: "피터 파커", char_name: "스파이더맨" },
+      { man_name: "피터 파커1", char_name: "스파이더맨1" },
+      { man_name: "피터 파커2", char_name: "스파이더맨2" },
+      { man_name: "미쉘 존스", char_name: "" },
+      { man_name: "J. 조너 제임슨", char_name: "편집장" },
+      { man_name: "맥스 딜런", char_name: "일렉트로" },
+      { man_name: "커트 코너스 박사", char_name: "리자드" },
+      { man_name: "노먼 오스본", char_name: "그린 고블린" },
+      { man_name: "닥터 옥타비우스", char_name: "닥터 옥타비우스" },
+      { man_name: "플린트 마코", char_name: "샌드맨" },
+      { man_name: "아드리안 툼즈", char_name: "벌쳐" },
+      { man_name: "메리 제인1", char_name: "" },
+      { man_name: "그웬 스테이시2", char_name: "" },
+    ],
     stone: [],
     sentence: "",
   },
@@ -898,7 +912,136 @@ const movies_schedule = [
 ];
 
 // 소니 마블 영화 배열 생성
-const movies_sony = [];
+const movies_sony = [
+  {
+    search: "베놈1",
+    name_kr: "베놈",
+    name_en: "Venom",
+    launch_year: "2018.10.03.",
+    url: "https://watcha.com/watch/mdRLbZr?mappingSource=basic",
+    img: "img/poster/수정본-300/베놈1.jpg",
+    phase: "",
+    timeline: "",
+    next_movie: ["베놈 2 : 렛 데어 비 카니지"],
+    character: [{ man_name: "에디 브록", char_name: "베놈" }],
+    stone: [],
+    sentence: ["We are venom.", "에디 브록 / 베놈", "톰 하디"],
+  },
+  {
+    search: "스파이더맨1",
+    name_kr: "스파이더맨",
+    name_en: "Spider-Man",
+    launch_year: "2002.05.03.",
+    url: "https://watcha.com/watch/mBOkBwW?mappingSource=basic",
+    img: "img/poster/수정본-300/스파이더맨1.jpg",
+    phase: "",
+    timeline: "",
+    next_movie: ["스파이더맨2", "스파이더맨 : 노 웨이 홈"],
+    character: [
+      { man_name: "피터 파커1", char_name: "스파이더맨1" },
+      { man_name: "노먼 오스본", char_name: "그린 고블린" },
+      { man_name: "메리 제인1", char_name: "" },
+      { man_name: "J. 조너 제임슨", char_name: "편집장" },
+    ],
+    stone: [],
+    sentence: [
+      "힘이 있으면 그 만큼의 책임이 따른다. 그것이 나의 축복이자 저주다. 내가 누구냐고? 난 스파이더맨이다.",
+      "스파이더맨 / 피터 파커",
+      "토비 맥과이어",
+    ],
+  },
+  {
+    search: "스파이더맨2",
+    name_kr: "스파이더맨2",
+    name_en: "Spider-Man2",
+    launch_year: "2004.06.30.",
+    url: "https://watcha.com/watch/mBOkqE5?mappingSource=basic",
+    img: "img/poster/수정본-300/스파이더맨2.jpg",
+    phase: "",
+    timeline: "",
+    next_movie: ["스파이더맨3", "스파이더맨 : 노 웨이 홈"],
+    character: [
+      { man_name: "피터 파커1", char_name: "스파이더맨1" },
+      { man_name: "닥터 옥타비우스", char_name: "닥터 옥타비우스" },
+      { man_name: "메리 제인1", char_name: "" },
+      { man_name: "J. 조너 제임슨", char_name: "편집장" },
+    ],
+    stone: [],
+    sentence: [
+      "옳은 일을 하려면 가끔은 가장 원하는걸 포기해야만할 때도 있어요.",
+      "스파이더맨 / 피터 파커",
+      "토비 맥과이어",
+    ],
+  },
+  {
+    search: "스파이더맨3",
+    name_kr: "스파이더맨3",
+    name_en: "Spider-Man3",
+    launch_year: "2007.05.01.",
+    url: "https://watcha.com/watch/mgOA3E5?mappingSource=basic",
+    img: "img/poster/수정본-300/스파이더맨3.jpg",
+    phase: "",
+    timeline: "",
+    next_movie: ["스파이더맨 : 노 웨이 홈"],
+    character: [
+      { man_name: "피터 파커1", char_name: "스파이더맨1" },
+      { man_name: "플린트 마코", char_name: "샌드맨" },
+      { man_name: "메리 제인1", char_name: "" },
+      { man_name: "에디 브록", char_name: "베놈" },
+      { man_name: "J. 조너 제임슨", char_name: "편집장" },
+    ],
+    stone: [],
+    sentence: [
+      "한 사람만 노력해도 세상은 달라지게 마련이야.",
+      "스파이더맨 / 피터 파커",
+      "토비 맥과이어",
+    ],
+  },
+  {
+    search: "어메이징 스파이더맨1",
+    name_kr: "어메이징 스파이더맨",
+    name_en: "The Amazing Spider-Man",
+    launch_year: "2012.06.28.",
+    url: "https://watcha.com/watch/mdR7xv5?mappingSource=basic",
+    img: "img/poster/수정본-300/어메이징 스파이더맨1.jpg",
+    phase: "",
+    timeline: "",
+    next_movie: ["어메이징 스파이더맨2", "스파이더맨 : 노 웨이 홈"],
+    character: [
+      { man_name: "피터 파커2", char_name: "스파이더맨2" },
+      { man_name: "커트 코너스 박사", char_name: "리자드" },
+      { man_name: "그웬 스테이시2", char_name: "" },
+    ],
+    stone: [],
+    sentence: [
+      "약속은 깨져야 제맛이지.",
+      "스파이더맨 / 피터 파커",
+      "앤드류 가필드",
+    ],
+  },
+  {
+    search: "어메이징 스파이더맨2",
+    name_kr: "어메이징 스파이더맨2",
+    name_en: "The Amazing Spider-Man2",
+    launch_year: "2014.04.23.",
+    url: "https://watcha.com/watch/mO0rl15?mappingSource=basic",
+    img: "img/poster/수정본-300/어메이징 스파이더맨2.jpg",
+    phase: "",
+    timeline: "",
+    next_movie: ["스파이더맨 : 노 웨이 홈"],
+    character: [
+      { man_name: "피터 파커2", char_name: "스파이더맨2" },
+      { man_name: "맥스 딜런", char_name: "일렉트로" },
+      { man_name: "그웬 스테이시2", char_name: "" },
+    ],
+    stone: [],
+    sentence: [
+      "남의 삶을 살지 말고 자신의 꿈을 쟁취하세요.",
+      "그웬 스테이시",
+      "엠마 스톤",
+    ],
+  },
+];
 
 // 영화별 세부정보
 const content_movies_info = [
@@ -1098,8 +1241,8 @@ const content_movies_info = [
     search: "샹치와 텐 링즈의 전설",
     synopsys:
       "초인적인 능력을 가진 ‘텐 링즈’의 힘으로 수세기 동안 어둠의 세상을 지배해 온 ‘웬우’ '샹치’는 아버지 ‘웬우’ 밑에서 암살자로 훈련을 받았지만 이를 거부하고 평범함 삶을 선택한다. 그러나 ‘샹치’는 목숨을 노리는 자들의 습격으로 더 이상 운명을 피할 수 없다는 것을 직감하고 어머니가 남긴 가족의 비밀과 내면의 신비한 힘을 일깨우게 된다 벗어나고 싶은 과거이자 그 누구보다 두려운 아버지 ‘웬우’를 마주해야 하는 ‘샹치’ 악이 될 것인가? 구원이 될 것인가? 마블의 새로운 시대 세상에 없던 힘이 탄생한다!",
-    starPoint: "8.10",
-    audienceCount: "1,816명",
+    starPoint: "7.62",
+    audienceCount: "54만명",
     summary: "액션 | 미국, 오스트레일리아 | 132분",
   },
   {
@@ -1181,6 +1324,54 @@ const content_movies_info = [
     audienceCount: "-",
     summary: "-",
   },
+  {
+    search: "베놈1",
+    synopsys:
+      "진실을 위해서라면 몸을 사리지 않는 정의로운 열혈 기자 '에디 브록' 거대 기업 라이프 파운데이션의 뒤를 쫓던 그는 이들의 사무실에 잠입했다가 실험실에서 외계 생물체 '심비오트'의 기습 공격을 받게 된다. '심비오트'와 공생하게 된 '에디 브록'은 마침내 한층 강력한 '베놈'으로 거듭나고, 악한 존재만을 상대하려는 '에디 브록'의 의지와 달리 '베놈'은 난폭한 힘을 주체하지 못하는데…! 지배할 것인가, 지배당할 것인가",
+    starPoint: "8.25",
+    audienceCount: "388만명",
+    summary: "액션 | 미국 | 107분",
+  },
+  {
+    search: "스파이더맨1",
+    synopsys:
+      "평범하고 내성적인 학생 피터 파커, 그는 우연히 유전자가 조작된 슈퍼거미에 물린다. 그 후, 피터는 손에서 거미줄이 튀어 나오고 벽을 기어 오를 수 있는 거미와 같은 능력을 갖게 된다. 다가오는 위험을 본능적으로 감지하는 초감각과 엄청난 파워까지. 피터는 짝사랑하던 '메리 제인'의 관심을 끌기 위해 멋진 스포츠카를 구입하는데 초능력을 처음 사용한다. 그러다 사랑하는 벤 아저씨의 죽음을 계기로 엄청난 파워에는 그만큼의 책임이 동반된다는 사실을 깨닫게 되는데...",
+    starPoint: "8.91",
+    audienceCount: "-",
+    summary: "액션 | 미국 | 121분",
+  },
+  {
+    search: "스파이더맨2",
+    synopsys:
+      "'스파이더맨'이 돌아온다. 우연한 사고로 특별한 능력을 갖게된 피터 파커(토비 맥과이어)는 대학생과 슈퍼 히어로의 신분을 오가며 짜릿한 생활을 하지만 사랑 하는 메리 제인(커스틴 던스트)에게조차 자신의 마음을 열 수 없는 현실은 그들을 안타까운 로맨스로 이끈다. 한편 스파이더맨에게 아버지를 잃고 복수심에 불타는 피터의 친구 해리가 연구 중 폭발로 기계촉수와 엄청난 파워를 갖게된 닥터 옥토퍼스에게 뿌리치지 못할 제안을 하면서 스파이더맨의 운명은 점차 예측불가능한 상황으로 전개되는데...",
+    starPoint: "8.78",
+    audienceCount: "150만명",
+    summary: "액션 | 미국 | 126분",
+  },
+  {
+    search: "스파이더맨3",
+    synopsys:
+      "대중의 사랑을 듬뿍 받으며 진정한 영웅으로 거듭난 스파이더맨, 피터 파커(토비 맥과이어). 어느 날, 스파이더맨은 외계에서 온 수수께끼의 유기체인 심비오트(Symbiote)에 감염되고 스파이더맨은 오리지날 스파이더맨에서 블랙 슈트 스파이더맨으로 변화한다. 한층 업그레이드 되고 강력해진 파워를 얻게 된 스파이더맨은 자신의 힘에 도취되어 마음껏 세상을 즐긴다. 아버지의 복수를 위해 '뉴 고블린(제임스 프랑코)'이 된 해리와 물리 실험에 노출되어 능력을 얻게 된 피터의 삼촌을 죽인 진범 '샌드맨(토마스 헤이든 처치)'은 호시탐탐 스파이더맨을 노리는데... 한편, 피터의 삶에서도 변화의 조짐이 보인다. 직장 동료인 에디 브록(토퍼 그레이스)이 스파이더맨을 쫒아다니며 연신 특종을 잡아 신문사의 영웅으로 떠오르며 그를 위협한 것. 하지만 브록은 스파이더맨이 자신의 여자친구 그웬(브라이스 달라스 하워드)을 위험에서 구해준 후, 그녀의 관심이 온통 그에게 쏠리자 스파이더맨에게 증오의 감정을 갖게 된다. 그리고 그가 벗어 던진 심비오트가 브록에게 전이되어 가장 강력한 악당인 '베놈'으로 진화한다. 상상을 초월하는 힘을 지니게 된 스파이더맨과 그를 노리는 뉴 고블린, 샌드맨, 베놈과의 피할 수 없는 사상 최대의 대결이 시작된다!",
+    starPoint: "7.45",
+    audienceCount: "459만명",
+    summary: "SF | 미국 | 139분",
+  },
+  {
+    search: "어메이징 스파이더맨1",
+    synopsys:
+      "어릴적 사라진 부모 대신 삼촌 내외와 살고 있는 피터 파커(앤드류 가필드)는 여느 고등학생처럼 평범한 학교 생활을 하며 일상을 보내고, 같은 학교 학생 그웬 스테이시(엠마 스톤)와 첫사랑에 빠져 우정과 사랑, 그리고 둘 만의 비밀을 키워나간다. 그러던 어느 날 아버지가 사용했던 비밀스러운 가방을 발견하고 부모님의 실종사건에 대한 의심을 품게 된 그는 그 동안 숨겨져 왔던 과거의 비밀을 추적하게 된다. 아버지의 옛 동료 코너스 박사(리스 이판)의 실험실을 찾아가게 된 피터는 우연한 사고로 특별한 능력을 갖게 되고, 뜻밖의 피터의 도움으로 연구를 완성한 코너스 박사는 자신의 숨겨진 자아인 악당 ‘리자드’를 탄생시킨다. 세상을 위협하는 세력앞에 피터는 그의 인생을 통째로 바꾸어 버릴 일생일대의 선택, 바로 ‘스파이더맨’이라 불리우는 영웅이 되기로 결심하는데… 2012년 6월 28일, 스파이더맨의 숨겨진 비밀이 마침내 밝혀진다!",
+    starPoint: "7.75",
+    audienceCount: "485만명",
+    summary: "SF | 미국 | 136분",
+  },
+  {
+    search: "어메이징 스파이더맨2",
+    synopsys:
+      "스파이더맨의 삶에 완전히 적응한 피터 파커(앤드류 가필드)는 거미줄로 뉴욕을 활강하며 위험에 처한 시민들을 구해주고 사랑하는 연인 그웬(엠마 스톤)과 데이트를 즐기며 행복하게 살아간다. 그러던 어느 날, 스파이더맨의 열렬한 팬이자 오스코프사의 전기 엔지니어인 맥스(제이미 폭스)는 작업 중 치명적인 사고로 자신에게 엄청난 능력이 생긴 것을 발견한다. 하지만 이 능력으로 인해 뉴욕을 마비시킨 대규모 정전사태가 발생하고 사태를 해결하기 위해 나선 자신의 영웅 스파이더맨에게 공격을 당하자 배신감을 느끼고 분노한다. 여기에 해리 오스본(데인 드한)은 맥스에게 자신과 함께 스파이더맨에게 복수를 하자며 손을 내미는데… 더욱 강력해진 적들의 등장! 진짜 전쟁은 지금부터다!",
+    starPoint: "8.06",
+    audienceCount: "416만명",
+    summary: "SF | 미국 | 142분",
+  },
 ];
 
-const movies = movies_launch.concat(movies_schedule);
+const movies = movies_launch.concat(movies_schedule, movies_sony);

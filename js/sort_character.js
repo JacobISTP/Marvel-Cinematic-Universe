@@ -238,7 +238,7 @@ let characters = [
   {
     man_name: "피터 파커",
     char_name: "스파이더맨",
-    img: "img/character/수정본/스파이더맨2.jpg",
+    img: "img/character/수정본/스파이더맨.jpg",
   },
   {
     man_name: "닥터 스트레인지",
@@ -355,6 +355,56 @@ let characters = [
     man_name: "알렉세이 쇼스타코프",
     char_name: "레드 가디언",
     img: "img/character/수정본/알렉세이 쇼스타코프.jpg",
+  },
+  {
+    man_name: "에디 브록",
+    char_name: "베놈",
+    img: "img/character/수정본/베놈.jpg",
+  },
+  {
+    man_name: "피터 파커1",
+    char_name: "스파이더맨1",
+    img: "img/character/수정본/스파이더맨1.jpg",
+  },
+  {
+    man_name: "피터 파커2",
+    char_name: "스파이더맨2",
+    img: "img/character/수정본/스파이더맨22.jpg",
+  },
+  {
+    man_name: "노먼 오스본",
+    char_name: "그린 고블린",
+    img: "img/character/수정본/그린 고블린.jpg",
+  },
+  {
+    man_name: "메리 제인1",
+    char_name: "",
+    img: "img/character/수정본/메리 제인1.jpg",
+  },
+  {
+    man_name: "닥터 옥타비우스",
+    char_name: "닥터 옥타비우스",
+    img: "img/character/수정본/닥터 옥타비우스.jpg",
+  },
+  {
+    man_name: "플린트 마코",
+    char_name: "샌드맨",
+    img: "img/character/수정본/샌드맨.jpg",
+  },
+  {
+    man_name: "커트 코너스 박사",
+    char_name: "리자드",
+    img: "img/character/수정본/리자드.jpg",
+  },
+  {
+    man_name: "맥스 딜런",
+    char_name: "일렉트로",
+    img: "img/character/수정본/일렉트로.jpg",
+  },
+  {
+    man_name: "그웬 스테이시2",
+    char_name: "",
+    img: "img/character/수정본/그웬 스테이시2.jpg",
   },
 ];
 // statement 선언

@@ -3,10 +3,27 @@
 function getMatchedValueByKey(array, key, name_kr) {
   for (let index = 0; index < array.length; index++) {
     const name = name_kr.normalize("NFC");
-    if (name === array[index]["name_kr"].normalize("NFC")) {
-      return array[index][key];
-    } else if (name === array[index]["search"].normalize("NFC")) {
-      return array[index][key];
+
+    if (name === array[index]["name_kr"]) {
+      let value_by_key_name_kr = array[index][key];
+      if (Array.isArray(value_by_key_name_kr)) {
+        for (let v = 0; v < value_by_key_name_kr.length; v++) {
+          value_by_key_name_kr[v] = value_by_key_name_kr[v].normalize("NFC");
+        }
+      } else {
+        value_by_key_name_kr = value_by_key_name_kr.normalize("NFC");
+      }
+      return value_by_key_name_kr;
+    } else if (name === array[index]["search"]) {
+      let value_by_key_search = array[index][key];
+      if (Array.isArray(value_by_key_search)) {
+        for (let v = 0; v < value_by_key_search.length; v++) {
+          value_by_key_search[v] = value_by_key_search[v].normalize("NFC");
+        }
+      } else {
+        value_by_key_search = value_by_key_search.normalize("NFC");
+      }
+      return value_by_key_search;
     }
   }
 
@@ -115,7 +132,6 @@ function specificContents(event) {
     "summary",
     getMatchedValueByKey(movies, "search", eachmovie_title)
   );
-
   const starPoint = getMatchedValueByKey(
     content_movies_info,
     "starPoint",

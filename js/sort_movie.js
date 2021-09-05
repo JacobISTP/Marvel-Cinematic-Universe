@@ -32,9 +32,9 @@ function f_movies_sort_movie(event = "", array = []) {
   if (array.length === 0) {
     event.preventDefault();
     movies_sort_movie.length = 0;
-    for (let s = 0; s < movies_time.length; s++) {
-      if (movies_time[s].name_kr.includes(input_sort.value)) {
-        movies_sort_movie.push(movies_time[s]);
+    for (let s = 0; s < movies.length; s++) {
+      if (movies[s].name_kr.includes(input_sort.value)) {
+        movies_sort_movie.push(movies[s]);
       }
     }
     array = movies_sort_movie;
@@ -91,10 +91,10 @@ function selectMovie(event) {
   f_movies_sort_movie_prev(select_movie_name);
   f_movies_sort_movie_next(select_movie_name);
 
-  for (let a = 0; a < movies_launch.length; a++) {
-    if (select_movie_name === movies_launch[a].name_kr) {
-      f_a_title(select_movie_a, a, movies_launch);
-      f_a_title(select_movie_a_img, a, movies_launch);
+  for (let a = 0; a < movies.length; a++) {
+    if (select_movie_name === movies[a].name_kr) {
+      f_a_title(select_movie_a, a, movies);
+      f_a_title(select_movie_a_img, a, movies);
     }
   }
 
@@ -117,10 +117,10 @@ const movies_sort_movie_next = [];
 function f_movies_sort_movie_prev(select_movie_name) {
   movies_sort_movie_prev.length = 0;
 
-  for (let p = 0; p < movies_time.length; p++) {
-    if (movies_time[p].next_movie.includes(select_movie_name)) {
-      if (!movies_sort_movie_prev.includes(movies_time[p])) {
-        movies_sort_movie_prev.push(movies_time[p]);
+  for (let p = 0; p < movies.length; p++) {
+    if (movies[p].next_movie.includes(select_movie_name)) {
+      if (!movies_sort_movie_prev.includes(movies[p])) {
+        movies_sort_movie_prev.push(movies[p]);
       }
     }
   }
@@ -130,17 +130,15 @@ function f_movies_sort_movie_next(select_movie_name) {
   movies_sort_movie_next.length = 0;
 
   const movies_sort_movie_next_name = [];
-  for (let n = 0; n < movies_time.length; n++) {
-    if (select_movie_name === movies_time[n].name_kr) {
-      movies_sort_movie_next_name.push(movies_time[n]);
+  for (let n = 0; n < movies.length; n++) {
+    if (select_movie_name === movies[n].name_kr) {
+      movies_sort_movie_next_name.push(movies[n]);
     }
   }
   for (let n = 0; n < movies_sort_movie_next_name[0].next_movie.length; n++) {
-    for (let t = 0; t < movies_time.length; t++) {
-      if (
-        movies_sort_movie_next_name[0].next_movie[n] === movies_time[t].name_kr
-      ) {
-        movies_sort_movie_next.push(movies_time[t]);
+    for (let t = 0; t < movies.length; t++) {
+      if (movies_sort_movie_next_name[0].next_movie[n] === movies[t].name_kr) {
+        movies_sort_movie_next.push(movies[t]);
       }
     }
   }
