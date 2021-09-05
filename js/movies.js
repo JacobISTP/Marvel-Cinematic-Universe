@@ -293,10 +293,8 @@ const movies_launch = [
       { man_name: "클린트 바튼", char_name: "호크 아이" },
       { man_name: "제임스 로드", char_name: "워머신" },
       { man_name: "닉 퓨리", char_name: "" },
-      { man_name: "로키", char_name: "로키" },
-      { man_name: "페퍼 포츠", char_name: "" },
-      { man_name: "필 콜슨 요원", char_name: "" },
-      { man_name: "셀빅 박사", char_name: "" },
+
+      { man_name: "페기 카터", char_name: "페기 카터" },
       { man_name: "스탠 리", char_name: "" },
       { man_name: "울트론", char_name: "울트론" },
       { man_name: "완다 막시모프", char_name: "스칼렛 위치" },

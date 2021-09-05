@@ -3,9 +3,9 @@
 function getMatchedValueByKey(array, key, name_kr) {
   for (let index = 0; index < array.length; index++) {
     const name = name_kr.normalize("NFC");
-    if (name === array[index]["name_kr"]) {
+    if (name === array[index]["name_kr"].normalize("NFC")) {
       return array[index][key];
-    } else if (name === array[index]["search"]) {
+    } else if (name === array[index]["search"].normalize("NFC")) {
       return array[index][key];
     }
   }
