@@ -2,27 +2,34 @@
 
 function getMatchedValueByKey(array, key, name_kr) {
   for (let index = 0; index < array.length; index++) {
-    const name = name_kr.normalize("NFC");
+    const nameNFC = name_kr.normalize("NFC");
+    const nameNFD = name_kr.normalize("NFD");
 
-    if (name === array[index]["name_kr"]) {
+    if (
+      nameNFC === array[index]["name_kr"] ||
+      nameNFD === array[index]["name_kr"]
+    ) {
       let value_by_key_name_kr = array[index][key];
-      if (Array.isArray(value_by_key_name_kr)) {
-        for (let v = 0; v < value_by_key_name_kr.length; v++) {
-          value_by_key_name_kr[v] = value_by_key_name_kr[v].normalize("NFC");
-        }
-      } else {
-        value_by_key_name_kr = value_by_key_name_kr.normalize("NFC");
-      }
+      // if (Array.isArray(value_by_key_name_kr)) {
+      //   for (let v = 0; v < value_by_key_name_kr.length; v++) {
+      //     value_by_key_name_kr[v] = value_by_key_name_kr[v].normalize("NFC");
+      //   }
+      // } else {
+      //   value_by_key_name_kr = value_by_key_name_kr.normalize("NFC");
+      // }
       return value_by_key_name_kr;
-    } else if (name === array[index]["search"]) {
+    } else if (
+      nameNFC === array[index]["search"] ||
+      nameNFD === array[index]["search"]
+    ) {
       let value_by_key_search = array[index][key];
-      if (Array.isArray(value_by_key_search)) {
-        for (let v = 0; v < value_by_key_search.length; v++) {
-          value_by_key_search[v] = value_by_key_search[v].normalize("NFC");
-        }
-      } else {
-        value_by_key_search = value_by_key_search.normalize("NFC");
-      }
+      // if (Array.isArray(value_by_key_search)) {
+      //   for (let v = 0; v < value_by_key_search.length; v++) {
+      //     value_by_key_search[v] = value_by_key_search[v].normalize("NFC");
+      //   }
+      // } else {
+      //   value_by_key_search = value_by_key_search.normalize("NFC");
+      // }
       return value_by_key_search;
     }
   }
