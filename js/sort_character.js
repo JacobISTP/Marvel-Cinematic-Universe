@@ -553,6 +553,6 @@ function createCharMovieDiv() {
   }
 }
 
-window.addEventListener("pageshow", f_movies_sort_char);
+window.addEventListener("load", f_movies_sort_char);
 form_sort.addEventListener("submit", f_movies_sort_char);
 go_to_back.addEventListener("click", f_backToTheResult_char);

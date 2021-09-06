@@ -15,8 +15,8 @@ function screenMoveBottom() {
 
 function screenMoveWindow(event) {
   if (
-    event.target.URL.indexOf("index") === -1 &&
-    event.target.URL.indexOf("html") !== -1
+    window.location.href.indexOf("index") === -1 &&
+    window.location.href.indexOf("html") !== -1
   ) {
     screenMoveBottom();
   } else {
@@ -44,11 +44,26 @@ function titleMenuBlink() {
   }
 }
 
+const page_load_target = document.querySelector("#page_load");
+const page_load_target_div = document.querySelector("#page_load > div");
+page_load_target_div.style = `margin-top:${window.pageYOffset}px;`;
+
+function expandLoadPage() {
+  page_load_target_div.style = `margin-top:${window.pageYOffset}px; opacity: 0%; transform: scale(200%); transition: 0.5s ease-in-out`;
+}
+
+function removeLoadPage() {
+  page_load_target.remove();
+}
+
+window.addEventListener("load", expandLoadPage);
+page_load_target_div.addEventListener("transitionend", removeLoadPage);
+
 for (let btn = 0; btn < btn_changeOrder.length - 1; btn++) {
   btn_changeOrder[btn].addEventListener("click", screenMoveBottom);
   btn_changeOrder[btn].addEventListener("click", titleMenuBlink);
 }
-window.addEventListener("pageshow", screenMoveWindow);
+page_load_target_div.addEventListener("transitionend", screenMoveWindow);
 // window.addEventListener("pageshow", titleMenuBlink);
 try {
   form_sort.addEventListener("submit", screenMoveBottom);

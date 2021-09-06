@@ -8,6 +8,12 @@ const btn_launch = document.querySelector("#btn_launch");
 const btn_schedule = document.querySelector("#btn_schedule");
 const title_header = document.querySelector("article img");
 
+const slider_array = [
+  order_launch_slider,
+  order_time_slider,
+  order_schedule_slider,
+];
+
 function actionTitleRemain() {
   title_header.classList.remove("logo_transition");
   title_header.classList.add("logo_opacity_100");
@@ -24,7 +30,7 @@ function reloadPage() {
 let mobileJs = window.matchMedia("(max-width: 420px)");
 let pcJs = window.matchMedia("(min-width: 421px)");
 let startX, endX, startY, endY;
-let position = 2;
+let position = 0;
 
 const move_statements = ["moveToLeft", "moveToMiddle", "moveToRight"];
 
@@ -70,6 +76,10 @@ function move3() {
   remove_currentOrder();
   btn_schedule.classList.add("currentOrder");
 }
+
+// function move(event, array, direction = "") {
+//   position_current = position;
+// }
 
 function prev() {
   if (position == 0) {

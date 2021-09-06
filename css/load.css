@@ -1,0 +1,19 @@
+#page_load {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 200vh;
+  align-items: flex-start;
+  background-color: black;
+  z-index: 10;
+  display: flex;
+}
+#page_load div {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+#page_load img {
+  width: 100%;
+}

@@ -12,6 +12,7 @@
 @import "orderDiv.css";
 @import "pcMedia.css";
 @import "sentences.css";
+@import "load.css";
 
 * {
   box-sizing: border-box;
