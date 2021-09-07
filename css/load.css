@@ -19,12 +19,11 @@
 }
 
 .load_img {
-  width: 100%;
-  height: min-content;
-
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
 
   box-shadow: 0px 0px 20px 20px black inset;
 }
@@ -33,22 +32,33 @@
   opacity: 0%;
 }
 #load_img1 {
-  background-image: url("../img/jarvis.jpg");
+  width: fit-content;
+  height: fit-content;
+  background-image: url("../img/load/load_avengers3.gif");
 }
 #load_img2 {
   width: 50%;
+  height: min-content;
   background-image: url("../img/load/load1.gif");
 }
 #load_img3 {
   width: 50%;
+  height: min-content;
   background-image: url("../img/load/load3.gif");
 }
 #load_img4 {
   width: 50%;
+  height: min-content;
   background-image: url("../img/load/load4.gif");
 }
 @media (max-width: 420px) {
+  .load_img img {
+    width: 100vw;
+  }
   #load_img1 {
+    background-image: url("../img/load/load_avengers2.gif");
+  }
+  #load_img1 img {
   }
   #load_img2 {
     width: 100%;
