@@ -10,12 +10,53 @@
   display: flex;
 }
 
-#page_load div {
+#page_load > div {
+  width: 100vw;
   height: 100vh;
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 
-#page_load img {
+.load_img {
   width: 100%;
+  height: min-content;
+
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  box-shadow: 0px 0px 20px 20px black inset;
+}
+.load_img img {
+  width: 100%;
+  opacity: 0%;
+}
+#load_img1 {
+  background-image: url("../img/jarvis.jpg");
+}
+#load_img2 {
+  width: 50%;
+  background-image: url("../img/load/load1.gif");
+}
+#load_img3 {
+  width: 50%;
+  background-image: url("../img/load/load3.gif");
+}
+#load_img4 {
+  width: 50%;
+  background-image: url("../img/load/load4.gif");
+}
+@media (max-width: 420px) {
+  #load_img1 {
+  }
+  #load_img2 {
+    width: 100%;
+  }
+  #load_img3 {
+    width: 100%;
+  }
+  #load_img4 {
+    width: 50%;
+  }
 }

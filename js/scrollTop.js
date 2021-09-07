@@ -46,7 +46,13 @@ function titleMenuBlink() {
 
 const page_load_target = document.querySelector("#page_load");
 const page_load_target_div = document.querySelector("#page_load > div");
+const page_load_target_img = document.querySelector(".load_img");
+let load_img_shadow = ((window.innerHeight + window.innerWidth) / 2) * 0.04;
+
 page_load_target_div.style = `margin-top:${window.pageYOffset}px;`;
+page_load_target_img.style = `box-shadow: 0px 0px ${load_img_shadow}px ${load_img_shadow}px black inset;`;
+console.dir(load_img_shadow);
+console.dir(window);
 
 function expandLoadPage() {
   page_load_target_div.style = `margin-top:${window.pageYOffset}px; opacity: 0%; transform: scale(200%); transition: 0.5s ease-in-out`;
