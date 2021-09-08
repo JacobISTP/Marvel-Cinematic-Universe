@@ -18,9 +18,9 @@ if (pcJs.matches) {
   }
 }
 
-opening.style = `width: fit-content; height: fit-content; background-color: black; top: ${
+opening.style = `width: fit-content; height: ${article_height}; background-color: black; top: 0px; padding:${
   (header_article.clientHeight - opening_gif_div.clientHeight) / 2
-}px;`;
+}px 0px;`;
 
 function fadeOutOpening() {
   opening.style = "opacity:0%; transition: 1s ease-in-out;";
