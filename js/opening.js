@@ -18,7 +18,7 @@ if (pcJs.matches) {
   }
 }
 
-opening.style = `width: fit-content; height: ${article_height}; background-color: black; top: 0px; padding:${
+opening.style = `width: fit-content; height: ${article_height}; background-color: black; padding:${
   (header_article.clientHeight - opening_gif_div.clientHeight) / 2
 }px 0px;`;
 
