@@ -13,12 +13,11 @@ if (pcJs.matches) {
   console.log(opening_gif_height);
   console.log(article_height);
 
-  if (opening_gif_height > article_height) {
+  if (opening_gif_height > article_height || opening_gif_height === 0) {
     opening_gif.style = `height: ${article_height}px;`;
   }
 }
-
-opening.style = `width: fit-content; height: ${article_height}; background-color: black; padding:${
+opening.style = `width: ${article_width}px; height: ${article_height}px; background-color: black; padding:${
   (header_article.clientHeight - opening_gif_div.clientHeight) / 2
 }px 0px;`;
 
