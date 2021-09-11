@@ -47,16 +47,16 @@ function titleMenuBlink() {
 const page_load_target = document.querySelector("#page_load");
 const page_load_target_div = document.querySelector("#page_load > div");
 const page_load_target_img = document.querySelector(".load_img");
-const page_load_target_img_img = document.querySelector(".load_img img");
+// const page_load_target_img_img = document.querySelector(".load_img img");
 let load_img_shadow = ((window.innerHeight + window.innerWidth) / 2) * 0.04;
 
 if (page_load_target !== null) {
   page_load_target_div.style = `margin-top:${window.pageYOffset}px;`;
   page_load_target_img.style = `box-shadow: 0px 0px ${load_img_shadow}px ${load_img_shadow}px black inset;`;
 
-  if (window.matchMedia("(max-width: 420px)").matches) {
-    page_load_target_img_img.src = "img/load/load_avengers2.gif";
-  }
+  // if (window.matchMedia("(max-width: 420px)").matches) {
+  //   page_load_target_img_img.src = "img/load/load_avengers2.gif";
+  // }
 
   window.addEventListener("load", expandLoadPage);
   page_load_target_div.addEventListener("transitionend", removeLoadPage);

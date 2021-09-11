@@ -88,7 +88,7 @@
     width: 100vw;
   }
   #load_img1 {
-    background-image: url("../img/load/load_avengers2.gif");
+    /* background-image: url("../img/load/load_avengers2.gif"); */
   }
   #load_img1 img {
   }
