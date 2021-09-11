@@ -714,7 +714,7 @@ const movies_launch = [
     search: "샹치와 텐 링즈의 전설",
     name_kr: "샹치와 텐 링즈의 전설",
     name_en: "Shang-Chi and the Legend of the Ten Rings",
-    launch_year: "2021. 09. 01.",
+    launch_year: "2021.09.01.",
     url: "https://www.youtube.com/watch?v=Pj7CadRf82k",
     img: "img/poster/수정본-300/샹치.jpg",
     phase: "4",
@@ -743,7 +743,7 @@ const movies_schedule = [
     search: "베놈 2 : 렛 데어 비 카니지",
     name_kr: "베놈 2 : 렛 데어 비 카니지",
     name_en: "Venom : Let There Be Carnage",
-    launch_year: "2021. 10. 13.\n마블은 아니지만 추후 MCU 편입 가능성있음",
+    launch_year: "2021.10.13.\n마블은 아니지만 추후 MCU 편입 가능성있음",
     url: "https://www.youtube.com/watch?v=BryJA-Xp-Q4",
     img: "img/poster/수정본-300/베놈2.jpg",
     phase: "",
@@ -757,7 +757,7 @@ const movies_schedule = [
     search: "이터널스",
     name_kr: "이터널스",
     name_en: "Eternals",
-    launch_year: "2021. 11. 5.",
+    launch_year: "2021.11.05.",
     url: "https://www.youtube.com/watch?v=BdkSkI61aGo",
     img: "img/poster/수정본-300/이터널스.jpg",
     phase: "4",
@@ -771,7 +771,7 @@ const movies_schedule = [
     search: "스파이더맨 : 노 웨이 홈",
     name_kr: "스파이더맨 : 노 웨이 홈",
     name_en: "Spider-Man : No Way Home",
-    launch_year: "2021. 12. 17",
+    launch_year: "2021.12.17",
     url: "https://www.youtube.com/watch?v=WgU7P6o-GkM&t=12s",
     img: "img/poster/수정본-300/스파이더맨_노웨이홈.jpg",
     phase: "4",
@@ -799,7 +799,7 @@ const movies_schedule = [
     search: "닥터 스트레인지 인 더 멀티버스 오브 매드니스",
     name_kr: "닥터 스트레인지 인 더 멀티버스 오브 매드니스",
     name_en: "Doctor Strange in the Multiverse of Madness",
-    launch_year: "2022. 3. 25.",
+    launch_year: "2022.03.25.",
     url: "",
     img: "img/poster/수정본-300/닥터스트레인지2.jpg",
     phase: "4",
@@ -815,7 +815,7 @@ const movies_schedule = [
     search: "토르 : 러브 앤 썬더",
     name_kr: "토르 : 러브 앤 썬더",
     name_en: "Thor : Love and Thunder",
-    launch_year: "2022. 5. 6.",
+    launch_year: "2022.05.06.",
     url: "",
     img: "img/poster/수정본-300/토르4.jpg",
     phase: "4",
@@ -829,7 +829,7 @@ const movies_schedule = [
     search: "블랙팬서: 와칸다 포에버",
     name_kr: "블랙팬서: 와칸다 포에버",
     name_en: "Black Panther: Wakanda Forever",
-    launch_year: "2022. 7. 8.",
+    launch_year: "2022.07.08.",
     url: "",
     img: "img/poster/수정본-300/블랙팬서2.jpg",
     phase: "4",
@@ -843,7 +843,7 @@ const movies_schedule = [
     search: "더 마블스",
     name_kr: "더 마블스",
     name_en: "The Marvels",
-    launch_year: "2022. 11. 11.",
+    launch_year: "2022.11.11.",
     url: "",
     img: "img/poster/수정본-300/캡틴마블2.jpg",
     phase: "4",
@@ -857,7 +857,7 @@ const movies_schedule = [
     search: "앤트맨과 와스프 : 퀀터매니아",
     name_kr: "앤트맨과 와스프 : 퀀터매니아",
     name_en: "Ant-man and the Wasp : Quantumania",
-    launch_year: "2023. 2. 17.",
+    launch_year: "2023.02.17.",
     url: "",
     img: "img/poster/수정본-300/앤트맨3.jpg",
     phase: "4",
@@ -871,7 +871,7 @@ const movies_schedule = [
     search: "가디언즈 오브 갤럭시 VOL.3",
     name_kr: "가디언즈 오브 갤럭시 VOL.3",
     name_en: "Guardians of the Galaxy Vol. 3",
-    launch_year: "2023. 5. 5.",
+    launch_year: "2023.05.05.",
     url: "",
     img: "img/poster/수정본-300/가오갤3.jpg",
     phase: "4",
@@ -1374,4 +1374,54 @@ const content_movies_info = [
   },
 ];
 
-const movies = movies_launch.concat(movies_schedule, movies_sony);
+const movies_raw = movies_launch.concat(movies_schedule, movies_sony);
+let movies_copy = {};
+let movie_copy = {};
+let launch_year = 0;
+let launch_month = 0;
+let launch_day = 0;
+for (let m = 0; m < movies_raw.length; m++) {
+  launch_year = String(movies_raw[m].launch_year.substring(0, 4));
+  let key_copy = Object.keys(movies_copy);
+  if (!key_copy.includes(launch_year)) {
+    movies_copy[launch_year] = [];
+  }
+  movies_copy[launch_year].push(movies_raw[m]);
+}
+const keys_copy = Object.keys(movies_copy);
+keys_copy.sort();
+
+const movies = [];
+for (let mc = 0; mc < keys_copy.length; mc++) {
+  let year_movies_copy = movies_copy[keys_copy[mc]];
+  if (year_movies_copy.length > 1) {
+    let year_movies_copy2 = [];
+
+    for (let ymc = 0; ymc < year_movies_copy.length; ymc++) {
+      launch_month = String(year_movies_copy[ymc].launch_year.substring(5, 7));
+      launch_day = year_movies_copy[ymc].launch_year.substring(8, 10);
+      if (launch_month === "") {
+        launch_month = "13";
+      }
+
+      let key_copy2 = Object.keys(year_movies_copy);
+      if (!key_copy2.includes(launch_month)) {
+        year_movies_copy2[launch_month] = [];
+      }
+      year_movies_copy2[launch_month].push(year_movies_copy[ymc]);
+    }
+    let keys_copy_month = Object.keys(year_movies_copy2);
+    keys_copy_month.sort();
+
+    year_movies_copy = [];
+    for (let ymc2 = 0; ymc2 < keys_copy_month.length; ymc2++) {
+      year_movies_copy.push(year_movies_copy2[keys_copy_month[ymc2]][0]);
+    }
+  }
+  console.log(year_movies_copy);
+  for (let ymc_f = 0; ymc_f < year_movies_copy.length; ymc_f++) {
+    console.log(year_movies_copy[ymc_f]);
+    movies.push(year_movies_copy[ymc_f]);
+  }
+}
+console.log(movies);

@@ -30,5 +30,8 @@ function removeOpening() {
 
 window.setTimeout(fadeOutOpening, 34000);
 opening.addEventListener("transitionend", removeOpening);
-console.log(opening_gif_width);
-console.log(article_height);
+// console.log(opening_gif_width);
+// console.log(article_height);
+for (let btn = 0; btn < btn_changeOrder.length - 1; btn++) {
+  btn_changeOrder[btn].addEventListener("click", removeOpening);
+}
