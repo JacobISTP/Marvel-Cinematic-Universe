@@ -22,11 +22,12 @@
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
+
   display: flex;
   flex-direction: column;
-  align-items: center;
-  color: cadetblue;
   justify-content: center;
+  align-items: center;
+  color: blueviolet;
 
   box-shadow: 0px 0px 20px 20px black inset;
 }
@@ -40,11 +41,15 @@
 }
 .load_img > div {
   display: flex;
-  align-items: flex-end;
+  justify-content: center;
+  align-items: center;
+}
+.load_img > div:first-child {
+  flex-direction: column;
 }
 .load_img svg {
-  margin: 20px 5px;
-  transform: scale(80%);
+  margin: 20px 10px;
+  transform: scale(100%);
   opacity: 0%;
   animation: loadingAnimation 2s ease-out infinite;
 }

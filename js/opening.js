@@ -21,7 +21,7 @@ if (pcJs.matches) {
 opening.style = `width: ${article_width}px; height: ${article_height}px; background-color: black;`;
 
 function fadeOutOpening() {
-  opening.style = "opacity:0%; transition: 1s ease-in-out;";
+  opening.style = "opacity:0%; transition: 1s ease-in-out; cursor: pointer;";
 }
 function removeOpening() {
   opening.remove();
@@ -29,6 +29,7 @@ function removeOpening() {
 
 window.setTimeout(fadeOutOpening, 34000);
 opening.addEventListener("transitionend", removeOpening);
+opening.addEventListener("click", removeOpening);
 // console.log(opening_gif_width);
 // console.log(article_height);
 for (let btn = 0; btn < btn_changeOrder.length - 1; btn++) {
