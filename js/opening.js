@@ -15,11 +15,10 @@ if (pcJs.matches) {
 
   if (opening_gif_height > article_height || opening_gif_height === 0) {
     opening_gif.style = `height: ${article_height}px;`;
+    console.dir(opening_gif);
   }
 }
-opening.style = `width: ${article_width}px; height: ${article_height}px; background-color: black; padding:${
-  (header_article.clientHeight - opening_gif_div.clientHeight) / 2
-}px 0px;`;
+opening.style = `width: ${article_width}px; height: ${article_height}px; background-color: black;`;
 
 function fadeOutOpening() {
   opening.style = "opacity:0%; transition: 1s ease-in-out;";
