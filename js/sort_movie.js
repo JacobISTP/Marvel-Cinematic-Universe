@@ -146,7 +146,7 @@ function f_movies_sort_movie_next(select_movie_name) {
 
 function createPrevMovieDiv() {
   if (document.querySelector(".phase:nth-child(2) .phase_movie") === null) {
-    createMovieDiv("이전 관련 영화");
+    createMovieDiv("이전 영화");
   }
   const order_sort_prev_new = document.querySelector(
     ".phase:nth-child(2) .phase_movie"
@@ -171,7 +171,7 @@ function createPrevMovieDiv() {
 
 function createNextMovieDiv() {
   if (document.querySelector(".phase:nth-child(3) .phase_movie") === null) {
-    createMovieDiv("다음 관련 영화");
+    createMovieDiv("다음 영화");
   }
   const order_sort_next_new = document.querySelector(
     ".phase:nth-child(3) .phase_movie"

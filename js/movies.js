@@ -11,7 +11,7 @@ const movies_launch = [
     img: "img/poster/수정본-300/아이언맨.jpg",
     phase: "1",
     timeline: "3",
-    next_movie: ["아이언맨2"],
+    next_movie: ["아이언맨2", "샹치와 텐 링즈의 전설"],
     character: [
       { man_name: "토니 스타크", char_name: "아이언맨" },
       { man_name: "제임스 로드", char_name: "" },
@@ -38,7 +38,7 @@ const movies_launch = [
     img: "img/poster/수정본-300/인크레더블 헐크.jpg",
     phase: "1",
     timeline: "4",
-    next_movie: ["어벤져스"],
+    next_movie: ["어벤져스", "샹치와 텐 링즈의 전설"],
     character: [
       { man_name: "브루스 배너", char_name: "헐크" },
       { man_name: "로스 장군", char_name: "" },
@@ -172,7 +172,7 @@ const movies_launch = [
     img: "img/poster/수정본-300/아이언맨3.jpg",
     phase: "2",
     timeline: "9",
-    next_movie: ["어벤져스 : 에이지 오브 울트론"],
+    next_movie: ["어벤져스 : 에이지 오브 울트론", "샹치와 텐 링즈의 전설"],
     character: [
       { man_name: "토니 스타크", char_name: "아이언맨" },
       { man_name: "페퍼 포츠", char_name: "" },
@@ -610,7 +610,7 @@ const movies_launch = [
     img: "img/poster/수정본-300/어벤져스4.jpg",
     phase: "3",
     timeline: "23",
-    next_movie: ["스파이더맨 : 파 프롬 홈"],
+    next_movie: ["스파이더맨 : 파 프롬 홈", "샹치와 텐 링즈의 전설"],
     character: [
       { man_name: "토니 스타크", char_name: "아이언맨" },
       { man_name: "나타샤 로마노프", char_name: "블랙 위도우" },
@@ -691,7 +691,7 @@ const movies_launch = [
     name_kr: "블랙위도우",
     name_en: "Black Widow",
     launch_year: "2021.07.07.",
-    url: "",
+    url: "https://www.youtube.com/watch?v=5j1sRpXWbxU",
     img: "img/poster/수정본-300/블랙위도우.jpg",
     phase: "4",
     timeline: "16",
@@ -720,9 +720,9 @@ const movies_launch = [
     phase: "4",
     timeline: "25",
     next_movie: [],
-    character: [{ man_name: "샹치", char_name: "샹치" }],
+    character: [{ man_name: "쑤 샹치", char_name: "샹치" }],
     stone: [],
-    sentence: ["상영중인 영화입니다.", "스포", "금지"],
+    sentence: ["피의 대가는 피로 치루는거란다.", "쑤 웬우", "양조위"],
   },
 ];
 
@@ -1241,8 +1241,8 @@ const content_movies_info = [
     search: "샹치와 텐 링즈의 전설",
     synopsys:
       "초인적인 능력을 가진 ‘텐 링즈’의 힘으로 수세기 동안 어둠의 세상을 지배해 온 ‘웬우’ '샹치’는 아버지 ‘웬우’ 밑에서 암살자로 훈련을 받았지만 이를 거부하고 평범함 삶을 선택한다. 그러나 ‘샹치’는 목숨을 노리는 자들의 습격으로 더 이상 운명을 피할 수 없다는 것을 직감하고 어머니가 남긴 가족의 비밀과 내면의 신비한 힘을 일깨우게 된다 벗어나고 싶은 과거이자 그 누구보다 두려운 아버지 ‘웬우’를 마주해야 하는 ‘샹치’ 악이 될 것인가? 구원이 될 것인가? 마블의 새로운 시대 세상에 없던 힘이 탄생한다!",
-    starPoint: "7.49",
-    audienceCount: "92만명",
+    starPoint: "7.40",
+    audienceCount: "122만명",
     summary: "액션 | 미국, 오스트레일리아 | 132분",
   },
   {
