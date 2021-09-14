@@ -19,7 +19,7 @@ function actionTitleRemain() {
   title_header.classList.add("logo_opacity_100");
 }
 function actionTitle() {
-  title_header.classList.remove("logo_opacity_100");
+  title_header.classList.remove("logo_opacity_0");
   title_header.classList.add("logo_transition");
 }
 
@@ -111,7 +111,6 @@ function touchEnd(event) {
   }
 }
 
-window.addEventListener("pageshow", actionTitle);
 order_launch.addEventListener("touchstart", touchStart);
 order_launch.addEventListener("touchend", touchEnd);
 order_time.addEventListener("touchstart", touchStart);

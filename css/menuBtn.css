@@ -4,7 +4,7 @@
 
 #btn_sort:hover a {
   visibility: visible;
-  background-color: rgba(46, 55, 65, 0.8);
+  background-color: rgb(20, 23, 27);
 }
 
 #btn_sort:hover .font_basic_sm {

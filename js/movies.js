@@ -918,7 +918,7 @@ const movies_sony = [
     name_kr: "베놈",
     name_en: "Venom",
     launch_year: "2018.10.03.",
-    url: "https://watcha.com/watch/mdRLbZr?mappingSource=basic",
+    url: "https://www.youtube.com/watch?v=uEv-FGwTDEw",
     img: "img/poster/수정본-300/베놈1.jpg",
     phase: "",
     timeline: "",
@@ -932,7 +932,7 @@ const movies_sony = [
     name_kr: "스파이더맨",
     name_en: "Spider-Man",
     launch_year: "2002.05.03.",
-    url: "https://watcha.com/watch/mBOkBwW?mappingSource=basic",
+    url: "https://www.youtube.com/watch?v=S9-UzUD2VBw",
     img: "img/poster/수정본-300/스파이더맨1.jpg",
     phase: "",
     timeline: "",
@@ -955,7 +955,7 @@ const movies_sony = [
     name_kr: "스파이더맨2",
     name_en: "Spider-Man2",
     launch_year: "2004.06.30.",
-    url: "https://watcha.com/watch/mBOkqE5?mappingSource=basic",
+    url: "https://www.youtube.com/watch?v=LotuL-4R4F4",
     img: "img/poster/수정본-300/스파이더맨2.jpg",
     phase: "",
     timeline: "",
@@ -978,7 +978,7 @@ const movies_sony = [
     name_kr: "스파이더맨3",
     name_en: "Spider-Man3",
     launch_year: "2007.05.01.",
-    url: "https://watcha.com/watch/mgOA3E5?mappingSource=basic",
+    url: "https://www.youtube.com/watch?v=nHl3oTRUSqk",
     img: "img/poster/수정본-300/스파이더맨3.jpg",
     phase: "",
     timeline: "",
@@ -1002,7 +1002,7 @@ const movies_sony = [
     name_kr: "어메이징 스파이더맨",
     name_en: "The Amazing Spider-Man",
     launch_year: "2012.06.28.",
-    url: "https://watcha.com/watch/mdR7xv5?mappingSource=basic",
+    url: "https://www.youtube.com/watch?v=t-v26AS1xF4",
     img: "img/poster/수정본-300/어메이징 스파이더맨1.jpg",
     phase: "",
     timeline: "",
@@ -1024,7 +1024,7 @@ const movies_sony = [
     name_kr: "어메이징 스파이더맨2",
     name_en: "The Amazing Spider-Man2",
     launch_year: "2014.04.23.",
-    url: "https://watcha.com/watch/mO0rl15?mappingSource=basic",
+    url: "https://www.youtube.com/watch?v=utyIYXpTYE4",
     img: "img/poster/수정본-300/어메이징 스파이더맨2.jpg",
     phase: "",
     timeline: "",
@@ -1418,10 +1418,7 @@ for (let mc = 0; mc < keys_copy.length; mc++) {
       year_movies_copy.push(year_movies_copy2[keys_copy_month[ymc2]][0]);
     }
   }
-  console.log(year_movies_copy);
   for (let ymc_f = 0; ymc_f < year_movies_copy.length; ymc_f++) {
-    console.log(year_movies_copy[ymc_f]);
     movies.push(year_movies_copy[ymc_f]);
   }
 }
-console.log(movies);

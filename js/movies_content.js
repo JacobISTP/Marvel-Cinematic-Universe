@@ -105,8 +105,9 @@ function specificContents(event) {
   const eachmovie_div_star_div = document.createElement("div");
   const eachmovie_div_star_span = document.createElement("span");
   const eachmovie_div_audience = document.createElement("span");
-  const eachMovie_div_synopsys_div = document.createElement("div");
-  const eachmovie_div_synopsys = document.createElement("p");
+  const eachMovie_div_maincontent_div = document.createElement("div");
+  const eachMovie_div_maintitle_div = document.createElement("div");
+  const eachMovie_div_main_div = document.createElement("div");
   const removeBtn = document.createElement("button");
 
   const body = document.querySelector("body");
@@ -200,11 +201,61 @@ function specificContents(event) {
   );
   eachmovie_div_a_youtube_img.src = "./img/logo/youtube.png";
 
-  eachmovie_div_synopsys.innerText = getMatchedValueByKey(
-    content_movies_info,
-    "synopsys",
-    getMatchedValueByKey(movies, "search", eachmovie_title)
-  );
+  //main
+  //title
+
+  const maintitle_a = [
+    document.createElement("a"),
+    document.createElement("a"),
+    document.createElement("a"),
+    document.createElement("a"),
+  ];
+  const maintitle_b = [
+    document.createElement("button"),
+    document.createElement("button"),
+    document.createElement("button"),
+    document.createElement("button"),
+  ];
+
+  const maintitle_button = ["줄거리", "캐릭터", "관련영화", "명장면(명대사)"];
+  //줄거리 | 캐릭터 | 관련영화 | 명장면(명대사)
+
+  for (let i = 0; i < maintitle_a.length; i++) {
+    maintitle_b[i].classList.add("btn_changeOrder_sm");
+    maintitle_b[i].innerText = maintitle_button[i];
+    maintitle_b[i].classList.add("font_basic_sm");
+
+    maintitle_a[i].appendChild(maintitle_b[i]);
+    eachMovie_div_maintitle_div.appendChild(maintitle_a[i]);
+  }
+
+  //content
+  function mainContentSynopsys() {
+    while (eachMovie_div_maincontent_div.hasChildNodes()) {
+      eachMovie_div_maincontent_div.removeChild(
+        eachMovie_div_maincontent_div.firstChild
+      );
+    }
+    const eachmovie_div_synopsys = document.createElement("p");
+
+    eachmovie_div_synopsys.innerText = getMatchedValueByKey(
+      content_movies_info,
+      "synopsys",
+      getMatchedValueByKey(movies, "search", eachmovie_title)
+    );
+
+    eachmovie_div_synopsys.classList.add("specificContentSynopsys");
+
+    eachMovie_div_maincontent_div.appendChild(eachmovie_div_synopsys);
+  }
+
+  // const eachmovie_div_synopsys = document.createElement("p");
+
+  // eachmovie_div_synopsys.innerText = getMatchedValueByKey(
+  //   content_movies_info,
+  //   "synopsys",
+  //   getMatchedValueByKey(movies, "search", eachmovie_title)
+  // );
 
   const xicon = document.createElement("i");
 
@@ -240,8 +291,9 @@ function specificContents(event) {
   eachmovie_div_star_span.classList.add("specificContentText");
   eachmovie_div_audience.classList.add("specificContentText");
   eachMovie_div_a_div.classList.add("specificContentAnchorDiv");
-  eachMovie_div_synopsys_div.classList.add("specificContentSynopsysDiv");
-  eachmovie_div_synopsys.classList.add("specificContentSynopsys");
+  eachMovie_div_maincontent_div.classList.add("specificMainContentDiv");
+  eachMovie_div_maintitle_div.classList.add("specificMainTitleDiv");
+  eachMovie_div_main_div.classList.add("specificMainDiv");
   removeBtn.classList.add("removeBtn");
   removeBtn.classList.add("font_basic");
   eachMovie_div_div.classList.add("specificContentImgDiv");
@@ -260,8 +312,12 @@ function specificContents(event) {
 
   eachMovie_div_div.appendChild(eachMovie_div_a_div);
   eachmovie_div.appendChild(eachMovie_div_div);
-  eachMovie_div_synopsys_div.appendChild(eachmovie_div_synopsys);
-  eachmovie_div.appendChild(eachMovie_div_synopsys_div);
+
+  mainContentSynopsys();
+
+  eachMovie_div_main_div.appendChild(eachMovie_div_maintitle_div);
+  eachMovie_div_main_div.appendChild(eachMovie_div_maincontent_div);
+  eachmovie_div.appendChild(eachMovie_div_main_div);
   eachmovie_div.appendChild(removeBtn);
   main.appendChild(eachmovie_div);
   body.appendChild(eachmovie_div_outer);

@@ -51,11 +51,38 @@
   font-size: 20px;
   text-indent: 20px;
   background: black;
+  margin: 0;
 }
+.specificMainDiv {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-columns: 1fr;
+  grid-template-rows: min-content 1fr;
+}
+.specificMainTitleDiv {
+  grid-row: 1/2;
+  font-size: 20px;
 
-.specificContentSynopsysDiv {
+  display: grid;
+  column-gap: 5px;
+  grid-template-columns: repeat(4, max-content) 1fr;
+  grid-template-rows: 40px;
+  /* grid-auto-flow: column; */
+}
+.specificMainTitleDiv .font_basic_sm {
+  color: rgb(228, 228, 228);
+  background-color: rgb(47, 54, 65);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.specificMainContentDiv {
   height: 100%;
   overflow-y: auto;
+  grid-row: 2/-1;
+
+  margin-top: 20px;
 }
 .removeBtn {
   position: absolute;

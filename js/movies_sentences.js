@@ -32,7 +32,6 @@ function getRandomNumber(array) {
       }
     }
   }
-  console.log(movies_random);
   return movies_random;
 }
 
@@ -129,18 +128,14 @@ function removeRandomSentences() {
 // const interval_random_number = setInterval(createRandomMovieSetence, 10000);
 
 prev_random_movie_btn.addEventListener("click", () => {
-  console.log(current_number);
-
   current_number =
     (current_number - 1 + movies_launch.length) % movies_launch.length;
   createRandomMovieSetence(movies_launch, order_random, current_number);
-  console.log(current_number);
 });
 
 next_random_movie_btn.addEventListener("click", () => {
   current_number = (current_number + 1) % movies_launch.length;
   createRandomMovieSetence(movies_launch, order_random, current_number);
-  console.log(current_number);
 });
 
 createRandomMovieSetence(movies_launch, order_random, current_number);

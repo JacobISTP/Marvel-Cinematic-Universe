@@ -21,7 +21,7 @@ if (pcJs.matches) {
 opening.style = `width: ${article_width}px; height: ${article_height}px; background-color: black;`;
 
 function fadeOutOpening() {
-  opening.style = "opacity:0%; transition: 1s ease-in-out; cursor: pointer;";
+  opening.classList.add("remove_opening");
 }
 function removeOpening() {
   opening.remove();
@@ -35,3 +35,5 @@ opening.addEventListener("click", removeOpening);
 for (let btn = 0; btn < btn_changeOrder.length - 1; btn++) {
   btn_changeOrder[btn].addEventListener("click", removeOpening);
 }
+opening.addEventListener("click", actionTitle);
+opening.addEventListener("transitionend", actionTitle);

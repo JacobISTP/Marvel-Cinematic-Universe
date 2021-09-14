@@ -19,7 +19,9 @@ article > img:first-child {
   width: 30vw;
   cursor: pointer;
 }
-
+.logo_opacity_0 {
+  opacity: 0%;
+}
 .logo_opacity_100 {
   opacity: 100%;
 }
@@ -37,6 +39,13 @@ header > article > div {
   justify-content: center;
   align-items: center;
   z-index: 2;
+
+  cursor: pointer;
+}
+
+.remove_opening {
+  opacity: 0%;
+  transition: 1s ease-in-out;
 }
 
 #opening_marvel {
