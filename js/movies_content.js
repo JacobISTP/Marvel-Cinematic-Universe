@@ -218,7 +218,6 @@ function specificContents(event) {
   ];
 
   const maintitle_button = ["줄거리", "캐릭터", "관련영화", "명장면(명대사)"];
-  //줄거리 | 캐릭터 | 관련영화 | 명장면(명대사)
 
   for (let i = 0; i < maintitle_a.length; i++) {
     maintitle_b[i].classList.add("btn_changeOrder_sm");
@@ -315,7 +314,11 @@ function specificContents(event) {
 
   mainContentSynopsys();
 
-  eachMovie_div_main_div.appendChild(eachMovie_div_maintitle_div);
+  if (pcJs.matches) {
+    eachMovie_div_main_div.appendChild(eachMovie_div_maintitle_div);
+  } else {
+    eachMovie_div_div.appendChild(eachMovie_div_maintitle_div);
+  }
   eachMovie_div_main_div.appendChild(eachMovie_div_maincontent_div);
   eachmovie_div.appendChild(eachMovie_div_main_div);
   eachmovie_div.appendChild(removeBtn);
