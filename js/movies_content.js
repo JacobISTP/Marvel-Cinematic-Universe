@@ -218,11 +218,14 @@ function specificContents(event) {
   ];
 
   const maintitle_button = ["줄거리", "캐릭터", "관련영화", "명장면(명대사)"];
+  const maintitle_handle = [mainContentSynopsys, , , ,];
 
   for (let i = 0; i < maintitle_a.length; i++) {
     maintitle_b[i].classList.add("btn_changeOrder_sm");
     maintitle_b[i].innerText = maintitle_button[i];
     maintitle_b[i].classList.add("font_basic_sm");
+    maintitle_b[i].addEventListener("click", maintitle_handle[i]);
+    console.dir(maintitle_handle);
 
     maintitle_a[i].appendChild(maintitle_b[i]);
     eachMovie_div_maintitle_div.appendChild(maintitle_a[i]);
@@ -230,6 +233,7 @@ function specificContents(event) {
 
   //content
   function mainContentSynopsys() {
+    console.log("click!");
     while (eachMovie_div_maincontent_div.hasChildNodes()) {
       eachMovie_div_maincontent_div.removeChild(
         eachMovie_div_maincontent_div.firstChild
