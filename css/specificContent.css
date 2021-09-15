@@ -136,6 +136,7 @@
 
   .specificMainDiv {
     display: flex;
+    line-height: 25px;
   }
   .specificMainTitleDiv {
     margin-top: 30px;
