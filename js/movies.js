@@ -647,7 +647,7 @@ const movies_launch = [
       { man_name: "발키리", char_name: "발키리" },
       { man_name: "호프 반 다인", char_name: "와스프" },
       { man_name: "에인션트 원", char_name: "에인션트 원" },
-      { man_name: "페기카터", char_name: "" },
+      { man_name: "페기 카터", char_name: "" },
       { man_name: "행크 핌 박사", char_name: "" },
       { man_name: "해피", char_name: "" },
       { man_name: "제인 포스터", char_name: "" },

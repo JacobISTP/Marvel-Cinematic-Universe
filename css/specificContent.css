@@ -53,6 +53,33 @@
   background: black;
   margin: 0;
 }
+
+.specificContentCharacter {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  flex-wrap: wrap;
+}
+
+.specificContentCharacter > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-family: "Prompt", "Do Hyeon", sans-serif;
+  line-height: 20px;
+  text-align: center;
+
+  margin: 20px;
+}
+
+.specificContentCharacter img {
+  width: 150px;
+  height: 225px;
+  margin-bottom: 10px;
+}
+
 .specificMainDiv {
   display: grid;
   width: 100%;
@@ -61,7 +88,10 @@
   grid-template-rows: min-content 1fr;
   font-family: "Nanum Myeongjo", serif;
   line-height: 35px;
+
+  background-color: rgba(0, 0, 0, 0.8);
 }
+
 .specificMainTitleDiv {
   grid-row: 1/2;
   font-size: 20px;

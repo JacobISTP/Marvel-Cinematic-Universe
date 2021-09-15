@@ -31,6 +31,12 @@ function getMatchedValueByKey(array, key, name_kr) {
       //   value_by_key_search = value_by_key_search.normalize("NFC");
       // }
       return value_by_key_search;
+    } else if (
+      nameNFC === array[index]["man_name"] ||
+      nameNFD === array[index]["man_name"]
+    ) {
+      let value_by_key_man = array[index][key];
+      return value_by_key_man;
     }
   }
 
@@ -218,14 +224,13 @@ function specificContents(event) {
   ];
 
   const maintitle_button = ["줄거리", "캐릭터", "관련영화", "명장면(명대사)"];
-  const maintitle_handle = [mainContentSynopsys, , , ,];
+  const maintitle_handle = [mainContentSynopsys, mainContentCharacter, , ,];
 
   for (let i = 0; i < maintitle_a.length; i++) {
     maintitle_b[i].classList.add("btn_changeOrder_sm");
     maintitle_b[i].innerText = maintitle_button[i];
     maintitle_b[i].classList.add("font_basic_sm");
     maintitle_b[i].addEventListener("click", maintitle_handle[i]);
-    console.dir(maintitle_handle);
 
     maintitle_a[i].appendChild(maintitle_b[i]);
     eachMovie_div_maintitle_div.appendChild(maintitle_a[i]);
@@ -233,7 +238,7 @@ function specificContents(event) {
 
   //content
   function mainContentSynopsys() {
-    console.log("click!");
+    console.log("click! synop");
     while (eachMovie_div_maincontent_div.hasChildNodes()) {
       eachMovie_div_maincontent_div.removeChild(
         eachMovie_div_maincontent_div.firstChild
@@ -250,6 +255,64 @@ function specificContents(event) {
     eachmovie_div_synopsys.classList.add("specificContentSynopsys");
 
     eachMovie_div_maincontent_div.appendChild(eachmovie_div_synopsys);
+  }
+
+  function mainContentCharacter() {
+    console.log("click! char");
+    while (eachMovie_div_maincontent_div.hasChildNodes()) {
+      eachMovie_div_maincontent_div.removeChild(
+        eachMovie_div_maincontent_div.firstChild
+      );
+    }
+    const eachmovie_div_char = document.createElement("div");
+
+    const eachmovie_div_charaters_raw = getMatchedValueByKey(
+      movies,
+      "character",
+      eachmovie_title
+    );
+    let eachMovie_characters = [];
+    for (let c = 0; c < eachmovie_div_charaters_raw.length; c++) {
+      eachMovie_characters.push(eachmovie_div_charaters_raw[c]["man_name"]);
+    }
+    eachMovie_characters.sort();
+
+    const eachmovie_div_charaters = [];
+    for (let cs = 0; cs < eachMovie_characters.length; cs++) {
+      for (let cr = 0; cr < eachmovie_div_charaters_raw.length; cr++) {
+        if (
+          eachMovie_characters[cs] ===
+          eachmovie_div_charaters_raw[cr]["man_name"]
+        ) {
+          eachmovie_div_charaters.push(eachmovie_div_charaters_raw[cr]);
+        }
+      }
+    }
+    let eachmovie_div_charaters_img = [];
+    for (let i = 0; i < eachmovie_div_charaters.length; i++) {
+      let eachmovie_div_div_charater = document.createElement("div");
+      let eachmovie_div_charater = document.createElement("img");
+      let eachmovie_div_charater_name = document.createElement("span");
+
+      eachmovie_div_charater.src = getMatchedValueByKey(
+        characters,
+        "img",
+        eachmovie_div_charaters[i]["man_name"]
+      );
+      eachmovie_div_charater_name.innerText =
+        eachmovie_div_charaters[i]["man_name"];
+      if (eachmovie_div_charaters[i]["char_name"] !== "") {
+        eachmovie_div_charater_name.innerText += `/\n${eachmovie_div_charaters[i]["char_name"]}`;
+      }
+
+      eachmovie_div_div_charater.appendChild(eachmovie_div_charater);
+      eachmovie_div_div_charater.appendChild(eachmovie_div_charater_name);
+      eachmovie_div_char.appendChild(eachmovie_div_div_charater);
+    }
+
+    eachmovie_div_char.classList.add("specificContentCharacter");
+
+    eachMovie_div_maincontent_div.appendChild(eachmovie_div_char);
   }
 
   // const eachmovie_div_synopsys = document.createElement("p");
