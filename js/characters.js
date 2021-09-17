@@ -406,12 +406,18 @@ const characters_raw = [
     char_name: "",
     img: "img/character/수정본/그웬 스테이시2.jpg",
   },
+
+  {
+    man_name: "에디 브록1",
+    char_name: "베놈1",
+    img: "img/character/수정본/베놈1.jpg",
+  },
 ];
 
 const characters = [];
 let name_chars = [];
 
-for (let c = 0; c < characters_raw.length - 1; c++) {
+for (let c = 0; c < characters_raw.length; c++) {
   name_chars.push(characters_raw[c]["man_name"]);
 }
 name_chars.sort();
