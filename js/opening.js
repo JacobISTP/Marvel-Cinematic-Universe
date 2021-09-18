@@ -34,6 +34,7 @@ opening.addEventListener("click", removeOpening);
 // console.log(article_height);
 for (let btn = 0; btn < btn_changeOrder.length - 1; btn++) {
   btn_changeOrder[btn].addEventListener("click", removeOpening);
+  btn_changeOrder[btn].addEventListener("click", actionTitle);
 }
 opening.addEventListener("click", actionTitle);
 opening.addEventListener("transitionend", actionTitle);

@@ -56,16 +56,16 @@ function createRandomMovieSetence(movies, order, random_index = 0) {
   const div_sentence_famous = document.createElement("div");
   const div_span_sentence_famous = document.createElement("div");
   const span_sentence_famous = document.createElement("span");
+  const div_sentence_famous_names_outer = document.createElement("div");
   const div_sentence_famous_names = document.createElement("div");
-  const span_sentence_famous_role = document.createElement("span");
-  const span_sentence_famous_verticalBar = document.createElement("span");
-  const span_sentence_famous_real = document.createElement("span");
+  const span_sentence_famous_role = document.createElement("div");
+  const span_sentence_famous_real = document.createElement("div");
 
   const famous_sentences = getMatchedValueByKey(
     movies_launch,
     "sentence",
     movies_launch[index].name_kr
-  );
+  )[0];
 
   f_div_movie(div_movie);
   f_img_movie(img_movie, index, array);
@@ -74,7 +74,6 @@ function createRandomMovieSetence(movies, order, random_index = 0) {
   // (${array[index].name_en})
   span_sentence_famous.innerText = famous_sentences[0];
   span_sentence_famous_role.innerText = famous_sentences[1];
-  span_sentence_famous_verticalBar.innerText = "|";
   span_sentence_famous_real.innerText = famous_sentences[2];
 
   if (pcJs.matches) {
@@ -85,6 +84,8 @@ function createRandomMovieSetence(movies, order, random_index = 0) {
   span_sentence_famous.id = "movie_sentences_famous_span";
   div_sentence_famous.id = "movie_sentences_famous";
   div_sentence_famous_names.id = "movie_sentences_famous_names";
+  div_sentence_famous_names_outer.style =
+    "background-color: rgb(228, 228, 228); margin-top: 10px; width: fit-content;";
 
   div_img_movie.appendChild(img_movie);
   div_movie.appendChild(div_img_movie);
@@ -102,12 +103,12 @@ function createRandomMovieSetence(movies, order, random_index = 0) {
   div_movie.appendChild(div_title);
 
   div_sentence_famous_names.appendChild(span_sentence_famous_role);
-  div_sentence_famous_names.appendChild(span_sentence_famous_verticalBar);
   div_sentence_famous_names.appendChild(span_sentence_famous_real);
+  div_sentence_famous_names_outer.appendChild(div_sentence_famous_names);
 
   div_span_sentence_famous.appendChild(span_sentence_famous);
   div_sentence_famous.appendChild(div_span_sentence_famous);
-  div_sentence_famous.appendChild(div_sentence_famous_names);
+  div_sentence_famous.appendChild(div_sentence_famous_names_outer);
 
   div_content.appendChild(div_movie);
   div_content.appendChild(div_sentence_famous);

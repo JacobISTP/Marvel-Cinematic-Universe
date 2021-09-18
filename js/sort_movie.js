@@ -30,7 +30,8 @@ function f_movies_sort_movie(event = "", array = []) {
 
   statement_sort_movie = 0;
   if (array.length === 0) {
-    event.preventDefault();
+    console.log(typeof event);
+    typeof event === "string" ? (event = event) : event.preventDefault();
     movies_sort_movie.length = 0;
     for (let s = 0; s < movies.length; s++) {
       if (movies[s].name_kr.includes(input_sort.value)) {

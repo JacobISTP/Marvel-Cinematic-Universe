@@ -54,14 +54,30 @@
   text-indent: 15px;
   font-style: italic;
   text-align: center;
+
+  height: fit-content;
+  line-height: 35px;
 }
 
 #movie_sentences_famous_names {
+  align-self: center;
+
+  display: grid;
+  column-gap: 1px;
+  width: fit-content;
+  grid-template-columns: repeat(2, minmax(min-content, max-content));
+
+  /* display: flex;
+  justify-content: center;
+  align-items: flex-end; */
+  font-size: 18px;
+}
+#movie_sentences_famous_names div {
+  background-color: black;
   display: flex;
   justify-content: center;
-  align-items: flex-end;
-  margin-top: 20px;
-  font-size: 18px;
+  align-items: center;
+  padding: 0px 10px;
 }
 
 #movie_sentences_famous_names span:nth-of-type(2) {
@@ -98,9 +114,11 @@
   }
 
   #movie_sentences_famous_names {
-    margin-top: 10px;
     font-size: 15px;
     font-weight: 700;
+  }
+  #movie_sentences_famous_names div {
+    padding: 0px 5px;
   }
 
   #movie_sentences_famous_names span:nth-of-type(2) {

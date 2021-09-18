@@ -11,7 +11,7 @@ const movies_launch = [
     img: "img/poster/수정본-300/아이언맨.jpg",
     phase: "1",
     timeline: "3",
-    next_movie: ["아이언맨2", "샹치와 텐 링즈의 전설"],
+    next_movie: ["아이언맨2"],
     character: [
       { man_name: "토니 스타크", char_name: "아이언맨" },
       { man_name: "제임스 로드", char_name: "" },
@@ -24,9 +24,11 @@ const movies_launch = [
     ],
     stone: [],
     sentence: [
-      'The truth is...\n"I am IRON MAN"',
-      "토니 스타크/아이언맨",
-      "로버트 다우니 주니어",
+      [
+        'The truth is...\n"I am IRON MAN"',
+        "토니 스타크/아이언맨",
+        "로버트 다우니 주니어",
+      ],
     ],
   },
   {
@@ -47,7 +49,7 @@ const movies_launch = [
       { man_name: "스탠 리", char_name: "" },
     ],
     stone: [],
-    sentence: ["HULK...SMASH!!!!!!!", "브루스 배너", "에드워드 노튼"],
+    sentence: [["HULK...SMASH!!!!!!!", "브루스 배너", "에드워드 노튼"]],
   },
   {
     search: "아이언맨2",
@@ -72,9 +74,11 @@ const movies_launch = [
     ],
     stone: [],
     sentence: [
-      "토니, 내 인생 일대 최고의 발명품은 바로 너란다",
-      "하워드 스타크",
-      "존 슬래터리",
+      [
+        "토니, 내 인생 일대 최고의 발명품은 바로 너란다",
+        "하워드 스타크",
+        "존 슬래터리",
+      ],
     ],
   },
   {
@@ -101,9 +105,11 @@ const movies_launch = [
     ],
     stone: ["space"],
     sentence: [
-      `난 단 한번도 왕좌를 원한적 없어. 난 인정받기를 원했을 뿐이야`,
-      "로키",
-      "톰 히들스턴",
+      [
+        `난 단 한번도 왕좌를 원한적 없어. 난 인정받기를 원했을 뿐이야`,
+        "로키",
+        "톰 히들스턴",
+      ],
     ],
   },
   {
@@ -127,9 +133,11 @@ const movies_launch = [
     ],
     stone: ["space"],
     sentence: [
-      "하루종일 싸울 수도 있어.",
-      "스티브 로저스/캡틴 아메리카",
-      "크리스 에반스",
+      [
+        "I can do this all day.",
+        "스티브 로저스/캡틴 아메리카",
+        "크리스 에반스",
+      ],
     ],
   },
   {
@@ -158,9 +166,11 @@ const movies_launch = [
     ],
     stone: ["space", "mind"],
     sentence: [
-      "저 이제 퇴근할게요. 저로 인해 영웅들이 하나로 뭉치길...",
-      "필 콜슨 요원",
-      "클락 그레그",
+      [
+        "저 이제 퇴근할게요. 저로 인해 영웅들이 하나로 뭉치길...",
+        "필 콜슨 요원",
+        "클락 그레그",
+      ],
     ],
   },
   {
@@ -183,9 +193,11 @@ const movies_launch = [
     ],
     stone: [],
     sentence: [
-      '다른 건 다 뺏어가도, 한가지 절대 빼앗아 갈 수 없는게 있죠. \n "I am IRON MAN"',
-      "토니 스타크/아이언맨",
-      "로버트 다우니 주니어",
+      [
+        '다른 건 다 뺏어가도, 한가지 절대 빼앗아 갈 수 없는게 있죠. \n "I am IRON MAN"',
+        "토니 스타크/아이언맨",
+        "로버트 다우니 주니어",
+      ],
     ],
   },
   {
@@ -214,9 +226,11 @@ const movies_launch = [
     ],
     stone: ["reality"],
     sentence: [
-      "위대한 왕이 되기보다 위대한 남자가 되겠습니다.",
-      "토르",
-      "크리스 헴스워스",
+      [
+        "위대한 왕이 되기보다 위대한 남자가 되겠습니다.",
+        "토르",
+        "크리스 헴스워스",
+      ],
     ],
   },
   {
@@ -244,9 +258,11 @@ const movies_launch = [
     ],
     stone: ["mind"],
     sentence: [
-      "자유의 가치는 비싸지...하지만 나는 기꺼이 지불하겠어.",
-      "스티브 로저스/캡틴 아메리카",
-      "크리스 에반스",
+      [
+        "자유의 가치는 비싸지...하지만 나는 기꺼이 지불하겠어.",
+        "스티브 로저스/캡틴 아메리카",
+        "크리스 에반스",
+      ],
     ],
   },
   {
@@ -272,7 +288,7 @@ const movies_launch = [
       { man_name: "스탠 리", char_name: "" },
     ],
     stone: ["reality", "power"],
-    sentence: ["We are Groot.", "그루트", "빈 디젤"],
+    sentence: [["We are Groot.", "그루트", "빈 디젤"]],
   },
   {
     search: "어벤져스 : 에이지 오브 울트론",
@@ -306,9 +322,11 @@ const movies_launch = [
     ],
     stone: ["mind"],
     sentence: [
-      "이 문을 나서는 순간, 너도 어벤져스야.",
-      "클린트 바튼 / 호크 아이",
-      "제레미 레너",
+      [
+        "이 문을 나서는 순간, 너도 어벤져스야.",
+        "클린트 바튼 / 호크 아이",
+        "제레미 레너",
+      ],
     ],
   },
   {
@@ -332,9 +350,11 @@ const movies_launch = [
     ],
     stone: [],
     sentence: [
-      "No, I'm Ant-Man!\nI know, it wasn't my idea.",
-      "스캇 랭/앤트맨",
-      "폴 러드",
+      [
+        "No, I'm Ant-Man!\nI know, it wasn't my idea.",
+        "스캇 랭/앤트맨",
+        "폴 러드",
+      ],
     ],
   },
   {
@@ -373,9 +393,11 @@ const movies_launch = [
     ],
     stone: ["mind"],
     sentence: [
-      "어벤져스는 사실 나보단 너에게 더 잘어울려. 난 18살부터 늘 혼자였었어, 군대에서도 어디에서도 잘 어울리지 못했지. 하지만 네가 날 필요로 하면 언제든 어디든 달려갈게 토니.",
-      "스티브 로저스/캡틴 아메리카",
-      "크리스 에반스",
+      [
+        "어벤져스는 사실 나보단 너에게 더 잘어울려. 난 18살부터 늘 혼자였었어, 군대에서도 어디에서도 잘 어울리지 못했지. 하지만 네가 날 필요로 하면 언제든 어디든 달려갈게 토니.",
+        "스티브 로저스/캡틴 아메리카",
+        "크리스 에반스",
+      ],
     ],
   },
   {
@@ -398,9 +420,7 @@ const movies_launch = [
     ],
     stone: ["time"],
     sentence: [
-      "이 광활한 멀티버스에서 넌 누구일까...?",
-      "에인션트 원",
-      "틸다 스윈튼",
+      ["이 광활한 멀티버스에서 넌 누구일까...?", "에인션트 원", "틸다 스윈튼"],
     ],
   },
   {
@@ -428,9 +448,11 @@ const movies_launch = [
     ],
     stone: [],
     sentence: [
-      "씨를 뿌렸다고 해서 아버지가 되는 것은 아니지.. 잘 못 키워서 미안하구나",
-      "욘두",
-      "마이클 루커",
+      [
+        "씨를 뿌렸다고 해서 아버지가 되는 것은 아니지.. 잘 못 키워서 미안하구나",
+        "욘두",
+        "마이클 루커",
+      ],
     ],
   },
   {
@@ -454,9 +476,11 @@ const movies_launch = [
     ],
     stone: [],
     sentence: [
-      "수트 없이 아무것도 못한다면, 넌 더더욱 그 수트를 가질 자격이 없어.",
-      "토니 스타크/아이언맨",
-      "로버트 다우니 주니어",
+      [
+        "수트 없이 아무것도 못한다면, 넌 더더욱 그 수트를 가질 자격이 없어.",
+        "토니 스타크/아이언맨",
+        "로버트 다우니 주니어",
+      ],
     ],
   },
   {
@@ -482,9 +506,7 @@ const movies_launch = [
     ],
     stone: [],
     sentence: [
-      "아스가르드는 장소가 아니야. 사람들이지.",
-      "오딘",
-      "안소니 홉킨스",
+      ["아스가르드는 장소가 아니야. 사람들이지.", "오딘", "안소니 홉킨스"],
     ],
   },
   {
@@ -505,9 +527,11 @@ const movies_launch = [
     ],
     stone: [],
     sentence: [
-      "현명한 자는 다리를 만들고 어리석은 자는 벽을 세운다.",
-      "티 찰라 / 블랙 팬서",
-      "채드윅 보스만",
+      [
+        "현명한 자는 다리를 만들고 어리석은 자는 벽을 세운다.",
+        "티 찰라 / 블랙 팬서",
+        "채드윅 보스만",
+      ],
     ],
   },
   {
@@ -555,7 +579,7 @@ const movies_launch = [
       { man_name: "스탠 리", char_name: "" },
     ],
     stone: ["space", "mind", "power", "time", "soul", "reality"],
-    sentence: [`실수한거야. 내 머리를 잘랐어야지.`, "타노스", "조슈 브롤린"],
+    sentence: [[`실수한거야. 내 머리를 잘랐어야지.`, "타노스", "조슈 브롤린"]],
   },
   {
     search: "앤트맨과 와스프",
@@ -576,7 +600,7 @@ const movies_launch = [
       { man_name: "스탠 리", char_name: "" },
     ],
     stone: [],
-    sentence: ["Antman and Warsp will return?", "쿠키영상", "엔드게임 예고"],
+    sentence: [["Antman and Warsp will return?", "쿠키영상", "엔드게임 예고"]],
   },
   {
     search: "캡틴 마블",
@@ -596,9 +620,7 @@ const movies_launch = [
     ],
     stone: ["space"],
     sentence: [
-      "너에게 증명할 것은 없어",
-      "캐럴 댄버스 / 캡틴 마블",
-      "브리 라슨",
+      ["너에게 증명할 것은 없어", "캐럴 댄버스 / 캡틴 마블", "브리 라슨"],
     ],
   },
   {
@@ -656,9 +678,11 @@ const movies_launch = [
     ],
     stone: ["space", "mind", "power", "time", "soul", "reality"],
     sentence: [
-      "And I... am... \t IRON MAN.",
-      "토니 스타크 / 아이언맨",
-      "로버트 다우니 주니어",
+      [
+        "And I... am... \t IRON MAN.",
+        "토니 스타크 / 아이언맨",
+        "로버트 다우니 주니어",
+      ],
     ],
   },
   {
@@ -681,9 +705,7 @@ const movies_launch = [
     ],
     stone: [],
     sentence: [
-      "왕관을 쓴 머리는 편안히 쉴 수 없다.",
-      "닉 퓨리",
-      "사무엘 L. 잭슨",
+      ["왕관을 쓴 머리는 편안히 쉴 수 없다.", "닉 퓨리", "사무엘 L. 잭슨"],
     ],
   },
   {
@@ -704,9 +726,11 @@ const movies_launch = [
     ],
     stone: [],
     sentence: [
-      "내겐 가족이 없는 줄 알았는데 둘이나 있더라고요. 한 가족은 감옥에 있으니 그들을 구하러 가야 해요.",
-      "나타샤 로마노프 / 블랙 위도우",
-      "스칼렛 요한슨",
+      [
+        "내겐 가족이 없는 줄 알았는데 둘이나 있더라고요. 한 가족은 감옥에 있으니 그들을 구하러 가야 해요.",
+        "나타샤 로마노프 / 블랙 위도우",
+        "스칼렛 요한슨",
+      ],
     ],
   },
 
@@ -722,7 +746,7 @@ const movies_launch = [
     next_movie: [],
     character: [{ man_name: "쑤 샹치", char_name: "샹치" }],
     stone: [],
-    sentence: ["피의 대가는 피로 치루는거란다.", "쑤 웬우", "양조위"],
+    sentence: [["피의 대가는 피로 치루는거란다.", "쑤 웬우", "양조위"]],
   },
 ];
 
@@ -751,7 +775,7 @@ const movies_schedule = [
     next_movie: [],
     character: [{ man_name: "에디 브록", char_name: "베놈" }],
     stone: [],
-    sentence: [],
+    sentence: [[]],
   },
   {
     search: "이터널스",
@@ -765,7 +789,7 @@ const movies_schedule = [
     next_movie: [],
     character: [{ man_name: "길가메쉬", char_name: "길가메쉬" }],
     stone: [],
-    sentence: [],
+    sentence: [[]],
   },
   {
     search: "스파이더맨 : 노 웨이 홈",
@@ -793,7 +817,7 @@ const movies_schedule = [
       { man_name: "그웬 스테이시2", char_name: "" },
     ],
     stone: [],
-    sentence: "",
+    sentence: [[]],
   },
   {
     search: "닥터 스트레인지 인 더 멀티버스 오브 매드니스",
@@ -809,7 +833,7 @@ const movies_schedule = [
       { man_name: "스티븐 스트레인지", char_name: "닥터 스트레인지" },
     ],
     stone: [],
-    sentence: [],
+    sentence: [[]],
   },
   {
     search: "토르 : 러브 앤 썬더",
@@ -823,7 +847,7 @@ const movies_schedule = [
     next_movie: [],
     character: [{ man_name: "토르", char_name: "토르" }],
     stone: [],
-    sentence: [],
+    sentence: [[]],
   },
   {
     search: "블랙팬서: 와칸다 포에버",
@@ -837,7 +861,7 @@ const movies_schedule = [
     next_movie: [],
     character: [{ man_name: "", char_name: "" }],
     stone: [],
-    sentence: [],
+    sentence: [[]],
   },
   {
     search: "더 마블스",
@@ -851,7 +875,7 @@ const movies_schedule = [
     next_movie: [],
     character: [{ man_name: "", char_name: "" }],
     stone: [],
-    sentence: [],
+    sentence: [[]],
   },
   {
     search: "앤트맨과 와스프 : 퀀터매니아",
@@ -865,7 +889,7 @@ const movies_schedule = [
     next_movie: [],
     character: [{ man_name: "", char_name: "" }],
     stone: [],
-    sentence: [],
+    sentence: [[]],
   },
   {
     search: "가디언즈 오브 갤럭시 VOL.3",
@@ -879,7 +903,7 @@ const movies_schedule = [
     next_movie: [],
     character: [{ man_name: "", char_name: "" }],
     stone: [],
-    sentence: [],
+    sentence: [[]],
   },
   {
     search: "마블 블레이드1",
@@ -893,7 +917,7 @@ const movies_schedule = [
     next_movie: [],
     character: [{ man_name: "", char_name: "" }],
     stone: [],
-    sentence: [],
+    sentence: [[]],
   },
   {
     search: "마블 판타스틱4",
@@ -907,7 +931,7 @@ const movies_schedule = [
     next_movie: [],
     character: [{ man_name: "", char_name: "" }],
     stone: [],
-    sentence: [],
+    sentence: [[]],
   },
 ];
 
@@ -925,7 +949,7 @@ const movies_sony = [
     next_movie: ["베놈 2 : 렛 데어 비 카니지"],
     character: [{ man_name: "에디 브록", char_name: "베놈" }],
     stone: [],
-    sentence: ["We are venom.", "에디 브록 / 베놈", "톰 하디"],
+    sentence: [["We are Venom.", "에디 브록 / 베놈", "톰 하디"]],
   },
   {
     search: "스파이더맨1",
@@ -945,9 +969,11 @@ const movies_sony = [
     ],
     stone: [],
     sentence: [
-      "힘이 있으면 그 만큼의 책임이 따른다. 그것이 나의 축복이자 저주다. 내가 누구냐고? 난 스파이더맨이다.",
-      "스파이더맨 / 피터 파커",
-      "토비 맥과이어",
+      [
+        "힘이 있으면 그 만큼의 책임이 따른다. 그것이 나의 축복이자 저주다. 내가 누구냐고? 난 스파이더맨이다.",
+        "스파이더맨 / 피터 파커",
+        "토비 맥과이어",
+      ],
     ],
   },
   {
@@ -968,9 +994,11 @@ const movies_sony = [
     ],
     stone: [],
     sentence: [
-      "옳은 일을 하려면 가끔은 가장 원하는걸 포기해야만할 때도 있어요.",
-      "스파이더맨 / 피터 파커",
-      "토비 맥과이어",
+      [
+        "옳은 일을 하려면 가끔은 가장 원하는걸 포기해야만할 때도 있어요.",
+        "스파이더맨 / 피터 파커",
+        "토비 맥과이어",
+      ],
     ],
   },
   {
@@ -992,9 +1020,11 @@ const movies_sony = [
     ],
     stone: [],
     sentence: [
-      "한 사람만 노력해도 세상은 달라지게 마련이야.",
-      "스파이더맨 / 피터 파커",
-      "토비 맥과이어",
+      [
+        "한 사람만 노력해도 세상은 달라지게 마련이야.",
+        "스파이더맨 / 피터 파커",
+        "토비 맥과이어",
+      ],
     ],
   },
   {
@@ -1014,9 +1044,7 @@ const movies_sony = [
     ],
     stone: [],
     sentence: [
-      "약속은 깨져야 제맛이지.",
-      "스파이더맨 / 피터 파커",
-      "앤드류 가필드",
+      ["약속은 깨져야 제맛이지.", "스파이더맨 / 피터 파커", "앤드류 가필드"],
     ],
   },
   {
@@ -1036,9 +1064,11 @@ const movies_sony = [
     ],
     stone: [],
     sentence: [
-      "남의 삶을 살지 말고 자신의 꿈을 쟁취하세요.",
-      "그웬 스테이시",
-      "엠마 스톤",
+      [
+        "남의 삶을 살지 말고 자신의 꿈을 쟁취하세요.",
+        "그웬 스테이시",
+        "엠마 스톤",
+      ],
     ],
   },
 ];
